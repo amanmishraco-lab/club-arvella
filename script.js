@@ -1,4 +1,10 @@
+const SUPABASE_URL = "https://vnuvidqgfdufhkvivfki.supabase.co";
+const SUPABASE_KEY = "sb_publishable_ZE4do_lwZXvbsvtsD9bpfA_U1_LvuSL";
 
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
 const india = [
 ["Rajasthan","Jaipur","https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80","The Pink City combines royal palaces, historic forts, colourful bazaars and Rajasthan's legendary hospitality into an unforgettable cultural journey."],
 ["Rajasthan","Udaipur","https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80","Known for shimmering lakes and romantic palaces, Udaipur offers a refined blend of heritage, luxury hotels and timeless Rajput architecture."],
