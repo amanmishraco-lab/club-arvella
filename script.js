@@ -45,8 +45,40 @@ function renderData(target,data,searchId){
 renderData("indiaGrid",india,"indiaSearch");
 renderData("worldGrid",world,"worldSearch");
 
-document.querySelector(".menu-btn")?.addEventListener("click",()=>document.querySelector(".nav-links").classList.toggle("open"));
-document.querySelectorAll(".demo-form").forEach(form=>form.addEventListener("submit",e=>{
- e.preventDefault(); const msg=form.querySelector(".form-message"); if(msg){msg.textContent="Thank you! Your holiday enquiry has been received. We will contact you shortly."; msg.classList.remove("hidden");}
- form.reset();
-}));
+document.querySelectorAll(".demo-form").forEach(form => {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const msg = form.querySelector(".form-message");
+
+    const name = form.querySelector('[name="name"]').value;
+    const email = form.querySelector('[name="email"]').value;
+    const phone = form.querySelector('[name="phone"]').value;
+    const destination = form.querySelector('[name="destination"]').value;
+    const travelDate = form.querySelector('[name="travelDate"]').value;
+    const travellers = form.querySelector('[name="travellers"]').value;
+    const message = form.querySelector('[name="message"]').value;
+
+    const { error } = await supabase
+      .from("Inquiries")
+      .insert([
+        {
+          Name: name,
+          "E-mail": email,
+          Phone: phone,
+          Destination: destination,
+          "Travel Date": travelDate,
+          Travellers: travellers,
+          Message: message
+        }
+      ]);
+
+    if (error) {
+      console.error(error);
+      msg.textContent = "Something went wrong. Please try again.";
+    } else {
+      msg.textContent = "Thank you! Your enquiry has been received.";
+      form.reset();
+    }
+  });
+});
