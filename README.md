@@ -9,7 +9,7 @@
 - `contact.html` — enquiry page
 - `style.css` — all styling
 - `script.js` — search and interactions
-- `assets/club-arvella-logo.png` — your uploaded logo
+- `club-arvella-logo.png` — your uploaded logo
 
 ## Before publishing
 1. Replace the placeholder WhatsApp number in every page/footer link.
