@@ -98,3 +98,639 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
  .search-box{grid-template-columns:1fr}
  h1{font-size:58px}.btn-outline{margin-left:0;margin-top:10px}
 }
+/* =====================================================
+   CLUB ARVELLA - PREMIUM ANIMATED HOMEPAGE
+   ===================================================== */
+
+
+/* ---------------- PREMIUM HERO ---------------- */
+
+.premium-hero{
+  min-height:850px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  background:
+  radial-gradient(circle at center,
+  rgba(20,45,70,.75),
+  rgba(7,26,43,.98));
+}
+
+
+/* Dark cinematic overlay */
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  background:
+  linear-gradient(
+    90deg,
+    rgba(7,26,43,.92),
+    rgba(7,26,43,.45),
+    rgba(7,26,43,.92)
+  );
+  pointer-events:none;
+}
+
+
+/* ---------------- FLOATING IMAGE ROWS ---------------- */
+
+.floating-row{
+  position:absolute;
+  left:0;
+  width:100%;
+  overflow:hidden;
+  z-index:1;
+  opacity:.42;
+}
+
+
+.floating-row-left{
+  top:12%;
+}
+
+
+.floating-row-right{
+  bottom:10%;
+}
+
+
+/* Image track */
+
+.floating-track{
+  display:flex;
+  gap:22px;
+  width:max-content;
+}
+
+
+/* Images */
+
+.floating-track img{
+  width:220px;
+  height:150px;
+  object-fit:cover;
+  border-radius:12px;
+
+  border:1px solid rgba(232,199,106,.35);
+
+  box-shadow:
+  0 20px 45px rgba(0,0,0,.45);
+
+  animation:
+  floatingImage 5s ease-in-out infinite;
+}
+
+
+.floating-track img:nth-child(even){
+  animation-delay:1.5s;
+}
+
+
+.floating-track img:nth-child(3n){
+  transform:rotate(2deg);
+}
+
+
+.floating-track img:nth-child(4n){
+  transform:rotate(-2deg);
+}
+
+
+/* LEFT MOVING ROW */
+
+.floating-row-left .floating-track{
+  animation:moveLeft 55s linear infinite;
+}
+
+
+/* RIGHT MOVING ROW */
+
+.floating-row-right .floating-track{
+  animation:moveRight 55s linear infinite;
+}
+
+
+/* Infinite movement */
+
+@keyframes moveLeft{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+@keyframes moveRight{
+
+  from{
+    transform:translateX(-50%);
+  }
+
+  to{
+    transform:translateX(0);
+  }
+
+}
+
+
+/* Floating movement */
+
+@keyframes floatingImage{
+
+  0%{
+    margin-top:0;
+  }
+
+  50%{
+    margin-top:-12px;
+  }
+
+  100%{
+    margin-top:0;
+  }
+
+}
+
+
+
+/* ---------------- HERO CONTENT ---------------- */
+
+.premium-hero-content{
+  position:relative;
+  z-index:5;
+  text-align:center;
+  max-width:950px;
+  margin:auto;
+  padding:120px 20px;
+}
+
+
+.premium-hero-content h1{
+  font-size:clamp(58px,9vw,120px);
+  line-height:.88;
+  margin:25px 0;
+}
+
+
+.premium-hero-content h1 span{
+  color:var(--champagne);
+}
+
+
+.premium-hero-content p{
+  max-width:700px;
+  margin:25px auto;
+  font-size:18px;
+  line-height:1.8;
+  color:#ddd9cf;
+}
+
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  margin-top:35px;
+}
+
+
+/* ---------------- PREMIUM STATS ---------------- */
+
+.stats-section{
+  padding:65px 0;
+  background:
+  linear-gradient(
+    135deg,
+    #09182a,
+    #10243b
+  );
+}
+
+
+.premium-stats{
+  grid-template-columns:
+  repeat(5,1fr);
+  gap:15px;
+}
+
+
+.premium-stats .stat{
+  border-left:1px solid rgba(212,175,55,.55);
+  padding:20px;
+}
+
+
+.premium-stats .stat span{
+  font-size:12px;
+  color:var(--muted);
+  display:block;
+  margin-top:5px;
+}
+
+
+.premium-stats .stat b{
+  font-size:42px;
+}
+
+
+/* ---------------- DESTINATION CARDS ---------------- */
+
+.destination-card{
+  position:relative;
+  min-height:280px;
+  overflow:hidden;
+  display:block;
+  background:
+  linear-gradient(
+    145deg,
+    #0b192b,
+    #10243b
+  );
+
+  border:1px solid rgba(212,175,55,.18);
+
+  transition:
+  transform .45s ease,
+  border-color .45s ease,
+  box-shadow .45s ease;
+}
+
+
+.destination-card:hover{
+  transform:translateY(-10px);
+
+  border-color:
+  rgba(212,175,55,.75);
+
+  box-shadow:
+  0 30px 60px
+  rgba(0,0,0,.35);
+}
+
+
+.destination-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+
+  transition:
+  transform .7s ease;
+}
+
+
+.destination-card:hover img{
+  transform:scale(1.12);
+}
+
+
+/* Dark gradient on image */
+
+.destination-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(5,15,29,.98),
+    rgba(5,15,29,.1),
+    transparent
+  );
+
+  pointer-events:none;
+}
+
+
+/* Destination content */
+
+.destination-overlay{
+  position:absolute;
+  left:25px;
+  right:25px;
+  bottom:25px;
+
+  z-index:2;
+}
+
+
+.destination-overlay span{
+  font-size:10px;
+  color:var(--champagne);
+  letter-spacing:2px;
+}
+
+
+.destination-overlay h3{
+  font-size:42px;
+  color:white;
+  margin:5px 0;
+}
+
+
+.destination-overlay p{
+  color:#e2ded4;
+  font-size:13px;
+  margin:5px 0 15px;
+}
+
+
+.destination-overlay b{
+  font-size:11px;
+  color:var(--gold);
+  letter-spacing:1px;
+}
+
+
+/* ---------------- HIDDEN 21 DESTINATIONS ---------------- */
+
+.more-destinations{
+  display:none;
+  margin-top:20px;
+}
+
+
+.more-destinations.show{
+  display:grid;
+  animation:
+  destinationReveal .8s ease;
+}
+
+
+.more-destinations .destination-card{
+  padding:35px 25px;
+  min-height:200px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+
+.destination-number{
+  position:absolute;
+  top:20px;
+  right:22px;
+
+  font-family:
+  "Cormorant Garamond",
+  serif;
+
+  font-size:70px;
+
+  color:
+  rgba(212,175,55,.12);
+
+  font-weight:700;
+}
+
+
+.more-destinations h3{
+  font-size:38px;
+  color:var(--champagne);
+  position:relative;
+  z-index:2;
+}
+
+
+.more-destinations p{
+  color:var(--muted);
+  position:relative;
+  z-index:2;
+}
+
+
+/* Animation */
+
+@keyframes destinationReveal{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+/* Load More Button */
+
+.center-btn{
+  text-align:center;
+  margin-top:45px;
+}
+
+
+/* ---------------- CUSTOM TRIP ---------------- */
+
+.custom-trip{
+  background:
+  linear-gradient(
+    135deg,
+    #071A2B,
+    #10243b
+  );
+}
+
+
+.custom-trip-form{
+  max-width:900px;
+  margin:40px auto 0;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:15px;
+
+  padding:30px;
+
+  background:
+  rgba(11,25,43,.8);
+
+  border:
+  1px solid
+  rgba(212,175,55,.25);
+
+  backdrop-filter:
+  blur(15px);
+}
+
+
+.custom-trip-form input,
+.custom-trip-form select{
+  width:100%;
+
+  padding:16px;
+
+  background:
+  #101e31;
+
+  border:
+  1px solid
+  rgba(232,199,106,.2);
+
+  color:white;
+
+  outline:none;
+}
+
+
+.custom-trip-form a{
+  grid-column:
+  1 / -1;
+
+  text-align:center;
+}
+
+
+/* ---------------- PACKAGE CARDS ---------------- */
+
+.section-light .card a{
+  display:inline-block;
+
+  margin-top:15px;
+
+  color:
+  #8a6810;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+}
+
+
+/* ---------------- SMOOTH REVEAL ---------------- */
+
+.destination-card,
+.card,
+.feature{
+  will-change:
+  transform;
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:900px){
+
+  .premium-hero{
+    min-height:760px;
+  }
+
+
+  .floating-track img{
+    width:170px;
+    height:120px;
+  }
+
+
+  .premium-stats{
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+
+
+  .hero-buttons{
+    flex-wrap:wrap;
+  }
+
+
+}
+
+
+@media(max-width:600px){
+
+  .premium-hero{
+    min-height:700px;
+  }
+
+
+  .premium-hero-content{
+    padding:100px 15px;
+  }
+
+
+  .premium-hero-content h1{
+    font-size:54px;
+  }
+
+
+  .premium-hero-content p{
+    font-size:15px;
+  }
+
+
+  .floating-row-left{
+    top:8%;
+  }
+
+
+  .floating-row-right{
+    bottom:8%;
+  }
+
+
+  .floating-track{
+    gap:12px;
+  }
+
+
+  .floating-track img{
+    width:130px;
+    height:95px;
+    border-radius:8px;
+  }
+
+
+  .premium-stats{
+    grid-template-columns:
+    1fr 1fr;
+  }
+
+
+  .premium-stats .stat:last-child{
+    grid-column:
+    1 / -1;
+  }
+
+
+  .custom-trip-form{
+    grid-template-columns:
+    1fr;
+
+    padding:20px;
+  }
+
+
+  .destination-overlay h3{
+    font-size:34px;
+  }
+
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+
+  .hero-buttons .btn{
+    width:100%;
+  }
+
+}
