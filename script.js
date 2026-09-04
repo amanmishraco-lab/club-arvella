@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
    SUPABASE CONNECTION
 ===================================== */
 
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
+const SUPABASE_URL = "https://supabase.com/dashboard/project/vnuvidqgfdufhkvivfki";
 
 const SUPABASE_ANON_KEY =
-  "YOUR_SUPABASE_ANON_KEY";
+  "sb_publishable_ZE4do_lwZXvbsvtsD9bpfA_U1_LvuSL";
 
 
 const supabaseClient =
