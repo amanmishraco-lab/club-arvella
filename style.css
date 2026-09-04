@@ -781,3 +781,99 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
 
   color:var(--muted);
 }
+/* ================================
+   PREMIUM HERO SIZE FIX
+================================ */
+
+.premium-hero {
+  min-height: 760px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating images should remain visible and clear */
+.floating-row {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  opacity: 1;
+  filter: none !important;
+}
+
+.floating-row-left {
+  top: 110px;
+}
+
+.floating-row-right {
+  bottom: 70px;
+}
+
+.floating-track img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Keep hero text above floating images */
+.premium-hero-content {
+  position: relative;
+  z-index: 5;
+  padding: 230px 0 180px;
+  text-align: center;
+}
+
+/* Smaller premium heading */
+.premium-hero-content h1 {
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: 0.95;
+  max-width: 950px;
+  margin: 20px auto;
+}
+
+.premium-hero-content h1 span {
+  display: block;
+}
+
+/* Hero description */
+.premium-hero-content p {
+  max-width: 650px;
+  margin: 25px auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Overlay should not hide images too much */
+.hero-overlay {
+  background: rgba(7, 26, 43, 0.45) !important;
+  z-index: 2;
+}
+
+/* Content stays above overlay */
+.premium-hero-content {
+  z-index: 3;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .premium-hero {
+    min-height: 650px;
+  }
+
+  .premium-hero-content {
+    padding: 200px 20px 140px;
+  }
+
+  .premium-hero-content h1 {
+    font-size: clamp(42px, 11vw, 64px);
+  }
+
+  .floating-track img {
+    width: 160px;
+    height: 105px;
+  }
+}
