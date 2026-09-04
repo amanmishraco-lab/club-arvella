@@ -1,1164 +1,245 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+document.addEventListener("DOMContentLoaded", () => {
 
-<title>Club Arvella | Travel Beyond Ordinary</title>
+  /* ==========================================
+     LOAD MORE DESTINATIONS
+  ========================================== */
 
-<meta name="description"
-content="Club Arvella offers premium holidays, luxury travel experiences, Indian tourist destinations and personalized holiday planning.">
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  const moreDestinations = document.getElementById("moreDestinations");
 
-<link rel="stylesheet" href="style.css">
-</head>
+  if (loadMoreBtn && moreDestinations) {
 
-<body>
+    loadMoreBtn.addEventListener("click", () => {
 
-<!-- ================= NAVBAR ================= -->
+      const isOpen = moreDestinations.classList.contains("show");
 
-<header class="nav">
-<div class="container nav-inner">
+      if (isOpen) {
 
-<a class="brand" href="index.html">
-<img src="assets/club-arvella-logo.png" alt="Club Arvella logo">
-<span class="brand-name">CLUB ARVELLA</span>
-</a>
+        moreDestinations.classList.remove("show");
 
-<button class="menu-btn">MENU</button>
+        loadMoreBtn.textContent = "EXPLORE ALL 30 DESTINATIONS";
 
-<nav class="nav-links">
-<a href="index.html">HOME</a>
-<a href="#destinations">DESTINATIONS</a>
-<a href="packages.html">PACKAGES</a>
-<a href="india.html">EXPLORE INDIA</a>
-<a href="world.html">EXPLORE WORLD</a>
-<a href="about.html">ABOUT</a>
-<a href="contact.html">CONTACT</a>
-</nav>
+        setTimeout(() => {
 
-<a class="btn btn-gold" href="#plan-trip">
-PLAN YOUR TRIP
-</a>
+          const destinationSection =
+            document.getElementById("destinations");
 
-</div>
-</header>
+          if (destinationSection) {
 
+            destinationSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
 
-<!-- ================= PREMIUM HERO ================= -->
+          }
 
-<section class="premium-hero">
+        }, 100);
 
-<div class="hero-overlay"></div>
+      } else {
 
+        moreDestinations.classList.add("show");
 
-<!-- ROW 1 : MOVES LEFT -->
+        loadMoreBtn.textContent = "SHOW LESS DESTINATIONS";
 
-<div class="floating-row floating-row-left">
+      }
 
-<div class="floating-track">
+    });
 
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Travel">
+  }
 
-<img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=800&q=80" alt="Kashmir">
 
-<img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80" alt="Goa">
+  /* ==========================================
+     IMAGE FALLBACK SYSTEM
+     
+     Agar koi Unsplash image load nahi hoti,
+     automatically backup travel image show hogi.
+  ========================================== */
 
-<img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=800&q=80" alt="Mountains">
+  const fallbackImage =
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85";
 
-<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80" alt="Kerala">
 
-<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80" alt="Rajasthan">
+  const allImages = document.querySelectorAll("img");
 
-<img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="India">
+  allImages.forEach((image) => {
 
-<img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80" alt="Travel Destination">
+    image.addEventListener("error", function () {
 
-<img src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=800&q=80" alt="Beach">
+      if (this.dataset.fallbackApplied === "true") return;
 
-<img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80" alt="Luxury Travel">
+      this.dataset.fallbackApplied = "true";
 
+      this.src = fallbackImage;
 
-<!-- Duplicate images for infinite animation -->
-
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Travel">
-
-<img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=800&q=80" alt="Kashmir">
-
-<img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80" alt="Goa">
-
-<img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=800&q=80" alt="Mountains">
-
-<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80" alt="Kerala">
-
-<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80" alt="Rajasthan">
-
-<img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" alt="India">
-
-<img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80" alt="Travel Destination">
-
-<img src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=800&q=80" alt="Beach">
-
-<img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80" alt="Luxury Travel">
-
-</div>
-
-</div>
-
-
-
-<!-- ROW 2 : MOVES RIGHT -->
-
-<div class="floating-row floating-row-right">
-
-<div class="floating-track">
-
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali">
-
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Beach">
-
-<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai">
-
-<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris">
-
-<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Nature">
-
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Luxury Hotel">
-
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Adventure">
-
-<img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80" alt="Mountains">
-
-<img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=800&q=80" alt="Travel">
-
-<img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80" alt="Thailand">
-
-
-<!-- Duplicate -->
-
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali">
-
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Beach">
-
-<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai">
-
-<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris">
-
-<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Nature">
-
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Luxury Hotel">
-
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Adventure">
-
-<img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80" alt="Mountains">
-
-<img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=800&q=80" alt="Travel">
-
-<img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80" alt="Thailand">
-
-</div>
-
-</div>
-
-
-
-<!-- HERO CONTENT -->
-
-<div class="container premium-hero-content">
-
-<div class="eyebrow">
-CLUB ARVELLA • LUXURY TRAVEL EXPERIENCES
-</div>
-
-<h1>
-DISCOVER INDIA.<br>
-<span>TRAVEL BEYOND ORDINARY.</span>
-</h1>
-
-<p>
-Extraordinary destinations, unforgettable experiences and
-personalized holidays designed for travellers who expect more.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#destinations" class="btn btn-gold">
-EXPLORE DESTINATIONS
-</a>
-
-<a href="#plan-trip" class="btn btn-outline">
-PLAN MY HOLIDAY
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= STATS ================= -->
-
-<section class="section stats-section">
-
-<div class="container">
-
-<div class="stats premium-stats">
-
-<div class="stat">
-<b class="counter" data-target="10000">10K+</b>
-<span>Active Members</span>
-</div>
-
-<div class="stat">
-<b class="counter" data-target="500">500+</b>
-<span>Holiday Experiences</span>
-</div>
-
-<div class="stat">
-<b>30+</b>
-<span>Indian Destinations</span>
-</div>
-
-<div class="stat">
-<b>1000+</b>
-<span>Stay Options</span>
-</div>
-
-<div class="stat">
-<b>4.9/5</b>
-<span>Travel Experience</span>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= EXPLORE INDIA ================= -->
-
-<section class="section section-light" id="destinations">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow" style="color:#8a6810">
-EXPLORE INCREDIBLE INDIA
-</div>
-
-<h2>
-Where Will Your Indian Journey Begin?
-</h2>
-
-<p>
-Discover India's most beautiful destinations, unforgettable experiences
-and extraordinary places waiting to be explored.
-</p>
-
-</div>
-
-
-
-<!-- FIRST 9 DESTINATIONS -->
-
-<div class="grid destination-grid">
-
-<!-- 1 -->
-
-<a href="india.html?place=kashmir" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=80" alt="Kashmir">
-
-<div class="destination-overlay">
-<span>01 • INDIA</span>
-<h3>Kashmir</h3>
-<p>Paradise on Earth</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 2 -->
-
-<a href="india.html?place=goa" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80" alt="Goa">
-
-<div class="destination-overlay">
-<span>02 • INDIA</span>
-<h3>Goa</h3>
-<p>Beaches, Culture & Nightlife</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 3 -->
-
-<a href="india.html?place=manali" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Manali">
-
-<div class="destination-overlay">
-<span>03 • INDIA</span>
-<h3>Manali</h3>
-<p>Mountains & Adventure</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 4 -->
-
-<a href="india.html?place=rajasthan" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80" alt="Rajasthan">
-
-<div class="destination-overlay">
-<span>04 • INDIA</span>
-<h3>Rajasthan</h3>
-<p>Royal Heritage & Culture</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 5 -->
-
-<a href="india.html?place=kerala" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=900&q=80" alt="Kerala">
-
-<div class="destination-overlay">
-<span>05 • INDIA</span>
-<h3>Kerala</h3>
-<p>God's Own Country</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 6 -->
-
-<a href="india.html?place=ladakh" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Ladakh">
-
-<div class="destination-overlay">
-<span>06 • INDIA</span>
-<h3>Ladakh</h3>
-<p>The Land of High Passes</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 7 -->
-
-<a href="india.html?place=andaman" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Andaman">
-
-<div class="destination-overlay">
-<span>07 • INDIA</span>
-<h3>Andaman</h3>
-<p>Tropical Island Paradise</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 8 -->
-
-<a href="india.html?place=mumbai" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=80" alt="Mumbai">
-
-<div class="destination-overlay">
-<span>08 • INDIA</span>
-<h3>Mumbai</h3>
-<p>The City of Dreams</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-
-<!-- 9 -->
-
-<a href="india.html?place=agra" class="destination-card">
-
-<img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Agra">
-
-<div class="destination-overlay">
-<span>09 • INDIA</span>
-<h3>Agra</h3>
-<p>Timeless Mughal Heritage</p>
-<b>EXPLORE →</b>
-</div>
-
-</a>
-
-</div>
-
-
-
-<!-- HIDDEN DESTINATIONS -->
-
-<div class="grid destination-grid more-destinations" id="moreDestinations">
-
-  <!-- 10 Jaipur -->
-  <a href="india.html?place=jaipur" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80" alt="Jaipur">
-    <div class="destination-overlay">
-      <span>10 • INDIA</span>
-      <h3>Jaipur</h3>
-      <p>The Pink City</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 11 Udaipur -->
-  <a href="india.html?place=udaipur" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=900&q=80" alt="Udaipur">
-    <div class="destination-overlay">
-      <span>11 • INDIA</span>
-      <h3>Udaipur</h3>
-      <p>City of Lakes</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 12 Delhi -->
-  <a href="india.html?place=delhi" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80" alt="Delhi">
-    <div class="destination-overlay">
-      <span>12 • INDIA</span>
-      <h3>Delhi</h3>
-      <p>India's Historic Capital</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 13 Varanasi -->
-  <a href="india.html?place=varanasi" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=900&q=80" alt="Varanasi">
-    <div class="destination-overlay">
-      <span>13 • INDIA</span>
-      <h3>Varanasi</h3>
-      <p>Spiritual Heart of India</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 14 Rishikesh -->
-  <a href="india.html?place=rishikesh" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Rishikesh">
-    <div class="destination-overlay">
-      <span>14 • INDIA</span>
-      <h3>Rishikesh</h3>
-      <p>Yoga & Adventure</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 15 Shimla -->
-  <a href="india.html?place=shimla" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Shimla">
-    <div class="destination-overlay">
-      <span>15 • INDIA</span>
-      <h3>Shimla</h3>
-      <p>Queen of Hills</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 16 Darjeeling -->
-  <a href="india.html?place=darjeeling" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80" alt="Darjeeling">
-    <div class="destination-overlay">
-      <span>16 • INDIA</span>
-      <h3>Darjeeling</h3>
-      <p>Himalayan Beauty</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 17 Ooty -->
-  <a href="india.html?place=ooty" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Ooty">
-    <div class="destination-overlay">
-      <span>17 • INDIA</span>
-      <h3>Ooty</h3>
-      <p>Beautiful Hill Escape</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 18 Coorg -->
-  <a href="india.html?place=coorg" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Coorg">
-    <div class="destination-overlay">
-      <span>18 • INDIA</span>
-      <h3>Coorg</h3>
-      <p>Scotland of India</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 19 Mysore -->
-  <a href="india.html?place=mysore" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=900&q=80" alt="Mysore">
-    <div class="destination-overlay">
-      <span>19 • INDIA</span>
-      <h3>Mysore</h3>
-      <p>Royal Heritage</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 20 Amritsar -->
-  <a href="india.html?place=amritsar" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=80" alt="Amritsar">
-    <div class="destination-overlay">
-      <span>20 • INDIA</span>
-      <h3>Amritsar</h3>
-      <p>Golden Temple City</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 21 Nainital -->
-  <a href="india.html?place=nainital" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Nainital">
-    <div class="destination-overlay">
-      <span>21 • INDIA</span>
-      <h3>Nainital</h3>
-      <p>Beautiful Lake Town</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 22 Mussoorie -->
-  <a href="india.html?place=mussoorie" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Mussoorie">
-    <div class="destination-overlay">
-      <span>22 • INDIA</span>
-      <h3>Mussoorie</h3>
-      <p>Mountain Escape</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 23 Meghalaya -->
-  <a href="india.html?place=meghalaya" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80" alt="Meghalaya">
-    <div class="destination-overlay">
-      <span>23 • INDIA</span>
-      <h3>Meghalaya</h3>
-      <p>Abode of Clouds</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 24 Sikkim -->
-  <a href="india.html?place=sikkim" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80" alt="Sikkim">
-    <div class="destination-overlay">
-      <span>24 • INDIA</span>
-      <h3>Sikkim</h3>
-      <p>Himalayan Paradise</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 25 Pondicherry -->
-  <a href="india.html?place=pondicherry" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Pondicherry">
-    <div class="destination-overlay">
-      <span>25 • INDIA</span>
-      <h3>Pondicherry</h3>
-      <p>French Coastal Charm</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 26 Mahabaleshwar -->
-  <a href="india.html?place=mahabaleshwar" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80" alt="Mahabaleshwar">
-    <div class="destination-overlay">
-      <span>26 • INDIA</span>
-      <h3>Mahabaleshwar</h3>
-      <p>Western Ghats Escape</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 27 Kodaikanal -->
-  <a href="india.html?place=kodaikanal" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Kodaikanal">
-    <div class="destination-overlay">
-      <span>27 • INDIA</span>
-      <h3>Kodaikanal</h3>
-      <p>Princess of Hill Stations</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 28 Hampi -->
-  <a href="india.html?place=hampi" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Hampi">
-    <div class="destination-overlay">
-      <span>28 • INDIA</span>
-      <h3>Hampi</h3>
-      <p>Ancient Indian Heritage</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 29 Hyderabad -->
-  <a href="india.html?place=hyderabad" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80" alt="Hyderabad">
-    <div class="destination-overlay">
-      <span>29 • INDIA</span>
-      <h3>Hyderabad</h3>
-      <p>Heritage & Modern India</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-
-  <!-- 30 Bengaluru -->
-  <a href="india.html?place=bengaluru" class="destination-card">
-    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Bengaluru">
-    <div class="destination-overlay">
-      <span>30 • INDIA</span>
-      <h3>Bengaluru</h3>
-      <p>The Garden City</p>
-      <b>EXPLORE →</b>
-    </div>
-  </a>
-
-</div>
-</div>
-
-
-<div class="center-btn">
-
-<button class="btn btn-gold" id="loadMoreBtn">
-EXPLORE ALL 30 DESTINATIONS
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= JOURNEY TYPES ================= -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-CHOOSE YOUR JOURNEY
-</div>
-
-<h2>
-Experiences Crafted Around You.
-</h2>
-
-</div>
-
-
-<div class="grid categories">
-
-<div class="card">
-
-<div class="icon">♛</div>
-
-<h3>Luxury Holidays</h3>
-
-<p>
-Exceptional stays and refined experiences.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">♡</div>
-
-<h3>Honeymoons</h3>
-
-<p>
-Romantic journeys made unforgettable.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">◉</div>
-
-<h3>Family Vacations</h3>
-
-<p>
-Beautiful memories for every generation.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">✦</div>
-
-<h3>Adventure</h3>
-
-<p>
-Explore beyond the expected.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= PACKAGES ================= -->
-
-<section class="section section-light">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow" style="color:#8a6810">
-FEATURED HOLIDAY EXPERIENCES
-</div>
-
-<h2>
-Journeys Designed For You.
-</h2>
-
-<p>
-From romantic escapes to family adventures, discover experiences
-designed around unforgettable memories.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-<div class="card">
-
-<h3>❤️ Honeymoon Escapes</h3>
-
-<p>
-Kashmir, Kerala, Goa and Andaman experiences for unforgettable romance.
-</p>
-
-<a href="packages.html">
-Explore Packages →
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>👨‍👩‍👧 Family Holidays</h3>
-
-<p>
-Comfortable and memorable journeys designed for the entire family.
-</p>
-
-<a href="packages.html">
-Explore Packages →
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>🏔 Adventure Journeys</h3>
-
-<p>
-Ladakh, Manali, Rishikesh and Meghalaya adventure experiences.
-</p>
-
-<a href="packages.html">
-Explore Packages →
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= PLAN TRIP ================= -->
-
-<section class="section custom-trip" id="plan-trip">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-YOUR JOURNEY • YOUR WAY
-</div>
-
-<h2>
-Build Your Perfect Holiday.
-</h2>
-
-<p>
-Tell us how you want to travel and Club Arvella will help
-create your perfect journey.
-</p>
-
-</div>
-
-
-<form class="custom-trip-form">
-
-<input type="text" placeholder="Where do you want to go?">
-
-<select>
-
-<option>Who are you travelling with?</option>
-
-<option>Solo</option>
-
-<option>Couple</option>
-
-<option>Family</option>
-
-<option>Friends</option>
-
-</select>
-
-
-<select>
-
-<option>Choose Travel Style</option>
-
-<option>Budget</option>
-
-<option>Comfort</option>
-
-<option>Premium</option>
-
-<option>Luxury</option>
-
-</select>
-
-
-<select>
-
-<option>Choose Duration</option>
-
-<option>3 Days</option>
-
-<option>5 Days</option>
-
-<option>7 Days</option>
-
-<option>10 Days</option>
-
-<option>Custom</option>
-
-</select>
-
-
-<a href="contact.html" class="btn btn-gold">
-
-CREATE MY PERFECT TRIP
-
-</a>
-
-</form>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= WHY CLUB ARVELLA ================= -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-WHY CLUB ARVELLA
-</div>
-
-<h2>
-Comfort Beyond Compare.
-</h2>
-
-</div>
-
-
-<div class="features">
-
-<div class="feature">
-
-<div class="icon">♛</div>
-
-<h3>Luxury Experiences</h3>
-
-<p>
-Designed with comfort and elegance in mind.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">◎</div>
-
-<h3>Handpicked Destinations</h3>
-
-<p>
-Places chosen for unforgettable experiences.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">⌂</div>
-
-<h3>Smart Travel Planning</h3>
-
-<p>
-Routes, stays and experiences in one journey.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">✦</div>
-
-<h3>Personalised Trips</h3>
-
-<p>
-Travel plans shaped around your preferences.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= FINAL CTA ================= -->
-
-<section class="section section-light">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow" style="color:#8a6810">
-CLUB ARVELLA
-</div>
-
-<h2>
-Your Next Story Starts Here.
-</h2>
-
-<p>
-Let Club Arvella help you discover your next unforgettable journey.
-</p>
-
-<a class="btn btn-gold" href="contact.html">
-PLAN MY HOLIDAY
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= WHATSAPP ================= -->
-
-<a class="whatsapp"
-href="https://wa.me/919999999999?text=Hello%20Club%20Arvella%2C%20I%20am%20interested%20in%20planning%20a%20holiday."
-aria-label="WhatsApp">
-
-◉
-
-</a>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-<div class="container footer-grid">
-
-<div>
-
-<div class="brand">
-
-<img src="assets/club-arvella-logo.png"
-alt="Club Arvella">
-
-<span class="brand-name">
-CLUB ARVELLA
-</span>
-
-</div>
-
-<p>
-Travel Beyond Ordinary.
-Luxury holidays, unforgettable destinations and personalized journeys.
-</p>
-
-</div>
-
-
-<div>
-
-<h3>Explore</h3>
-
-<ul>
-
-<li><a href="india.html">Incredible India</a></li>
-
-<li><a href="world.html">Explore World</a></li>
-
-<li><a href="packages.html">Holiday Packages</a></li>
-
-<li><a href="about.html">About Club Arvella</a></li>
-
-</ul>
-
-</div>
-
-
-<div>
-
-<h3>Contact</h3>
-
-<p>Phone: 9998887776</p>
-
-<p>Email: inquiry@clubarvella.com</p>
-
-<p>© 2026 Club Arvella</p>
-
-</div>
-
-</div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
-/* ===============================
-   LOAD ALL 30 DESTINATIONS
-================================ */
-
-const loadMoreBtn = document.getElementById("loadMoreBtn");
-const moreDestinations = document.getElementById("moreDestinations");
-
-if (loadMoreBtn && moreDestinations) {
-
-  loadMoreBtn.addEventListener("click", () => {
-
-    moreDestinations.classList.toggle("show");
-
-    if (moreDestinations.classList.contains("show")) {
-
-      loadMoreBtn.textContent = "SHOW LESS DESTINATIONS";
-
-      setTimeout(() => {
-        moreDestinations.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }, 100);
-
-    } else {
-
-      loadMoreBtn.textContent = "EXPLORE ALL 30 DESTINATIONS";
-
-      document.getElementById("destinations").scrollIntoView({
-        behavior: "smooth"
-      });
-
-    }
+    });
 
   });
 
-}
+
+  /* ==========================================
+     PREMIUM SMOOTH NAVBAR
+  ========================================== */
+
+  const nav = document.querySelector(".nav");
+
+  if (nav) {
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 40) {
+
+        nav.classList.add("nav-scrolled");
+
+      } else {
+
+        nav.classList.remove("nav-scrolled");
+
+      }
+
+    });
+
+  }
+
+
+  /* ==========================================
+     SMOOTH SCROLL FOR INTERNAL LINKS
+  ========================================== */
+
+  const internalLinks =
+    document.querySelectorAll('a[href^="#"]');
+
+  internalLinks.forEach((link) => {
+
+    link.addEventListener("click", function (event) {
+
+      const targetId =
+        this.getAttribute("href");
+
+      if (!targetId || targetId === "#") return;
+
+      const target =
+        document.querySelector(targetId);
+
+      if (target) {
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+
+    });
+
+  });
+
+
+  /* ==========================================
+     DESTINATION CARD IMAGE LOADING EFFECT
+  ========================================== */
+
+  const destinationImages =
+    document.querySelectorAll(".destination-card img");
+
+  destinationImages.forEach((image) => {
+
+    image.addEventListener("load", () => {
+
+      image.classList.add("image-loaded");
+
+    });
+
+  });
+
+
+  /* ==========================================
+     SIMPLE COUNTER ANIMATION
+  ========================================== */
+
+  const counters =
+    document.querySelectorAll(".counter");
+
+  const animateCounter = (counter) => {
+
+    const target =
+      Number(counter.dataset.target);
+
+    if (!target) return;
+
+    let current = 0;
+
+    const increment =
+      Math.ceil(target / 100);
+
+    const timer =
+      setInterval(() => {
+
+        current += increment;
+
+        if (current >= target) {
+
+          current = target;
+
+          clearInterval(timer);
+
+        }
+
+        if (target >= 1000) {
+
+          counter.textContent =
+            Math.floor(current / 1000) + "K+";
+
+        } else {
+
+          counter.textContent =
+            current + "+";
+
+        }
+
+      }, 20);
+
+  };
+
+
+  if ("IntersectionObserver" in window) {
+
+    const observer =
+      new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            animateCounter(entry.target);
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      }, {
+        threshold: 0.5
+      });
+
+
+    counters.forEach((counter) => {
+
+      observer.observe(counter);
+
+    });
+
+  } else {
+
+    counters.forEach((counter) => {
+
+      animateCounter(counter);
+
+    });
+
+  }
+
+
+});
