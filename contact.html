@@ -7,7 +7,75 @@
 </nav>
 <a class="btn btn-gold" href="contact.html">PLAN YOUR TRIP</a>
 </div></header>
-<section class="page-hero"><div class="container"><div class="eyebrow">PLAN YOUR JOURNEY</div><h1>LET'S CREATE<br>YOUR ESCAPE.</h1></div></section><section class="section"><div class="container"><div class="section-head"><h2>Request Your Custom Holiday</h2><p>Share your travel plans and our team can help create your ideal journey.</p></div><form class="form demo-form"><input placeholder="Full Name" required><input type="tel" placeholder="Phone Number" required><input type="email" placeholder="Email Address" required><input placeholder="Destination"><input type="date"><input placeholder="Number of Travelers"><input placeholder="Budget Range"><textarea placeholder="Tell us about your dream holiday"></textarea><button class="btn btn-gold full">REQUEST A CUSTOM HOLIDAY</button><p class="form-message hidden full"></p></form><div class="notice">Important: this Version 1 form currently displays a success message only. In Version 2, we can connect it to Supabase so enquiries are saved and delivered to you.</div></div></section>
+<section class="page-hero"><div class="container"><div class="eyebrow">PLAN YOUR JOURNEY</div><h1>LET'S CREATE<br>YOUR ESCAPE.</h1></div></section><section class="section"><div class="container"><div class="section-head"><h2>Request Your Custom Holiday</h2><p>Share your travel plans and our team can help create your ideal journey.</p></div><form class="form demo-form" id="enquiryForm">
+
+  <input
+    type="text"
+    id="full_name"
+    name="full_name"
+    placeholder="Full Name"
+    required
+  >
+
+  <input
+    type="tel"
+    id="phone_number"
+    name="phone_number"
+    placeholder="Phone Number"
+    required
+  >
+
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Email Address"
+    required
+  >
+
+  <input
+    type="text"
+    id="destination"
+    name="destination"
+    placeholder="Destination"
+  >
+
+  <input
+    type="date"
+    id="travel_date"
+    name="travel_date"
+  >
+
+  <input
+    type="text"
+    id="travelers"
+    name="travelers"
+    placeholder="Number of Travelers"
+  >
+
+  <input
+    type="text"
+    id="budget_range"
+    name="budget_range"
+    placeholder="Budget Range"
+  >
+
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Tell us about your dream holiday"
+  ></textarea>
+
+  <button
+    type="submit"
+    class="btn btn-gold full"
+  >
+    REQUEST A CUSTOM HOLIDAY
+  </button>
+
+  <p class="form-message hidden full"></p>
+
+</form><input placeholder="Full Name" required><input type="tel" placeholder="Phone Number" required><input type="email" placeholder="Email Address" required><input placeholder="Destination"><input type="date"><input placeholder="Number of Travelers"><input placeholder="Budget Range"><textarea placeholder="Tell us about your dream holiday"></textarea><button class="btn btn-gold full">REQUEST A CUSTOM HOLIDAY</button><p class="form-message hidden full"></p></form><div class="notice">Important: this Version 1 form currently displays a success message only. In Version 2, we can connect it to Supabase so enquiries are saved and delivered to you.</div></div></section>
 <a class="whatsapp" href="https://wa.me/919999999999?text=Hello%20Club%20Arvella%2C%20I%20am%20interested%20in%20planning%20a%20holiday." aria-label="WhatsApp">◉</a>
 <footer class="footer"><div class="container footer-grid">
 <div><div class="brand"><img src="aseets/club-arvella-logo.png" alt="Club Arvella"><span class="brand-name">CLUB ARVELLA</span></div><p>Luxury holidays, timeless memories and handpicked destinations designed around extraordinary experiences.</p></div>
