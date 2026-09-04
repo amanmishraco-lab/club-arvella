@@ -734,3 +734,94 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
   }
 
 }
+/* ===============================
+   HOME DESTINATIONS LOAD MORE
+================================ */
+
+.more-destinations{
+  display:none;
+  margin-top:20px;
+  animation:destinationReveal .8s ease;
+}
+
+.more-destinations.show{
+  display:grid;
+}
+
+.center-btn{
+  text-align:center;
+  margin-top:45px;
+}
+
+#loadMoreBtn{
+  cursor:pointer;
+  border:none;
+}
+
+@keyframes destinationReveal{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* Number style for destinations 10–30 */
+
+.more-destinations .destination-card{
+  min-height:220px;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  position:relative;
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0B1628,
+    #142944
+  );
+
+  transition:.35s;
+}
+
+.more-destinations .destination-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+}
+
+.destination-number{
+  position:absolute;
+
+  top:15px;
+  right:20px;
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:70px;
+
+  color:rgba(212,175,55,.12);
+
+  font-weight:bold;
+}
+
+.more-destinations h3{
+  position:relative;
+
+  font-size:34px;
+
+  color:var(--champagne);
+}
+
+.more-destinations p{
+  position:relative;
+
+  color:var(--muted);
+}
