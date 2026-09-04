@@ -1173,3 +1173,55 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
     font-size: 44px !important;
   }
 }
+/* ===== HERO TEXT & FLOATING IMAGES FIX ===== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 780px;
+}
+
+/* Main content always above floating images */
+.hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+/* Heading */
+.hero h1 {
+    position: relative;
+    z-index: 6;
+    font-size: clamp(52px, 5.5vw, 82px);
+    line-height: 0.95;
+    margin-bottom: 28px;
+}
+
+/* Description */
+.hero-content p {
+    position: relative;
+    z-index: 6;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.hero-actions {
+    position: relative;
+    z-index: 6;
+}
+
+/* Floating image container */
+.hero-floating,
+.floating-images,
+.floating-gallery {
+    position: relative;
+    z-index: 2;
+    margin-top: 45px;
+}
+
+/* Individual floating images */
+.hero-floating img,
+.floating-images img,
+.floating-gallery img {
+    position: relative;
+    z-index: 2;
+}
