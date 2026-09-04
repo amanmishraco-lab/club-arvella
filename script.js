@@ -82,3 +82,285 @@ document.querySelectorAll(".demo-form").forEach(form => {
     }
   });
 });
+/* =====================================================
+   CLUB ARVELLA - PREMIUM WEBSITE FUNCTIONALITY
+===================================================== */
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuButton = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuButton && navLinks) {
+
+  menuButton.addEventListener("click", () => {
+
+    navLinks.classList.toggle("open");
+
+    if (navLinks.classList.contains("open")) {
+      menuButton.textContent = "CLOSE";
+    } else {
+      menuButton.textContent = "MENU";
+    }
+
+  });
+
+}
+
+
+/* =====================================================
+   LOAD MORE DESTINATIONS
+===================================================== */
+
+const loadMoreButton = document.getElementById("loadMoreDestinations");
+const moreDestinations = document.getElementById("moreDestinations");
+
+if (loadMoreButton && moreDestinations) {
+
+  loadMoreButton.addEventListener("click", () => {
+
+    moreDestinations.classList.toggle("show");
+
+    if (moreDestinations.classList.contains("show")) {
+
+      loadMoreButton.textContent = "SHOW LESS";
+
+      moreDestinations.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    } else {
+
+      loadMoreButton.textContent = "LOAD MORE DESTINATIONS";
+
+    }
+
+  });
+
+}
+
+
+/* =====================================================
+   ANIMATED COUNTERS
+===================================================== */
+
+function animateCounter(element) {
+
+  const targetText = element.dataset.target;
+
+  if (!targetText) return;
+
+  const target = parseInt(targetText.replace(/\D/g, ""));
+
+  if (!target) return;
+
+  const suffix = targetText.replace(/[0-9]/g, "");
+
+  let current = 0;
+
+  const increment = Math.max(
+    1,
+    Math.ceil(target / 100)
+  );
+
+  const interval = setInterval(() => {
+
+    current += increment;
+
+    if (current >= target) {
+
+      current = target;
+
+      clearInterval(interval);
+
+    }
+
+    element.textContent = current.toLocaleString() + suffix;
+
+  }, 20);
+
+}
+
+
+const counterObserver = new IntersectionObserver(
+
+  (entries, observer) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        const counters =
+          entry.target.querySelectorAll("[data-target]");
+
+        counters.forEach(counter => {
+
+          if (!counter.dataset.animated) {
+
+            counter.dataset.animated = "true";
+
+            animateCounter(counter);
+
+          }
+
+        });
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+
+  {
+    threshold: 0.3
+  }
+
+);
+
+
+document.querySelectorAll(".stats-section").forEach(section => {
+
+  counterObserver.observe(section);
+
+});
+
+
+/* =====================================================
+   SMOOTH CARD REVEAL ANIMATION
+===================================================== */
+
+const revealElements = document.querySelectorAll(
+  ".destination-card, .card, .feature"
+);
+
+
+const revealObserver = new IntersectionObserver(
+
+  (entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.style.opacity = "1";
+
+        entry.target.style.transform = "translateY(0)";
+
+      }
+
+    });
+
+  },
+
+  {
+    threshold: 0.12
+  }
+
+);
+
+
+revealElements.forEach(element => {
+
+  element.style.opacity = "0";
+
+  element.style.transform = "translateY(35px)";
+
+  element.style.transition =
+    "opacity .7s ease, transform .7s ease";
+
+  revealObserver.observe(element);
+
+});
+
+
+/* =====================================================
+   HERO SEARCH
+===================================================== */
+
+const heroSearchForm =
+  document.querySelector(".premium-search-form");
+
+
+if (heroSearchForm) {
+
+  heroSearchForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const destination =
+      this.querySelector("input").value.trim();
+
+    if (destination) {
+
+      window.location.href =
+        "india.html?search=" +
+        encodeURIComponent(destination);
+
+    } else {
+
+      window.location.href = "india.html";
+
+    }
+
+  });
+
+}
+
+
+/* =====================================================
+   INDIA SEARCH FROM URL
+===================================================== */
+
+const urlParams = new URLSearchParams(
+  window.location.search
+);
+
+const searchQuery =
+  urlParams.get("search");
+
+
+if (searchQuery) {
+
+  const indiaSearch =
+    document.getElementById("indiaSearch");
+
+  if (indiaSearch) {
+
+    indiaSearch.value = searchQuery;
+
+    indiaSearch.dispatchEvent(
+      new Event("input")
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   FLOATING IMAGE PAUSE ON HOVER
+===================================================== */
+
+document
+  .querySelectorAll(".floating-track")
+  .forEach(track => {
+
+    track.addEventListener("mouseenter", () => {
+
+      track.style.animationPlayState = "paused";
+
+    });
+
+    track.addEventListener("mouseleave", () => {
+
+      track.style.animationPlayState = "running";
+
+    });
+
+  });
