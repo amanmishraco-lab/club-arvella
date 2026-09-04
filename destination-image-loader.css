@@ -1,0 +1,117 @@
+/* =========================================
+   FLOATING IMAGE LOADER
+========================================= */
+
+.floating-row {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-track {
+    display: flex;
+    width: max-content;
+    gap: 14px;
+    will-change: transform;
+}
+
+.floating-track img {
+    display: block;
+    width: 240px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    background: #071a2b;
+
+    opacity: 0.92;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.floating-track img.image-loaded {
+    opacity: 1;
+}
+
+.floating-row-left .floating-track {
+    animation: floatLeft 75s linear infinite;
+}
+
+.floating-row-right .floating-track {
+    animation: floatRight 85s linear infinite;
+}
+
+@keyframes floatLeft {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+@keyframes floatRight {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE OPTIMIZATION
+========================================= */
+
+@media (max-width: 768px) {
+
+    .floating-track {
+        gap: 8px;
+    }
+
+    .floating-track img {
+        width: 150px;
+        height: 95px;
+
+        border-radius: 10px;
+    }
+
+    .floating-row-left .floating-track {
+        animation-duration: 55s;
+    }
+
+    .floating-row-right .floating-track {
+        animation-duration: 65s;
+    }
+
+}
+
+
+/* =========================================
+   PAUSE ANIMATION WHEN USER REDUCES MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .floating-track {
+        animation: none !important;
+    }
+
+}
