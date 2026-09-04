@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* ===============================
+     LOAD MORE DESTINATIONS
+  =============================== */
+
   const loadMoreBtn = document.getElementById("loadMoreBtn");
   const moreDestinations = document.getElementById("moreDestinations");
 
@@ -20,31 +24,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  const fallbackImage =
-    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85";
-
-  document.querySelectorAll("img").forEach((image) => {
-
-    image.addEventListener("error", function () {
-
-      if (this.dataset.fallbackApplied === "true") return;
-
-      this.dataset.fallbackApplied = "true";
-      this.src = fallbackImage;
-
-    });
-
-  });
-
+  /* ===============================
+     NAVBAR SCROLL
+  =============================== */
 
   const nav = document.querySelector(".nav");
 
   if (nav) {
     window.addEventListener("scroll", () => {
       nav.classList.toggle("nav-scrolled", window.scrollY > 40);
-    });
+    }, { passive: true });
   }
 
+
+  /* ===============================
+     SMOOTH SCROLL
+  =============================== */
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
@@ -57,13 +52,61 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = document.querySelector(targetId);
 
       if (target) {
+
         event.preventDefault();
 
         target.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
+
       }
+
+    });
+
+  });
+
+
+  /* ===============================
+     MOBILE MENU
+  =============================== */
+
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuBtn && navLinks) {
+
+    menuBtn.addEventListener("click", () => {
+
+      navLinks.classList.toggle("mobile-open");
+
+      menuBtn.textContent =
+        navLinks.classList.contains("mobile-open")
+          ? "CLOSE"
+          : "MENU";
+
+    });
+
+  }
+
+
+  /* ===============================
+     IMAGE ERROR HANDLING
+
+     IMPORTANT:
+     NO SINGLE FALLBACK IMAGE
+
+     This prevents the same wrong
+     image from appearing everywhere.
+  =============================== */
+
+  document.querySelectorAll("img").forEach((image) => {
+
+    image.addEventListener("error", function () {
+
+      this.classList.add("image-error");
+
+      this.removeAttribute("src");
 
     });
 
