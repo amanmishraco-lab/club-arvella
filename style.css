@@ -781,121 +781,6 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
 
   color:var(--muted);
 }
-/* ================================
-   PREMIUM HERO SIZE FIX
-================================ */
-
-.premium-hero {
-  min-height: 760px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Floating images should remain visible and clear */
-.floating-row {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  opacity: 1;
-  filter: none !important;
-}
-
-.floating-row-left {
-  top: 110px;
-}
-
-.floating-row-right {
-  bottom: 70px;
-}
-
-.floating-track img {
-  width: 220px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 12px;
-  filter: none !important;
-  opacity: 1 !important;
-}
-
-/* Keep hero text above floating images */
-.premium-hero-content {
-  position: relative;
-  z-index: 5;
-  padding: 230px 0 180px;
-  text-align: center;
-}
-
-/* Smaller premium heading */
-.premium-hero-content h1 {
-  font-size: clamp(52px, 6vw, 88px);
-  line-height: 0.95;
-  max-width: 950px;
-  margin: 20px auto;
-}
-
-.premium-hero-content h1 span {
-  display: block;
-}
-
-/* Hero description */
-.premium-hero-content p {
-  max-width: 650px;
-  margin: 25px auto;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-/* Overlay should not hide images too much */
-.hero-overlay {
-  background: rgba(7, 26, 43, 0.45) !important;
-  z-index: 2;
-}
-
-/* Content stays above overlay */
-.premium-hero-content {
-  z-index: 3;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-  .premium-hero {
-    min-height: 650px;
-  }
-
-  .premium-hero-content {
-    padding: 200px 20px 140px;
-  }
-
-  .premium-hero-content h1 {
-    font-size: clamp(42px, 11vw, 64px);
-  }
-
-  .floating-track img {
-    width: 160px;
-    height: 105px;
-  }
-}
-/* =========================================
-   FINAL HERO + FLOATING ANIMATION FIX
-========================================= */
-
-.premium-hero{
-  min-height:760px;
-  position:relative;
-  overflow:hidden;
-  background:#071a2b;
-}
-
-/* Overlay */
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(7,26,43,.25) !important;
-  z-index:1;
-}
-
 /* ================= FLOATING ROWS ================= */
 
 .floating-row{
@@ -1049,75 +934,6 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
   }
 }
 /* =====================================
-   FLOATING ROWS - EXACT GAP FIX
-===================================== */
-
-.premium-hero {
-  min-height: 850px !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-/* Both floating rows */
-.premium-hero .floating-row {
-  position: absolute !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 125px !important;
-  overflow: hidden !important;
-  z-index: 2 !important;
-  display: block !important;
-}
-
-/* TOP floating row */
-.premium-hero .floating-row-left {
-  top: auto !important;
-  bottom: 155px !important;
-}
-
-/* BOTTOM floating row */
-.premium-hero .floating-row-right {
-  top: auto !important;
-  bottom: 15px !important;
-}
-
-/* Gap calculation:
-   Top row bottom = 155px
-   Row height = 125px
-   Bottom row starts = 15px
-   GAP = 15px
-*/
-
-.premium-hero .floating-track {
-  display: flex !important;
-  gap: 12px !important;
-  width: max-content !important;
-  height: 125px !important;
-  align-items: center !important;
-}
-
-.premium-hero .floating-track img {
-  width: 210px !important;
-  height: 125px !important;
-  display: block !important;
-  flex-shrink: 0 !important;
-  object-fit: cover !important;
-  border-radius: 14px !important;
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-/* Animation directions */
-.premium-hero .floating-row-left .floating-track {
-  animation: moveLeft 35s linear infinite !important;
-}
-
-.premium-hero .floating-row-right .floating-track {
-  animation: moveRight 35s linear infinite !important;
-}
-
-
-/* =====================================
    HERO TEXT ABOVE, FLOATING BELOW
 ===================================== */
 
@@ -1173,55 +989,244 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
     font-size: 44px !important;
   }
 }
-/* ===== HERO TEXT & FLOATING IMAGES FIX ===== */
+/* ==========================================
+   FINAL PREMIUM HERO - CLEAN VERSION
+========================================== */
 
-.hero {
-    position: relative;
-    overflow: hidden;
-    min-height: 780px;
+.premium-hero {
+  position: relative !important;
+  min-height: 850px !important;
+  overflow: hidden !important;
+  background: #071A2B !important;
 }
 
-/* Main content always above floating images */
-.hero-content {
-    position: relative;
-    z-index: 5;
+/* Dark overlay */
+.premium-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 26, 43, 0.18) !important;
+  z-index: 1 !important;
+  pointer-events: none;
 }
 
-/* Heading */
-.hero h1 {
-    position: relative;
-    z-index: 6;
-    font-size: clamp(52px, 5.5vw, 82px);
-    line-height: 0.95;
-    margin-bottom: 28px;
+/* ==========================================
+   HERO TEXT - ALWAYS ABOVE
+========================================== */
+
+.premium-hero .premium-hero-content {
+  position: relative !important;
+  z-index: 10 !important;
+
+  text-align: center !important;
+
+  /* Text ko upper section mein rakhega */
+  padding: 65px 20px 0 !important;
+
+  max-width: 950px !important;
+  margin: 0 auto !important;
+}
+
+/* Small heading */
+.premium-hero .eyebrow {
+  font-size: 11px !important;
+  letter-spacing: 4px !important;
+  margin-bottom: 15px !important;
+}
+
+/* Main heading */
+.premium-hero .premium-hero-content h1 {
+  position: relative !important;
+  z-index: 11 !important;
+
+  font-size: clamp(48px, 5vw, 78px) !important;
+  line-height: 1.02 !important;
+
+  max-width: 900px !important;
+  margin: 0 auto 22px !important;
+}
+
+/* Gold text */
+.premium-hero .premium-hero-content h1 span {
+  color: var(--champagne) !important;
 }
 
 /* Description */
-.hero-content p {
-    position: relative;
-    z-index: 6;
-    margin-top: 20px;
+.premium-hero .premium-hero-content p {
+  position: relative !important;
+  z-index: 11 !important;
+
+  max-width: 680px !important;
+  margin: 0 auto 25px !important;
+
+  font-size: 16px !important;
+  line-height: 1.65 !important;
 }
 
 /* Buttons */
-.hero-actions {
-    position: relative;
-    z-index: 6;
+.premium-hero .hero-buttons {
+  position: relative !important;
+  z-index: 11 !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  gap: 15px !important;
 }
 
-/* Floating image container */
-.hero-floating,
-.floating-images,
-.floating-gallery {
-    position: relative;
-    z-index: 2;
-    margin-top: 45px;
+
+/* ==========================================
+   FLOATING IMAGE ROWS - BELOW TEXT
+========================================== */
+
+.premium-hero .floating-row {
+  position: absolute !important;
+
+  left: 0 !important;
+  width: 100% !important;
+  height: 125px !important;
+
+  overflow: hidden !important;
+
+  z-index: 3 !important;
+
+  opacity: 1 !important;
+  filter: none !important;
 }
 
-/* Individual floating images */
-.hero-floating img,
-.floating-images img,
-.floating-gallery img {
-    position: relative;
-    z-index: 2;
+/* FIRST FLOATING ROW */
+.premium-hero .floating-row-left {
+  top: auto !important;
+  bottom: 150px !important;
+}
+
+/* SECOND FLOATING ROW */
+.premium-hero .floating-row-right {
+  top: auto !important;
+  bottom: 12px !important;
+}
+
+
+/* ==========================================
+   FLOATING TRACK
+========================================== */
+
+.premium-hero .floating-track {
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 12px !important;
+
+  width: max-content !important;
+  height: 125px !important;
+
+  will-change: transform;
+}
+
+
+/* Images */
+.premium-hero .floating-track img {
+  width: 210px !important;
+  height: 125px !important;
+
+  flex-shrink: 0 !important;
+
+  display: block !important;
+
+  object-fit: cover !important;
+
+  border-radius: 14px !important;
+
+  opacity: 1 !important;
+
+  filter: none !important;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,.30) !important;
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.premium-hero .floating-row-left .floating-track {
+  animation: moveLeft 35s linear infinite !important;
+}
+
+.premium-hero .floating-row-right .floating-track {
+  animation: moveRight 35s linear infinite !important;
+}
+
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .premium-hero {
+    min-height: 700px !important;
+  }
+
+  .premium-hero .premium-hero-content {
+    padding: 60px 18px 0 !important;
+  }
+
+  .premium-hero .premium-hero-content h1 {
+    font-size: clamp(40px, 10vw, 60px) !important;
+  }
+
+  .premium-hero .premium-hero-content p {
+    font-size: 15px !important;
+  }
+
+  .premium-hero .floating-row {
+    height: 95px !important;
+  }
+
+  /* First row */
+  .premium-hero .floating-row-left {
+    bottom: 112px !important;
+  }
+
+  /* Second row */
+  .premium-hero .floating-row-right {
+    bottom: 8px !important;
+  }
+
+  .premium-hero .floating-track {
+    height: 95px !important;
+    gap: 8px !important;
+  }
+
+  .premium-hero .floating-track img {
+    width: 150px !important;
+    height: 95px !important;
+    border-radius: 10px !important;
+  }
+
+  .premium-hero .hero-buttons {
+    flex-wrap: wrap !important;
+  }
 }
