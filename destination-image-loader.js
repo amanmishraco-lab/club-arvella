@@ -1,367 +1,171 @@
 (() => {
 
-  const WIKI_API =
+  const API =
     "https://en.wikipedia.org/api/rest_v1/page/summary/";
 
-  const COMMONS_API =
-    "https://commons.wikimedia.org/w/api.php";
 
-  const loadedImages = new Map();
-  const usedImages = new Set();
+  const imageCache =
+    new Map();
 
 
-  /* =========================================
-     CREATE PREMIUM PLACEHOLDER
-     ONLY USED IF IMAGE CANNOT BE FOUND
-
-     IMPORTANT:
-     No repeated fallback photo
-  ========================================= */
-
-  function createPlaceholder(name) {
-
-    const safeName = String(name || "Club Arvella")
-      .replace(/[<>&"]/g, "");
-
-    const svg = `
-      <svg xmlns="http://www.w3.org/2000/svg"
-           width="1600"
-           height="1000"
-           viewBox="0 0 1600 1000">
-
-        <defs>
-
-          <linearGradient
-            id="background"
-            x1="0"
-            y1="0"
-            x2="1"
-            y2="1">
-
-            <stop
-              offset="0%"
-              stop-color="#0b1d30"/>
-
-            <stop
-              offset="100%"
-              stop-color="#172d45"/>
-
-          </linearGradient>
-
-        </defs>
-
-        <rect
-          width="1600"
-          height="1000"
-          fill="url(#background)"/>
-
-        <rect
-          x="50"
-          y="50"
-          width="1500"
-          height="900"
-          rx="8"
-          fill="none"
-          stroke="#d4af37"
-          stroke-opacity="0.35"
-          stroke-width="3"/>
-
-        <text
-          x="800"
-          y="500"
-          text-anchor="middle"
-          fill="#d4af37"
-          font-family="Georgia, serif"
-          font-size="70">
-
-          ${safeName}
-
-        </text>
-
-      </svg>
-    `;
-
-    return "data:image/svg+xml;charset=UTF-8," +
-      encodeURIComponent(svg);
-
-  }
+  const loadingCache =
+    new Map();
 
 
-  /* =========================================
-     NORMALIZE IMAGE URL
-  ========================================= */
+  async function getImage(title) {
 
-  function normalize(url) {
+    if (imageCache.has(title)) {
 
-    if (!url) return "";
+      return imageCache.get(title);
 
-    return url
-      .replace(/\/\d+px-/i, "/")
-      .split("?")[0]
-      .toLowerCase();
-
-  }
+    }
 
 
-  /* =========================================
-     WIKIPEDIA IMAGE
-  ========================================= */
+    if (loadingCache.has(title)) {
 
-  async function getWikipediaImage(title) {
+      return loadingCache.get(title);
 
-    try {
+    }
 
-      const response = await fetch(
 
-        WIKI_API +
+    const request =
+      fetch(
+        API +
         encodeURIComponent(
           title.replace(/\s+/g, "_")
         ),
-
-        {
-          mode: "cors",
-          cache: "force-cache"
-        }
-
-      );
-
-      if (!response.ok) return null;
-
-      const data = await response.json();
-
-      const image =
-        data.originalimage?.source ||
-        data.thumbnail?.source ||
-        null;
-
-      return image;
-
-    } catch (error) {
-
-      return null;
-
-    }
-
-  }
-
-
-  /* =========================================
-     WIKIMEDIA COMMONS BACKUP
-
-     Searches for another image
-     if the first image is duplicate
-  ========================================= */
-
-  async function getCommonsImage(title) {
-
-    try {
-
-      const params = new URLSearchParams({
-
-        action: "query",
-
-        generator: "search",
-
-        gsrsearch: title,
-
-        gsrnamespace: "6",
-
-        gsrlimit: "10",
-
-        prop: "imageinfo",
-
-        iiprop: "url",
-
-        iiurlwidth: "1600",
-
-        format: "json",
-
-        origin: "*"
-
-      });
-
-
-      const response = await fetch(
-
-        COMMONS_API +
-        "?" +
-        params.toString(),
-
         {
           cache: "force-cache"
         }
+      )
+        .then((response) => {
 
-      );
+          if (!response.ok) {
+
+            throw new Error(
+              "Image not found"
+            );
+
+          }
+
+          return response.json();
+
+        })
+        .then((data) => {
+
+          const image =
+            data.originalimage?.source ||
+            data.thumbnail?.source ||
+            null;
 
 
-      if (!response.ok) return null;
+          if (!image) {
 
-      const data = await response.json();
+            throw new Error(
+              "No image available"
+            );
 
-      const pages =
-        Object.values(
-          data.query?.pages || {}
-        );
+          }
 
 
-      for (const page of pages) {
+          imageCache.set(
+            title,
+            image
+          );
 
-        const imageInfo =
-          page.imageinfo?.[0];
-
-        const image =
-          imageInfo?.thumburl ||
-          imageInfo?.url;
-
-        if (!image) continue;
-
-        const normalized =
-          normalize(image);
-
-        if (!usedImages.has(normalized)) {
 
           return image;
 
-        }
+        })
+        .catch(() => null)
+        .finally(() => {
 
-      }
+          loadingCache.delete(
+            title
+          );
 
-
-      return null;
-
-    } catch (error) {
-
-      return null;
-
-    }
-
-  }
+        });
 
 
-  /* =========================================
-     GET UNIQUE IMAGE
-
-     Duplicate image is rejected.
-     Then Commons is searched.
-  ========================================= */
-
-  async function getUniqueImage(title) {
-
-    if (loadedImages.has(title)) {
-
-      return loadedImages.get(title);
-
-    }
+    loadingCache.set(
+      title,
+      request
+    );
 
 
-    let image =
-      await getWikipediaImage(title);
-
-
-    if (image) {
-
-      const normalized =
-        normalize(image);
-
-      if (!usedImages.has(normalized)) {
-
-        usedImages.add(normalized);
-
-        loadedImages.set(
-          title,
-          image
-        );
-
-        return image;
-
-      }
-
-    }
-
-
-    image =
-      await getCommonsImage(title);
-
-
-    if (image) {
-
-      const normalized =
-        normalize(image);
-
-      if (!usedImages.has(normalized)) {
-
-        usedImages.add(normalized);
-
-        loadedImages.set(
-          title,
-          image
-        );
-
-        return image;
-
-      }
-
-    }
-
-
-    return null;
+    return request;
 
   }
 
 
-  /* =========================================
-     LOAD ONE IMAGE
-  ========================================= */
+  function setImage(
+    imageElement,
+    source
+  ) {
 
-  async function loadImage(imageElement) {
+    return new Promise(
+      (resolve) => {
+
+        const testImage =
+          new Image();
+
+
+        testImage.decoding =
+          "async";
+
+
+        testImage.onload =
+          () => {
+
+            imageElement.src =
+              source;
+
+            imageElement.classList.add(
+              "destination-image-loaded"
+            );
+
+            resolve(true);
+
+          };
+
+
+        testImage.onerror =
+          () => {
+
+            resolve(false);
+
+          };
+
+
+        testImage.src =
+          source;
+
+      }
+    );
+
+  }
+
+
+  async function loadDestinationImage(
+    imageElement
+  ) {
 
     const title =
       imageElement.dataset.wiki ||
-      imageElement.alt ||
-      "India";
+      imageElement.alt;
 
 
-    /*
-      Floating rows intentionally contain
-      duplicate DOM elements for smooth
-      continuous animation.
-
-      For normal destination cards,
-      unique image protection is active.
-    */
-
-    const isFloating =
-      imageElement.closest(".floating-track");
+    if (!title) return;
 
 
-    if (isFloating) {
-
-      if (loadedImages.has(title)) {
-
-        imageElement.src =
-          loadedImages.get(title);
-
-        imageElement.classList.add(
-          "image-loaded"
-        );
-
-        return;
-
-      }
-
-    }
+    const source =
+      await getImage(title);
 
 
-    const image =
-      await getUniqueImage(title);
-
-
-    if (image) {
-
-      imageElement.src = image;
+    if (!source) {
 
       imageElement.classList.add(
-        "image-loaded"
+        "destination-image-unavailable"
       );
 
       return;
@@ -369,94 +173,55 @@
     }
 
 
-    /*
-      If no valid unique photo exists,
-      use a destination-specific
-      premium placeholder.
-
-      Never use the same random
-      fallback image.
-    */
-
-    imageElement.src =
-      createPlaceholder(title);
-
-    imageElement.classList.add(
-      "image-loaded",
-      "image-placeholder"
-    );
-
-  }
-
-
-  /* =========================================
-     LOAD PRIORITY IMAGES FIRST
-  ========================================= */
-
-  async function loadImages() {
-
-    const images =
-      Array.from(
-        document.querySelectorAll(
-          "img[data-destination-image]"
-        )
+    const loaded =
+      await setImage(
+        imageElement,
+        source
       );
 
 
-    /*
-      Visible destination cards first.
-    */
+    if (!loaded) {
 
-    const priority =
-      images.filter(
-        image =>
-          !image.closest(".more-destinations")
+      imageElement.classList.add(
+        "destination-image-unavailable"
       );
-
-
-    const lazy =
-      images.filter(
-        image =>
-          image.closest(".more-destinations")
-      );
-
-
-    /*
-      Load visible images gradually.
-
-      This prevents mobile from
-      opening 30 image requests
-      at exactly the same time.
-    */
-
-    for (const image of priority) {
-
-      await loadImage(image);
 
     }
 
-
-    /*
-      Remaining images are loaded
-      after the important content.
-    */
-
-    setTimeout(async () => {
-
-      for (const image of lazy) {
-
-        await loadImage(image);
-
-      }
-
-    }, 500);
-
   }
 
 
-  /* =========================================
-     START
-  ========================================= */
+  async function start() {
+
+    const images =
+      [
+        ...document.querySelectorAll(
+          "img[data-destination-image]"
+        )
+      ];
+
+
+    /*
+      Floating images can have duplicate
+      elements for continuous animation.
+
+      Normal destination cards should
+      still receive their correct image.
+    */
+
+
+    for (
+      const image of images
+    ) {
+
+      await loadDestinationImage(
+        image
+      );
+
+    }
+
+  }
+
 
   if (
     document.readyState ===
@@ -465,12 +230,12 @@
 
     document.addEventListener(
       "DOMContentLoaded",
-      loadImages
+      start
     );
 
   } else {
 
-    loadImages();
+    start();
 
   }
 
