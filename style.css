@@ -1858,3 +1858,118 @@ h2 {
   }
 
 }
+/* =========================================
+   FULL SCREEN DESTINATION HERO – FINAL FIX
+========================================= */
+
+.destination-detail-hero {
+  position: relative;
+  min-height: calc(100vh - 82px);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background-color: #071A2B;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* DARK PREMIUM OVERLAY */
+
+.destination-detail-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 31, 0.92) 0%,
+      rgba(5, 18, 31, 0.72) 42%,
+      rgba(5, 18, 31, 0.28) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* REMOVE ANY OLD IMAGE BOX */
+
+.destination-detail-hero img,
+.destination-detail-hero .destination-image,
+.destination-detail-hero .hero-image {
+  display: none !important;
+}
+
+
+/* CONTENT */
+
+.destination-detail-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+
+  padding: 80px 0;
+}
+
+
+.destination-detail-content h1 {
+  font-size: clamp(64px, 9vw, 130px);
+
+  line-height: 0.9;
+
+  max-width: 850px;
+
+  margin: 18px 0;
+
+  color: #ffffff;
+}
+
+
+.destination-detail-content p {
+  max-width: 650px;
+
+  font-size: clamp(16px, 1.5vw, 20px);
+
+  line-height: 1.7;
+
+  color: rgba(255,255,255,0.88);
+}
+
+
+.destination-detail-overlay {
+  display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .destination-detail-hero {
+    min-height: calc(100vh - 72px);
+
+    background-position: center center !important;
+  }
+
+  .destination-detail-content {
+    padding: 80px 0;
+  }
+
+  .destination-detail-content h1 {
+    font-size: clamp(58px, 15vw, 90px);
+  }
+
+}
