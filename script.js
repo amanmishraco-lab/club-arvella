@@ -660,3 +660,305 @@ const destinationData = {
   },
 
 };
+  ladakh: {
+    region: "LADAKH • INDIA",
+    name: "Ladakh",
+    tagline: "High mountain passes, dramatic landscapes and unforgettable adventures.",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+    description: "Ladakh offers dramatic Himalayan landscapes, high-altitude roads, monasteries and extraordinary adventure experiences.",
+
+    bestTime: "May – September",
+    duration: "6 – 8 Days",
+    travelStyle: "Adventure & Nature",
+    bestFor: "Adventure Lovers & Couples",
+
+    topPlaces: [
+      { name: "Leh", description: "Explore monasteries, local culture and dramatic mountain views." },
+      { name: "Nubra Valley", description: "Discover sand dunes, mountain roads and unique landscapes." },
+      { name: "Pangong Lake", description: "Experience one of Ladakh's most iconic high-altitude lakes." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "Fly to Kushok Bakula Rimpochee Airport in Leh." },
+      { title: "By Road", text: "Travel through the Manali–Leh or Srinagar–Leh highway when open." },
+      { title: "Best Route", text: "Leh → Nubra Valley → Pangong Lake → Leh" }
+    ],
+
+    stays: [
+      "Luxury Hotels in Leh",
+      "Premium Camps in Nubra",
+      "Lakeside Camps near Pangong"
+    ],
+
+    nearby: [
+      "Khardung La",
+      "Tso Moriri",
+      "Sham Valley"
+    ]
+  },
+
+
+  andaman: {
+    region: "ANDAMAN & NICOBAR • INDIA",
+    name: "Andaman",
+    tagline: "Turquoise waters, tropical islands and unforgettable beach escapes.",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85",
+    description: "Andaman offers beautiful beaches, crystal-clear waters, island adventures and relaxing tropical experiences.",
+
+    bestTime: "October – May",
+    duration: "5 – 7 Days",
+    travelStyle: "Beach & Island Luxury",
+    bestFor: "Couples & Families",
+
+    topPlaces: [
+      { name: "Port Blair", description: "Explore the gateway to the Andaman Islands and historic attractions." },
+      { name: "Havelock Island", description: "Enjoy famous beaches, diving and premium island stays." },
+      { name: "Neil Island", description: "Discover peaceful beaches and scenic tropical landscapes." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "Fly to Veer Savarkar International Airport in Port Blair." },
+      { title: "By Sea", text: "Passenger ships connect Port Blair with selected mainland ports." },
+      { title: "Best Route", text: "Port Blair → Havelock → Neil Island → Port Blair" }
+    ],
+
+    stays: [
+      "Luxury Beach Resorts",
+      "Premium Island Villas",
+      "Boutique Beach Hotels"
+    ],
+
+    nearby: [
+      "Radhanagar Beach",
+      "Cellular Jail",
+      "Bharatpur Beach"
+    ]
+  },
+
+
+  mumbai: {
+    region: "MAHARASHTRA • INDIA",
+    name: "Mumbai",
+    tagline: "India's city of dreams, where heritage, luxury and energy meet.",
+    image: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=1800&q=85",
+    description: "Mumbai combines iconic landmarks, coastal views, historic architecture, luxury hotels, food and an unmatched urban energy.",
+
+    bestTime: "November – February",
+    duration: "3 – 5 Days",
+    travelStyle: "City & Lifestyle",
+    bestFor: "Friends, Couples & Families",
+
+    topPlaces: [
+      { name: "Gateway of India", description: "One of Mumbai's most iconic waterfront landmarks." },
+      { name: "Marine Drive", description: "Enjoy the famous Queen's Necklace and Arabian Sea views." },
+      { name: "Colaba", description: "Explore heritage streets, cafes and lively shopping areas." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "Fly to Chhatrapati Shivaji Maharaj International Airport." },
+      { title: "By Train", text: "Mumbai is connected to major cities through multiple railway terminals." },
+      { title: "Best Route", text: "Gateway of India → Colaba → Marine Drive → Bandra" }
+    ],
+
+    stays: [
+      "Luxury Hotels in South Mumbai",
+      "Premium Stays in Bandra",
+      "Business Hotels near BKC"
+    ],
+
+    nearby: [
+      "Lonavala",
+      "Alibaug",
+      "Matheran"
+    ]
+  },
+
+
+  agra: {
+    region: "UTTAR PRADESH • INDIA",
+    name: "Agra",
+    tagline: "Timeless Mughal architecture and one of the world's greatest monuments.",
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+    description: "Agra is a historic destination known worldwide for Mughal architecture, rich heritage and the unforgettable beauty of the Taj Mahal.",
+
+    bestTime: "October – March",
+    duration: "2 – 3 Days",
+    travelStyle: "Heritage & Culture",
+    bestFor: "Couples, Families & History Lovers",
+
+    topPlaces: [
+      { name: "Taj Mahal", description: "Experience India's most iconic monument and timeless architectural masterpiece." },
+      { name: "Agra Fort", description: "Explore the impressive Mughal fort and its historic royal spaces." },
+      { name: "Fatehpur Sikri", description: "Discover the remarkable historic city near Agra." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "The nearest major international airport is in Delhi." },
+      { title: "By Train", text: "Agra has excellent railway connectivity from major Indian cities." },
+      { title: "Best Route", text: "Delhi → Agra → Fatehpur Sikri → Jaipur" }
+    ],
+
+    stays: [
+      "Luxury Hotels near Taj Mahal",
+      "Premium Heritage Hotels",
+      "Comfortable City Hotels"
+    ],
+
+    nearby: [
+      "Mathura",
+      "Vrindavan",
+      "Bharatpur"
+    ]
+  },
+
+
+  jaipur: {
+    region: "RAJASTHAN • INDIA",
+    name: "Jaipur",
+    tagline: "Royal forts, pink streets and the timeless charm of Rajasthan.",
+    image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+    description: "Jaipur offers royal palaces, magnificent forts, colourful bazaars and unforgettable heritage experiences.",
+
+    bestTime: "October – March",
+    duration: "3 – 4 Days",
+    travelStyle: "Heritage & Culture",
+    bestFor: "Couples & Families",
+
+    topPlaces: [
+      { name: "Amber Fort", description: "Explore one of Rajasthan's most spectacular hilltop forts." },
+      { name: "City Palace", description: "Discover royal architecture and Jaipur's rich history." },
+      { name: "Hawa Mahal", description: "See Jaipur's iconic Palace of Winds." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "Fly directly to Jaipur International Airport." },
+      { title: "By Train", text: "Jaipur is well connected to major Indian railway routes." },
+      { title: "Best Route", text: "Delhi → Jaipur → Ajmer → Udaipur" }
+    ],
+
+    stays: [
+      "Luxury Palace Hotels",
+      "Heritage Hotels",
+      "Premium City Resorts"
+    ],
+
+    nearby: [
+      "Ajmer",
+      "Pushkar",
+      "Ranthambore"
+    ]
+  },
+
+
+  udaipur: {
+    region: "RAJASTHAN • INDIA",
+    name: "Udaipur",
+    tagline: "Romantic lakes, royal palaces and timeless luxury.",
+    image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1800&q=85",
+    description: "Udaipur is known for its shimmering lakes, royal palaces, beautiful architecture and romantic atmosphere.",
+
+    bestTime: "October – March",
+    duration: "3 – 4 Days",
+    travelStyle: "Luxury & Romance",
+    bestFor: "Couples & Families",
+
+    topPlaces: [
+      { name: "City Palace", description: "Explore magnificent royal architecture overlooking Lake Pichola." },
+      { name: "Lake Pichola", description: "Enjoy scenic boat rides surrounded by palaces and hills." },
+      { name: "Sajjangarh Palace", description: "Experience panoramic views from the famous Monsoon Palace." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "Fly to Maharana Pratap Airport." },
+      { title: "By Train", text: "Udaipur is connected with major Indian cities by rail." },
+      { title: "Best Route", text: "Jaipur → Ajmer → Udaipur → Mount Abu" }
+    ],
+
+    stays: [
+      "Luxury Lake Hotels",
+      "Heritage Palace Hotels",
+      "Boutique City Stays"
+    ],
+
+    nearby: [
+      "Kumbhalgarh",
+      "Mount Abu",
+      "Chittorgarh"
+    ]
+  },
+
+
+  delhi: {
+    region: "DELHI • INDIA",
+    name: "Delhi",
+    tagline: "A journey through ancient history, culture and modern India.",
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1800&q=85",
+    description: "Delhi brings together historic monuments, vibrant markets, exceptional food and the energy of India's capital.",
+
+    bestTime: "October – March",
+    duration: "3 – 4 Days",
+    travelStyle: "Culture & City",
+    bestFor: "Families, Couples & History Lovers",
+
+    topPlaces: [
+      { name: "India Gate", description: "Visit one of the capital's most iconic landmarks." },
+      { name: "Qutub Minar", description: "Explore a remarkable UNESCO-listed historic complex." },
+      { name: "Red Fort", description: "Discover one of India's most important Mughal monuments." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "Fly to Indira Gandhi International Airport." },
+      { title: "By Train", text: "Delhi is connected nationwide through major railway stations." },
+      { title: "Best Route", text: "Old Delhi → Central Delhi → New Delhi → South Delhi" }
+    ],
+
+    stays: [
+      "Luxury Hotels in Central Delhi",
+      "Premium Hotels in Aerocity",
+      "Boutique Stays in South Delhi"
+    ],
+
+    nearby: [
+      "Agra",
+      "Jaipur",
+      "Neemrana"
+    ]
+  },
+
+
+  varanasi: {
+    region: "UTTAR PRADESH • INDIA",
+    name: "Varanasi",
+    tagline: "Ancient spirituality, sacred ghats and timeless Indian culture.",
+    image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1800&q=85",
+    description: "Varanasi is one of the world's oldest living cities, offering spiritual experiences, sacred ghats and unforgettable cultural traditions.",
+
+    bestTime: "October – March",
+    duration: "2 – 4 Days",
+    travelStyle: "Spiritual & Cultural",
+    bestFor: "Culture & Spiritual Travellers",
+
+    topPlaces: [
+      { name: "Dashashwamedh Ghat", description: "Experience the famous evening Ganga Aarti." },
+      { name: "Kashi Vishwanath Area", description: "Explore the spiritual heart of the ancient city." },
+      { name: "Assi Ghat", description: "Enjoy peaceful riverside views and local culture." }
+    ],
+
+    routes: [
+      { title: "By Air", text: "Fly to Lal Bahadur Shastri International Airport." },
+      { title: "By Train", text: "Varanasi has strong rail connectivity." },
+      { title: "Best Route", text: "Varanasi → Sarnath → Prayagraj" }
+    ],
+
+    stays: [
+      "Heritage Hotels",
+      "Premium Riverside Stays",
+      "Boutique Hotels near the Ghats"
+    ],
+
+    nearby: [
+      "Sarnath",
+      "Prayagraj",
+      "Ayodhya"
+    ]
+  }
