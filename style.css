@@ -877,3 +877,174 @@ h2{font-size:clamp(42px,5vw,66px);line-height:.95}
     height: 105px;
   }
 }
+/* =========================================
+   FINAL HERO + FLOATING ANIMATION FIX
+========================================= */
+
+.premium-hero{
+  min-height:760px;
+  position:relative;
+  overflow:hidden;
+  background:#071a2b;
+}
+
+/* Overlay */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(7,26,43,.25) !important;
+  z-index:1;
+}
+
+/* ================= FLOATING ROWS ================= */
+
+.floating-row{
+  position:absolute;
+  left:0;
+  width:100%;
+  overflow:hidden;
+  z-index:2;
+  filter:none !important;
+  opacity:1 !important;
+}
+
+/* First row */
+.floating-row-left{
+  bottom:155px;
+}
+
+/* Second row — very small gap */
+.floating-row-right{
+  bottom:15px;
+}
+
+/* Moving track */
+.floating-track{
+  display:flex;
+  gap:12px;
+  width:max-content;
+  will-change:transform;
+}
+
+/* LEFT animation */
+.floating-row-left .floating-track{
+  animation:moveLeft 35s linear infinite;
+}
+
+/* RIGHT animation */
+.floating-row-right .floating-track{
+  animation:moveRight 35s linear infinite;
+}
+
+/* Images */
+.floating-track img{
+  width:210px;
+  height:125px;
+  flex-shrink:0;
+  object-fit:cover;
+  border-radius:14px;
+  opacity:1 !important;
+  filter:none !important;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+/* Animation */
+@keyframes moveLeft{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+@keyframes moveRight{
+  from{
+    transform:translateX(-50%);
+  }
+
+  to{
+    transform:translateX(0);
+  }
+}
+
+/* ================= HERO CONTENT ================= */
+
+.premium-hero-content{
+  position:relative;
+  z-index:5;
+  text-align:center;
+  padding:85px 20px 330px;
+}
+
+/* Small luxury label */
+.premium-hero-content .eyebrow{
+  font-size:11px;
+  letter-spacing:4px;
+  margin-bottom:18px;
+}
+
+/* Main heading */
+.premium-hero-content h1{
+  font-size:clamp(48px,5.5vw,82px);
+  line-height:1;
+  letter-spacing:-2px;
+  max-width:950px;
+  margin:0 auto 24px;
+}
+
+/* Gold line */
+.premium-hero-content h1 span{
+  color:#e8c76a;
+}
+
+/* Description */
+.premium-hero-content p{
+  max-width:680px;
+  margin:0 auto 28px;
+  font-size:17px;
+  line-height:1.6;
+}
+
+/* Buttons */
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .premium-hero{
+    min-height:680px;
+  }
+
+  .premium-hero-content{
+    padding:70px 18px 280px;
+  }
+
+  .premium-hero-content h1{
+    font-size:clamp(40px,11vw,60px);
+  }
+
+  .floating-row-left{
+    bottom:125px;
+  }
+
+  .floating-row-right{
+    bottom:10px;
+  }
+
+  .floating-track{
+    gap:8px;
+  }
+
+  .floating-track img{
+    width:150px;
+    height:95px;
+    border-radius:10px;
+  }
+}
