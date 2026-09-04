@@ -27,7 +27,58 @@ document.addEventListener("DOMContentLoaded", () => {
           ? "EXPLORE ALL 30 DESTINATIONS"
           : "SHOW LESS DESTINATIONS";
 
-    });
+      /* =====================================
+     ENQUIRY FORM SUCCESS MESSAGE
+  ===================================== */
+
+  const enquiryForm =
+    document.getElementById("enquiryForm");
+
+  if (enquiryForm) {
+
+    enquiryForm.addEventListener(
+      "submit",
+      function (event) {
+
+        event.preventDefault();
+
+        const formMessage =
+          enquiryForm.querySelector(".form-message");
+
+        if (formMessage) {
+
+          formMessage.textContent =
+            "Thank you! We have successfully received your request. Our team will connect with you shortly.";
+
+          formMessage.classList.remove(
+            "hidden"
+          );
+
+          formMessage.style.display =
+            "block";
+
+          formMessage.style.marginTop =
+            "20px";
+
+          formMessage.style.textAlign =
+            "center";
+
+          formMessage.style.color =
+            "#d4af37";
+
+          formMessage.style.fontWeight =
+            "600";
+
+        }
+
+        /* Reset form after submission */
+
+        enquiryForm.reset();
+
+      }
+    );
+
+  }});
 
   }
 
