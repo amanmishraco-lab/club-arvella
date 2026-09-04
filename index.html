@@ -915,3 +915,40 @@ Luxury holidays, unforgettable destinations and personalized journeys.
 
 </body>
 </html>
+/* ===============================
+   LOAD ALL 30 DESTINATIONS
+================================ */
+
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+const moreDestinations = document.getElementById("moreDestinations");
+
+if (loadMoreBtn && moreDestinations) {
+
+  loadMoreBtn.addEventListener("click", () => {
+
+    moreDestinations.classList.toggle("show");
+
+    if (moreDestinations.classList.contains("show")) {
+
+      loadMoreBtn.textContent = "SHOW LESS DESTINATIONS";
+
+      setTimeout(() => {
+        moreDestinations.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 100);
+
+    } else {
+
+      loadMoreBtn.textContent = "EXPLORE ALL 30 DESTINATIONS";
+
+      document.getElementById("destinations").scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }
+
+  });
+
+}
