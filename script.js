@@ -364,3 +364,299 @@ document
     });
 
   });
+/* =========================================
+   CLUB ARVELLA - INDIA DESTINATION SYSTEM
+========================================= */
+
+const destinationData = {
+
+  kashmir: {
+    region: "JAMMU & KASHMIR • INDIA",
+    name: "Kashmir",
+    tagline: "Paradise on Earth, where mountains, lakes and timeless beauty come together.",
+    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1800&q=85",
+
+    description:
+      "Kashmir offers breathtaking Himalayan landscapes, peaceful lakes, beautiful valleys and unforgettable experiences. From luxurious houseboats to snow-covered mountains, every journey here feels extraordinary.",
+
+    bestTime: "March – October",
+    duration: "5 – 7 Days",
+    travelStyle: "Nature & Luxury",
+    bestFor: "Couples & Families",
+
+    topPlaces: [
+      {
+        name: "Srinagar",
+        description: "Experience Dal Lake, Mughal gardens and iconic houseboats."
+      },
+      {
+        name: "Gulmarg",
+        description: "Discover snow adventures, scenic gondola rides and mountain beauty."
+      },
+      {
+        name: "Pahalgam",
+        description: "Enjoy peaceful valleys, rivers and spectacular Himalayan scenery."
+      }
+    ],
+
+    routes: [
+      {
+        title: "By Air",
+        text: "Fly to Srinagar Airport, followed by a convenient city transfer."
+      },
+      {
+        title: "By Road",
+        text: "Travel through scenic Himalayan highways from Jammu."
+      },
+      {
+        title: "Best Route",
+        text: "Srinagar → Gulmarg → Pahalgam → Srinagar"
+      }
+    ],
+
+    stays: [
+      "Luxury Houseboats on Dal Lake",
+      "Premium Hotels in Srinagar",
+      "Mountain Resorts in Gulmarg"
+    ],
+
+    nearby: [
+      "Sonamarg",
+      "Yusmarg",
+      "Doodhpathri"
+    ]
+  },
+
+
+  goa: {
+    region: "GOA • INDIA",
+    name: "Goa",
+    tagline: "Golden beaches, unforgettable sunsets and vibrant coastal experiences.",
+    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+
+    description:
+      "Goa brings together beautiful beaches, Portuguese heritage, luxury resorts, vibrant nightlife and unforgettable coastal dining experiences.",
+
+    bestTime: "November – February",
+    duration: "4 – 6 Days",
+    travelStyle: "Beach & Lifestyle",
+    bestFor: "Couples, Friends & Families",
+
+    topPlaces: [
+      {
+        name: "North Goa",
+        description: "Experience famous beaches, nightlife and vibrant beach clubs."
+      },
+      {
+        name: "South Goa",
+        description: "Relax at peaceful beaches and luxury coastal resorts."
+      },
+      {
+        name: "Old Goa",
+        description: "Explore Portuguese heritage and historic architecture."
+      }
+    ],
+
+    routes: [
+      {
+        title: "By Air",
+        text: "Fly to Manohar International Airport or Goa International Airport."
+      },
+      {
+        title: "By Train",
+        text: "Major railway stations include Madgaon and Thivim."
+      },
+      {
+        title: "Best Route",
+        text: "North Goa → Panjim → Old Goa → South Goa"
+      }
+    ],
+
+    stays: [
+      "Luxury Beach Resorts",
+      "Premium Villas in North Goa",
+      "Boutique Stays in South Goa"
+    ],
+
+    nearby: [
+      "Dudhsagar Falls",
+      "Gokarna",
+      "Amboli"
+    ]
+  },
+
+
+  manali: {
+    region: "HIMACHAL PRADESH • INDIA",
+    name: "Manali",
+    tagline: "Mountains, adventure and unforgettable Himalayan journeys.",
+    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=85",
+
+    description:
+      "Manali is one of India's most loved mountain destinations, offering snow-covered landscapes, adventure activities, peaceful valleys and beautiful Himalayan views.",
+
+    bestTime: "October – June",
+    duration: "4 – 6 Days",
+    travelStyle: "Adventure & Nature",
+    bestFor: "Couples, Friends & Families",
+
+    topPlaces: [
+      {
+        name: "Solang Valley",
+        description: "Adventure sports, snow experiences and spectacular mountain scenery."
+      },
+      {
+        name: "Old Manali",
+        description: "Cafes, local culture and a relaxed mountain atmosphere."
+      },
+      {
+        name: "Atal Tunnel",
+        description: "A scenic journey through one of India's most remarkable mountain routes."
+      }
+    ],
+
+    routes: [
+      {
+        title: "By Air",
+        text: "Fly to Bhuntar Airport followed by a road journey to Manali."
+      },
+      {
+        title: "By Road",
+        text: "Travel from Delhi or Chandigarh through scenic Himalayan highways."
+      },
+      {
+        title: "Best Route",
+        text: "Delhi → Chandigarh → Kullu → Manali"
+      }
+    ],
+
+    stays: [
+      "Luxury Resorts in Manali",
+      "Boutique Hotels in Old Manali",
+      "Mountain View Cottages"
+    ],
+
+    nearby: [
+      "Kasol",
+      "Kullu",
+      "Sissu"
+    ]
+  },
+
+
+  rajasthan: {
+    region: "RAJASTHAN • INDIA",
+    name: "Rajasthan",
+    tagline: "Royal palaces, golden deserts and timeless Indian heritage.",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85",
+
+    description:
+      "Rajasthan offers magnificent forts, royal palaces, colourful cities, desert experiences and some of India's most iconic luxury heritage stays.",
+
+    bestTime: "October – March",
+    duration: "7 – 10 Days",
+    travelStyle: "Heritage & Luxury",
+    bestFor: "Couples, Families & Culture Lovers",
+
+    topPlaces: [
+      {
+        name: "Jaipur",
+        description: "Explore royal palaces, forts and colourful markets."
+      },
+      {
+        name: "Udaipur",
+        description: "Experience romantic lakes and magnificent palace architecture."
+      },
+      {
+        name: "Jaisalmer",
+        description: "Discover golden desert landscapes and unforgettable desert camps."
+      }
+    ],
+
+    routes: [
+      {
+        title: "By Air",
+        text: "Jaipur International Airport offers convenient access."
+      },
+      {
+        title: "By Train",
+        text: "Major cities are connected through India's railway network."
+      },
+      {
+        title: "Best Route",
+        text: "Jaipur → Jodhpur → Udaipur → Jaisalmer"
+      }
+    ],
+
+    stays: [
+      "Luxury Heritage Hotels",
+      "Palace Hotels",
+      "Premium Desert Camps"
+    ],
+
+    nearby: [
+      "Ajmer",
+      "Pushkar",
+      "Ranthambore"
+    ]
+  },
+
+
+  kerala: {
+    region: "KERALA • INDIA",
+    name: "Kerala",
+    tagline: "Backwaters, beaches, tea gardens and peaceful luxury escapes.",
+    image: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1800&q=85",
+
+    description:
+      "Kerala combines tropical beaches, peaceful backwaters, misty hill stations and world-famous wellness experiences into one unforgettable journey.",
+
+    bestTime: "September – March",
+    duration: "6 – 8 Days",
+    travelStyle: "Wellness & Nature",
+    bestFor: "Couples & Families",
+
+    topPlaces: [
+      {
+        name: "Munnar",
+        description: "Tea gardens, mountains and cool scenic landscapes."
+      },
+      {
+        name: "Alleppey",
+        description: "Luxury houseboat experiences through Kerala's famous backwaters."
+      },
+      {
+        name: "Kochi",
+        description: "Heritage, culture and beautiful coastal experiences."
+      }
+    ],
+
+    routes: [
+      {
+        title: "By Air",
+        text: "Fly to Kochi, Trivandrum or Calicut airports."
+      },
+      {
+        title: "By Train",
+        text: "Kerala has excellent railway connectivity."
+      },
+      {
+        title: "Best Route",
+        text: "Kochi → Munnar → Thekkady → Alleppey"
+      }
+    ],
+
+    stays: [
+      "Luxury Backwater Resorts",
+      "Premium Houseboats",
+      "Tea Estate Resorts"
+    ],
+
+    nearby: [
+      "Thekkady",
+      "Varkala",
+      "Kumarakom"
+    ]
+  },
+
+};
