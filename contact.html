@@ -1,86 +1,411 @@
-<section class="section">
-  <div class="container">
+<!doctype html>
+<html lang="en">
 
-    <div class="section-head">
-      <h2>Request Your Custom Holiday</h2>
-      <p>
-        Share your travel plans and our team can help create your ideal journey.
-      </p>
-    </div>
+<head>
 
-    <form class="form demo-form" id="enquiryForm">
+  <meta charset="utf-8">
 
-      <input
-        type="text"
-        id="full_name"
-        name="full_name"
-        placeholder="Full Name"
-        required
-      >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-      <input
-        type="tel"
-        id="phone_number"
-        name="phone_number"
-        placeholder="Phone Number"
-        required
-      >
+  <title>Contact | Club Arvella</title>
 
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Email Address"
-        required
-      >
+  <link rel="stylesheet" href="style.css">
 
-      <input
-        type="text"
-        id="destination"
-        name="destination"
-        placeholder="Destination"
-      >
+</head>
 
-      <input
-        type="date"
-        id="travel_date"
-        name="travel_date"
-      >
 
-      <input
-        type="text"
-        id="travelers"
-        name="travelers"
-        placeholder="Number of Travelers"
-      >
+<body>
 
-      <input
-        type="text"
-        id="budget_range"
-        name="budget_range"
-        placeholder="Budget Range"
-      >
 
-      <textarea
-        id="message"
-        name="message"
-        placeholder="Tell us about your dream holiday"
-      ></textarea>
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="nav">
+
+    <div class="container nav-inner">
+
+
+      <!-- LOGO -->
+
+      <a class="brand" href="index.html">
+
+        <img
+          src="assets/club-arvella-logo.png"
+          alt="Club Arvella logo"
+        >
+
+        <span class="brand-name">
+          CLUB ARVELLA
+        </span>
+
+      </a>
+
+
+      <!-- MOBILE MENU -->
 
       <button
-        type="submit"
-        class="btn btn-gold full"
+        class="menu-btn"
+        type="button"
       >
-        REQUEST A CUSTOM HOLIDAY
+        MENU
       </button>
 
-      <p class="form-message hidden full"></p>
 
-    </form>
+      <!-- NAVIGATION -->
 
-    <div class="notice">
-      Submit your holiday enquiry and our team will get in touch with you shortly.
+      <nav class="nav-links">
+
+        <a href="index.html">
+          HOME
+        </a>
+
+        <a href="about.html">
+          ABOUT
+        </a>
+
+        <a href="india.html">
+          EXPLORE INDIA
+        </a>
+
+        <a href="world.html">
+          EXPLORE WORLD
+        </a>
+
+        <a href="packages.html">
+          PACKAGES
+        </a>
+
+        <a href="membership.html">
+          MEMBERSHIP
+        </a>
+
+        <a href="contact.html">
+          CONTACT
+        </a>
+
+      </nav>
+
+
+      <!-- CTA -->
+
+      <a
+        class="btn btn-gold"
+        href="contact.html"
+      >
+        PLAN YOUR TRIP
+      </a>
+
+
     </div>
 
-  </div>
-</section>
+  </header>
+
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        PLAN YOUR JOURNEY
+      </div>
+
+
+      <h1>
+        LET'S CREATE<br>
+        YOUR ESCAPE.
+      </h1>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= ENQUIRY FORM ================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+
+      <div class="section-head">
+
+        <div class="eyebrow">
+          CLUB ARVELLA HOLIDAYS
+        </div>
+
+        <h2>
+          Request Your Custom Holiday
+        </h2>
+
+        <p>
+          Share your travel plans and our team will help create
+          your ideal holiday experience.
+        </p>
+
+      </div>
+
+
+
+      <!-- FORM -->
+
+      <form
+        class="form demo-form"
+        id="enquiryForm"
+      >
+
+
+        <!-- FULL NAME -->
+
+        <input
+          type="text"
+          id="full_name"
+          name="full_name"
+          placeholder="Full Name"
+          required
+        >
+
+
+        <!-- PHONE NUMBER -->
+
+        <input
+          type="tel"
+          id="phone_number"
+          name="phone_number"
+          placeholder="Phone Number"
+          required
+        >
+
+
+        <!-- EMAIL -->
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        >
+
+
+        <!-- DESTINATION -->
+
+        <input
+          type="text"
+          id="destination"
+          name="destination"
+          placeholder="Destination"
+        >
+
+
+        <!-- TRAVEL DATE -->
+
+        <input
+          type="date"
+          id="travel_date"
+          name="travel_date"
+        >
+
+
+        <!-- NUMBER OF TRAVELERS -->
+
+        <input
+          type="text"
+          id="travelers"
+          name="travelers"
+          placeholder="Number of Travelers"
+        >
+
+
+        <!-- BUDGET RANGE -->
+
+        <input
+          type="text"
+          id="budget_range"
+          name="budget_range"
+          placeholder="Budget Range"
+        >
+
+
+        <!-- MESSAGE -->
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Tell us about your dream holiday"
+        ></textarea>
+
+
+
+        <!-- SUBMIT BUTTON -->
+
+        <button
+          type="submit"
+          class="btn btn-gold full"
+        >
+          REQUEST A CUSTOM HOLIDAY
+        </button>
+
+
+
+        <!-- SUCCESS / ERROR MESSAGE -->
+
+        <p class="form-message hidden full"></p>
+
+
+      </form>
+
+
+
+      <div class="notice">
+
+        Submit your holiday enquiry and our Club Arvella
+        travel experts will get in touch with you shortly.
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= WHATSAPP ================= -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/919999999999?text=Hello%20Club%20Arvella%2C%20I%20am%20interested%20in%20planning%20a%20holiday."
+    aria-label="WhatsApp"
+  >
+    ◉
+  </a>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+
+      <!-- COMPANY -->
+
+      <div>
+
+        <div class="brand">
+
+          <img
+            src="assets/club-arvella-logo.png"
+            alt="Club Arvella"
+          >
+
+          <span class="brand-name">
+            CLUB ARVELLA
+          </span>
+
+        </div>
+
+
+        <p>
+
+          Luxury holidays, timeless memories and handpicked
+          destinations designed around extraordinary experiences.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- EXPLORE -->
+
+      <div>
+
+        <h3>
+          Explore
+        </h3>
+
+
+        <ul>
+
+          <li>
+            <a href="india.html">
+              Incredible India
+            </a>
+          </li>
+
+
+          <li>
+            <a href="world.html">
+              Explore World
+            </a>
+          </li>
+
+
+          <li>
+            <a href="packages.html">
+              Holiday Packages
+            </a>
+          </li>
+
+
+          <li>
+            <a href="membership.html">
+              Membership
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- CONTACT -->
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+
+        <p>
+          Phone: Add your business number
+        </p>
+
+
+        <p>
+          Email: Add your business email
+        </p>
+
+
+        <p>
+          © 2026 Club Arvella
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
