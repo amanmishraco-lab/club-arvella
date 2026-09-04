@@ -1,193 +1,477 @@
-document.addEventListener("DOMContentLoaded", async () => {
+(() => {
 
-    const images = document.querySelectorAll(
-        "img[data-destination-image]"
-    );
+  const WIKI_API =
+    "https://en.wikipedia.org/api/rest_v1/page/summary/";
 
-    if (!images.length) return;
+  const COMMONS_API =
+    "https://commons.wikimedia.org/w/api.php";
 
-
-    /* =========================================
-       IMAGE CACHE
-    ========================================= */
-
-    const imageCache = new Map();
+  const loadedImages = new Map();
+  const usedImages = new Set();
 
 
-    /* =========================================
-       GET WIKIPEDIA IMAGE
-    ========================================= */
+  /* =========================================
+     CREATE PREMIUM PLACEHOLDER
+     ONLY USED IF IMAGE CANNOT BE FOUND
 
-    async function getDestinationImage(wikiTitle) {
+     IMPORTANT:
+     No repeated fallback photo
+  ========================================= */
 
-        if (imageCache.has(wikiTitle)) {
-            return imageCache.get(wikiTitle);
+  function createPlaceholder(name) {
+
+    const safeName = String(name || "Club Arvella")
+      .replace(/[<>&"]/g, "");
+
+    const svg = `
+      <svg xmlns="http://www.w3.org/2000/svg"
+           width="1600"
+           height="1000"
+           viewBox="0 0 1600 1000">
+
+        <defs>
+
+          <linearGradient
+            id="background"
+            x1="0"
+            y1="0"
+            x2="1"
+            y2="1">
+
+            <stop
+              offset="0%"
+              stop-color="#0b1d30"/>
+
+            <stop
+              offset="100%"
+              stop-color="#172d45"/>
+
+          </linearGradient>
+
+        </defs>
+
+        <rect
+          width="1600"
+          height="1000"
+          fill="url(#background)"/>
+
+        <rect
+          x="50"
+          y="50"
+          width="1500"
+          height="900"
+          rx="8"
+          fill="none"
+          stroke="#d4af37"
+          stroke-opacity="0.35"
+          stroke-width="3"/>
+
+        <text
+          x="800"
+          y="500"
+          text-anchor="middle"
+          fill="#d4af37"
+          font-family="Georgia, serif"
+          font-size="70">
+
+          ${safeName}
+
+        </text>
+
+      </svg>
+    `;
+
+    return "data:image/svg+xml;charset=UTF-8," +
+      encodeURIComponent(svg);
+
+  }
+
+
+  /* =========================================
+     NORMALIZE IMAGE URL
+  ========================================= */
+
+  function normalize(url) {
+
+    if (!url) return "";
+
+    return url
+      .replace(/\/\d+px-/i, "/")
+      .split("?")[0]
+      .toLowerCase();
+
+  }
+
+
+  /* =========================================
+     WIKIPEDIA IMAGE
+  ========================================= */
+
+  async function getWikipediaImage(title) {
+
+    try {
+
+      const response = await fetch(
+
+        WIKI_API +
+        encodeURIComponent(
+          title.replace(/\s+/g, "_")
+        ),
+
+        {
+          mode: "cors",
+          cache: "force-cache"
         }
 
-        try {
+      );
 
-            const title = encodeURIComponent(wikiTitle);
+      if (!response.ok) return null;
 
-            const response = await fetch(
-                `https://en.wikipedia.org/api/rest_v1/page/summary/${title}`,
-                {
-                    headers: {
-                        "Accept": "application/json"
-                    }
-                }
-            );
+      const data = await response.json();
 
-            if (!response.ok) {
-                throw new Error("Image request failed");
-            }
+      const image =
+        data.originalimage?.source ||
+        data.thumbnail?.source ||
+        null;
 
-            const data = await response.json();
+      return image;
 
+    } catch (error) {
 
-            let imageUrl = null;
-
-
-            if (data.originalimage && data.originalimage.source) {
-
-                imageUrl = data.originalimage.source;
-
-            } else if (
-                data.thumbnail &&
-                data.thumbnail.source
-            ) {
-
-                imageUrl = data.thumbnail.source;
-
-            }
-
-
-            imageCache.set(wikiTitle, imageUrl);
-
-            return imageUrl;
-
-        } catch (error) {
-
-            console.warn(
-                "Could not load image:",
-                wikiTitle
-            );
-
-            return null;
-
-        }
+      return null;
 
     }
 
-
-    /* =========================================
-       LOAD ALL IMAGES
-    ========================================= */
-
-    const requests = [];
-
-    images.forEach((img) => {
-
-        const wikiTitle =
-            img.getAttribute("data-wiki") ||
-            img.alt;
-
-        requests.push({
-            img,
-            wikiTitle
-        });
-
-    });
+  }
 
 
-    /* =========================================
-       LOAD WITH LIMITED CONCURRENCY
-       Better for mobile performance
-    ========================================= */
+  /* =========================================
+     WIKIMEDIA COMMONS BACKUP
 
-    const CONCURRENT_REQUESTS = 4;
+     Searches for another image
+     if the first image is duplicate
+  ========================================= */
 
-    let currentIndex = 0;
+  async function getCommonsImage(title) {
 
+    try {
 
-    async function worker() {
+      const params = new URLSearchParams({
 
-        while (currentIndex < requests.length) {
+        action: "query",
 
-            const requestIndex = currentIndex++;
+        generator: "search",
 
-            const item =
-                requests[requestIndex];
+        gsrsearch: title,
 
-            const {
-                img,
-                wikiTitle
-            } = item;
+        gsrnamespace: "6",
 
+        gsrlimit: "10",
 
-            const imageUrl =
-                await getDestinationImage(
-                    wikiTitle
-                );
+        prop: "imageinfo",
 
+        iiprop: "url",
 
-            if (imageUrl) {
+        iiurlwidth: "1600",
 
-                const preload =
-                    new Image();
+        format: "json",
 
-                preload.decoding =
-                    "async";
+        origin: "*"
 
-                preload.src =
-                    imageUrl;
+      });
 
 
-                preload.onload = () => {
+      const response = await fetch(
 
-                    img.src =
-                        imageUrl;
+        COMMONS_API +
+        "?" +
+        params.toString(),
 
-                    img.classList.add(
-                        "image-loaded"
-                    );
-
-                };
-
-
-                preload.onerror = () => {
-
-                    console.warn(
-                        "Image failed:",
-                        wikiTitle
-                    );
-
-                };
-
-            }
-
+        {
+          cache: "force-cache"
         }
 
-    }
+      );
 
 
-    const workers = [];
+      if (!response.ok) return null;
 
+      const data = await response.json();
 
-    for (
-        let i = 0;
-        i < CONCURRENT_REQUESTS;
-        i++
-    ) {
-
-        workers.push(
-            worker()
+      const pages =
+        Object.values(
+          data.query?.pages || {}
         );
 
+
+      for (const page of pages) {
+
+        const imageInfo =
+          page.imageinfo?.[0];
+
+        const image =
+          imageInfo?.thumburl ||
+          imageInfo?.url;
+
+        if (!image) continue;
+
+        const normalized =
+          normalize(image);
+
+        if (!usedImages.has(normalized)) {
+
+          return image;
+
+        }
+
+      }
+
+
+      return null;
+
+    } catch (error) {
+
+      return null;
+
+    }
+
+  }
+
+
+  /* =========================================
+     GET UNIQUE IMAGE
+
+     Duplicate image is rejected.
+     Then Commons is searched.
+  ========================================= */
+
+  async function getUniqueImage(title) {
+
+    if (loadedImages.has(title)) {
+
+      return loadedImages.get(title);
+
     }
 
 
-    await Promise.all(
-        workers
+    let image =
+      await getWikipediaImage(title);
+
+
+    if (image) {
+
+      const normalized =
+        normalize(image);
+
+      if (!usedImages.has(normalized)) {
+
+        usedImages.add(normalized);
+
+        loadedImages.set(
+          title,
+          image
+        );
+
+        return image;
+
+      }
+
+    }
+
+
+    image =
+      await getCommonsImage(title);
+
+
+    if (image) {
+
+      const normalized =
+        normalize(image);
+
+      if (!usedImages.has(normalized)) {
+
+        usedImages.add(normalized);
+
+        loadedImages.set(
+          title,
+          image
+        );
+
+        return image;
+
+      }
+
+    }
+
+
+    return null;
+
+  }
+
+
+  /* =========================================
+     LOAD ONE IMAGE
+  ========================================= */
+
+  async function loadImage(imageElement) {
+
+    const title =
+      imageElement.dataset.wiki ||
+      imageElement.alt ||
+      "India";
+
+
+    /*
+      Floating rows intentionally contain
+      duplicate DOM elements for smooth
+      continuous animation.
+
+      For normal destination cards,
+      unique image protection is active.
+    */
+
+    const isFloating =
+      imageElement.closest(".floating-track");
+
+
+    if (isFloating) {
+
+      if (loadedImages.has(title)) {
+
+        imageElement.src =
+          loadedImages.get(title);
+
+        imageElement.classList.add(
+          "image-loaded"
+        );
+
+        return;
+
+      }
+
+    }
+
+
+    const image =
+      await getUniqueImage(title);
+
+
+    if (image) {
+
+      imageElement.src = image;
+
+      imageElement.classList.add(
+        "image-loaded"
+      );
+
+      return;
+
+    }
+
+
+    /*
+      If no valid unique photo exists,
+      use a destination-specific
+      premium placeholder.
+
+      Never use the same random
+      fallback image.
+    */
+
+    imageElement.src =
+      createPlaceholder(title);
+
+    imageElement.classList.add(
+      "image-loaded",
+      "image-placeholder"
     );
 
-});
+  }
+
+
+  /* =========================================
+     LOAD PRIORITY IMAGES FIRST
+  ========================================= */
+
+  async function loadImages() {
+
+    const images =
+      Array.from(
+        document.querySelectorAll(
+          "img[data-destination-image]"
+        )
+      );
+
+
+    /*
+      Visible destination cards first.
+    */
+
+    const priority =
+      images.filter(
+        image =>
+          !image.closest(".more-destinations")
+      );
+
+
+    const lazy =
+      images.filter(
+        image =>
+          image.closest(".more-destinations")
+      );
+
+
+    /*
+      Load visible images gradually.
+
+      This prevents mobile from
+      opening 30 image requests
+      at exactly the same time.
+    */
+
+    for (const image of priority) {
+
+      await loadImage(image);
+
+    }
+
+
+    /*
+      Remaining images are loaded
+      after the important content.
+    */
+
+    setTimeout(async () => {
+
+      for (const image of lazy) {
+
+        await loadImage(image);
+
+      }
+
+    }, 500);
+
+  }
+
+
+  /* =========================================
+     START
+  ========================================= */
+
+  if (
+    document.readyState ===
+    "loading"
+  ) {
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      loadImages
+    );
+
+  } else {
+
+    loadImages();
+
+  }
+
+})();
