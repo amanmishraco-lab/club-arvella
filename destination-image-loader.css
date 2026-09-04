@@ -1,0 +1,2 @@
+img[data-destination-image] { background:#0b2035; }
+img[data-destination-image]:not(.image-loaded) { color: transparent; }

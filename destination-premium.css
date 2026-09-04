@@ -1,0 +1,126 @@
+/* =========================================================
+   CLUB ARVELLA — DESTINATION PREMIUM FINAL FIX
+   Full-screen hero + premium image cards
+========================================================= */
+
+.destination-detail-hero {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 82px) !important;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #071a2b;
+  background-image:
+    linear-gradient(90deg, rgba(5,16,29,.93) 0%, rgba(5,16,29,.72) 42%, rgba(5,16,29,.26) 100%),
+    var(--destination-hero, none) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.destination-detail-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(7,26,43,.05), rgba(7,26,43,.42));
+  pointer-events: none;
+}
+
+.destination-detail-overlay { display: none !important; }
+
+.destination-detail-content {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 92%);
+  max-width: none !important;
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.destination-detail-content h1 {
+  max-width: 900px;
+  margin: 16px 0 20px !important;
+  font-size: clamp(58px, 8.5vw, 124px) !important;
+  line-height: .9 !important;
+  letter-spacing: -.035em;
+  color: #f7f5ef;
+  text-wrap: balance;
+}
+
+.destination-detail-content p {
+  max-width: 680px;
+  margin-bottom: 30px;
+  font-size: clamp(16px, 1.4vw, 20px) !important;
+  line-height: 1.65 !important;
+  color: rgba(255,255,255,.88) !important;
+}
+
+/* Keep all destination images sharp and consistent */
+.destination-card img,
+.floating-track img,
+.place-card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  background: #0a1b2d;
+}
+
+.destination-card img {
+  height: 100%;
+  min-height: 320px;
+  transition: transform .55s ease, filter .35s ease;
+}
+.destination-card:hover img { transform: scale(1.05); }
+
+.floating-track img {
+  width: 220px !important;
+  height: 138px !important;
+  flex: 0 0 auto;
+}
+
+.place-card img {
+  height: 270px !important;
+}
+
+/* Subtle loading state — never show broken-image icon */
+[data-destination-image] {
+  background: linear-gradient(110deg, #0b2035 20%, #18354d 38%, #0b2035 55%);
+  background-size: 220% 100%;
+  animation: clubArvellaImageLoad 1.5s linear infinite;
+}
+[data-destination-image].image-loaded {
+  animation: none;
+  background: #0a1b2d;
+}
+@keyframes clubArvellaImageLoad {
+  to { background-position: -220% 0; }
+}
+
+.section-head h2, .detail-title h2 {
+  font-size: clamp(38px, 4vw, 60px) !important;
+}
+.quick-info b { font-size: clamp(20px, 2vw, 28px) !important; }
+.place-card { display:flex; flex-direction:column; }
+.place-card-content { display:flex; flex-direction:column; flex:1; }
+.place-card h3 { font-size: clamp(28px, 2.5vw, 36px) !important; }
+.place-card p { font-size: 14px !important; line-height:1.7 !important; }
+.place-number { color: var(--gold); letter-spacing: 2px; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+.place-meta { margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(212,175,55,.18); display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.place-meta span { display:block; color:var(--gold); font-size:9px; letter-spacing:1.2px; margin-bottom:6px; }
+.place-meta b { display:block; color:#e9e4da; font-size:12px; line-height:1.45; font-weight:600; }
+.destination-cta h2 { font-size: clamp(34px,4vw,54px) !important; }
+.destination-cta p { font-size:15px; line-height:1.7; }
+
+@media (max-width: 900px) {
+  .destination-detail-hero { min-height: calc(100vh - 74px) !important; }
+  .quick-info-grid, .top-places-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .destination-detail-hero { min-height: 680px !important; background-position: 58% center !important; }
+  .destination-detail-content { width: min(92%, 560px); padding: 72px 0; }
+  .destination-detail-content h1 { font-size: clamp(52px, 15vw, 82px) !important; }
+  .quick-info-grid, .top-places-grid, .place-meta { grid-template-columns: 1fr !important; }
+}
