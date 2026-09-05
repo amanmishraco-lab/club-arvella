@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Explore India | Club Arvella</title>
 
@@ -11,241 +17,358 @@
     content="Explore 30 extraordinary Indian destinations with Club Arvella."
   >
 
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="explore.css">
+  <link
+    rel="preconnect"
+    href="https://images.unsplash.com"
+  >
+
+  <link
+    rel="stylesheet"
+    href="explore.css"
+  >
+
 </head>
+
 
 <body>
 
+
+<!-- ==============================
+     NAVIGATION
+================================ -->
+
 <header class="nav">
 
-  <a class="brand" href="index.html" aria-label="Club Arvella Home">
-    <span class="brand-mark">A</span>
+
+  <a
+    class="brand"
+    href="index.html"
+    aria-label="Club Arvella Home"
+  >
+
+    <span class="brand-mark">
+      A
+    </span>
+
 
     <span class="brand-name">
+
       CLUB ARVELLA
-      <small>TRAVEL BEYOND</small>
+
+      <small>
+        TRAVEL BEYOND
+      </small>
+
     </span>
+
   </a>
 
-  <button class="menu-btn" aria-label="Open menu">
+
+
+  <button
+    class="menu-btn"
+    aria-label="Open menu"
+    type="button"
+  >
     MENU
   </button>
 
+
+
   <nav class="nav-links">
 
-    <a href="index.html">HOME</a>
 
-    <a class="active" href="india.html">
+    <a href="index.html">
+      HOME
+    </a>
+
+
+    <a
+      class="active"
+      href="india.html"
+    >
       EXPLORE INDIA
     </a>
+
 
     <a href="world.html">
       EXPLORE WORLD
     </a>
 
+
     <a href="packages.html">
       PACKAGES
     </a>
+
 
     <a href="about.html">
       ABOUT
     </a>
 
+
     <a href="contact.html">
       CONTACT
     </a>
 
-    <a class="nav-cta" href="contact.html">
+
+    <a
+      class="nav-cta"
+      href="contact.html"
+    >
       PLAN YOUR TRIP
     </a>
+
 
   </nav>
 
 </header>
 
 
+
+<!-- ==============================
+     MAIN
+================================ -->
+
 <main>
 
-<section class="world-hero">
 
-  <img
-    class="hero-image"
-    src="https://images.unsplash.com/photo-1600681424632-4e3b1a9d0e3c?auto=format&fit=crop&w=2200&q=85"
-    alt="Kashmir landscape in India"
-    fetchpriority="high"
-  >
+  <!-- HERO -->
 
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-
-    <p class="eyebrow">
-      CURATED BY CLUB ARVELLA
-    </p>
-
-    <h1>
-      EXPLORE INDIA
-    </h1>
-
-    <p>
-      30 incredible destinations. A thousand unforgettable stories.
-    </p>
-
-  </div>
-
-</section>
+  <section class="world-hero">
 
 
-<section class="explore-wrap">
+    <img
+      class="hero-image"
+      src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2200&q=85"
+      alt="Kashmir mountains and lake in India"
+      fetchpriority="high"
+    >
 
-  <div class="filters">
 
-    <label class="search-box">
+    <div class="hero-overlay"></div>
 
-      <span aria-hidden="true">
-        ⌕
-      </span>
 
-      <input
-        id="searchInput"
-        type="search"
-        placeholder="Search destinations (e.g. Kashmir, Goa, Kerala...)"
-        autocomplete="off"
+    <div class="hero-content">
+
+
+      <p class="eyebrow">
+        CURATED BY CLUB ARVELLA
+      </p>
+
+
+      <h1>
+        EXPLORE INDIA
+      </h1>
+
+
+      <p>
+        30 incredible destinations.
+        A thousand unforgettable stories.
+      </p>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- DESTINATION AREA -->
+
+  <section class="explore-wrap">
+
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+
+      <!-- SEARCH -->
+
+      <label class="search-box">
+
+
+        <span aria-hidden="true">
+          ⌕
+        </span>
+
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search destinations (e.g. Kashmir, Goa, Kerala...)"
+          autocomplete="off"
+        >
+
+
+      </label>
+
+
+
+      <!-- REGION -->
+
+      <select
+        id="regionFilter"
+        aria-label="Filter by region"
       >
 
-    </label>
+        <option value="all">
+          All Regions
+        </option>
+
+        <option value="north">
+          North India
+        </option>
+
+        <option value="west">
+          West India
+        </option>
+
+        <option value="south">
+          South India
+        </option>
+
+        <option value="east">
+          East India
+        </option>
+
+        <option value="north-east">
+          North East India
+        </option>
+
+        <option value="central">
+          Central India
+        </option>
+
+        <option value="islands">
+          Islands
+        </option>
+
+      </select>
 
 
-    <select id="regionFilter">
 
-      <option value="all">
-        All Regions
-      </option>
+      <!-- TRAVEL STYLE -->
 
-      <option value="north">
-        North India
-      </option>
+      <select
+        id="styleFilter"
+        aria-label="Filter by travel style"
+      >
 
-      <option value="west">
-        West India
-      </option>
+        <option value="all">
+          All Travel Styles
+        </option>
 
-      <option value="south">
-        South India
-      </option>
+        <option value="luxury">
+          Luxury
+        </option>
 
-      <option value="east">
-        East India
-      </option>
+        <option value="beach">
+          Beaches
+        </option>
 
-      <option value="north-east">
-        North East India
-      </option>
+        <option value="culture">
+          Culture
+        </option>
 
-      <option value="central">
-        Central India
-      </option>
+        <option value="nature">
+          Nature
+        </option>
 
-      <option value="islands">
-        Islands
-      </option>
+        <option value="adventure">
+          Adventure
+        </option>
 
-    </select>
+        <option value="heritage">
+          Heritage
+        </option>
 
-
-    <select id="styleFilter">
-
-      <option value="all">
-        All Travel Styles
-      </option>
-
-      <option value="luxury">
-        Luxury
-      </option>
-
-      <option value="beach">
-        Beaches
-      </option>
-
-      <option value="culture">
-        Culture
-      </option>
-
-      <option value="nature">
-        Nature
-      </option>
-
-      <option value="adventure">
-        Adventure
-      </option>
-
-      <option value="heritage">
-        Heritage
-      </option>
-
-    </select>
+      </select>
 
 
-    <select id="seasonFilter">
 
-      <option value="all">
-        All Seasons
-      </option>
+      <!-- SEASON -->
 
-      <option value="winter">
-        Winter Escape
-      </option>
+      <select
+        id="seasonFilter"
+        aria-label="Filter by season"
+      >
 
-      <option value="summer">
-        Summer Escape
-      </option>
+        <option value="all">
+          All Seasons
+        </option>
 
-      <option value="monsoon">
-        Monsoon Escape
-      </option>
+        <option value="winter">
+          Winter Escape
+        </option>
 
-      <option value="year-round">
-        Year Round
-      </option>
+        <option value="summer">
+          Summer Escape
+        </option>
 
-    </select>
+        <option value="monsoon">
+          Monsoon Escape
+        </option>
+
+        <option value="year-round">
+          Year Round
+        </option>
+
+      </select>
 
 
-    <button
-      id="resetBtn"
-      class="reset-btn"
-      type="button"
+
+      <!-- RESET -->
+
+      <button
+        id="resetBtn"
+        class="reset-btn"
+        type="button"
+      >
+        Reset
+      </button>
+
+
+    </div>
+
+
+
+    <!-- DESTINATION CARDS -->
+
+    <div
+      id="destinationGrid"
+      class="destination-grid"
+    ></div>
+
+
+
+    <!-- NO RESULT -->
+
+    <p
+      id="emptyState"
+      class="empty-state"
+      hidden
     >
-      Reset
-    </button>
-
-  </div>
+      No destinations match your search.
+    </p>
 
 
-  <div
-    id="destinationGrid"
-    class="destination-grid"
-  ></div>
+  </section>
 
-
-  <p
-    id="emptyState"
-    class="empty-state"
-    hidden
-  >
-    No destinations match your search.
-  </p>
-
-</section>
 
 </main>
 
+
+
+<!-- INDIA JAVASCRIPT -->
 
 <script
   src="explore-india.js"
   defer
 ></script>
 
+
 </body>
+
 </html>
