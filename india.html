@@ -3,80 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Explore India | Club Arvella</title>
-  <meta name="description" content="Explore 30 extraordinary Indian destinations with Club Arvella.">
+
+  <meta
+    name="description"
+    content="Explore 30 extraordinary Indian destinations with Club Arvella."
+  >
+
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="explore.css">
 </head>
+
 <body>
+
 <header class="nav">
+
   <a class="brand" href="index.html" aria-label="Club Arvella Home">
     <span class="brand-mark">A</span>
-    <span class="brand-name">CLUB ARVELLA<small>TRAVEL BEYOND</small></span>
+
+    <span class="brand-name">
+      CLUB ARVELLA
+      <small>TRAVEL BEYOND</small>
+    </span>
   </a>
-  <button class="menu-btn" aria-label="Open menu">MENU</button>
+
+  <button class="menu-btn" aria-label="Open menu">
+    MENU
+  </button>
+
   <nav class="nav-links">
+
     <a href="index.html">HOME</a>
-    <a class="active" href="india.html">EXPLORE INDIA</a>
-    <a href="world.html">EXPLORE WORLD</a>
-    <a href="packages.html">PACKAGES</a>
-    <a href="about.html">ABOUT</a>
-    <a href="contact.html">CONTACT</a>
-    <a class="nav-cta" href="contact.html">PLAN YOUR TRIP</a>
+
+    <a class="active" href="india.html">
+      EXPLORE INDIA
+    </a>
+
+    <a href="world.html">
+      EXPLORE WORLD
+    </a>
+
+    <a href="packages.html">
+      PACKAGES
+    </a>
+
+    <a href="about.html">
+      ABOUT
+    </a>
+
+    <a href="contact.html">
+      CONTACT
+    </a>
+
+    <a class="nav-cta" href="contact.html">
+      PLAN YOUR TRIP
+    </a>
+
   </nav>
+
 </header>
 
+
 <main>
-  <section class="world-hero">
-    <img class="hero-image" src="https://images.unsplash.com/photo-1600681424632-4e3b1a9d0e3c?auto=format&fit=crop&w=2200&q=85" alt="Kashmir landscape in India" fetchpriority="high">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="eyebrow">CURATED BY CLUB ARVELLA</p>
-      <h1>EXPLORE INDIA</h1>
-      <p>30 incredible destinations. A thousand unforgettable stories.</p>
-    </div>
-  </section>
 
-  <section class="explore-wrap">
-    <div class="filters">
-      <label class="search-box">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" placeholder="Search destinations (e.g. Kashmir, Goa, Kerala...)" autocomplete="off">
-      </label>
-      <select id="regionFilter" aria-label="Filter by region">
-        <option value="all">All Regions</option>
-        <option value="north">North India</option>
-        <option value="west">West India</option>
-        <option value="south">South India</option>
-        <option value="east">East India</option>
-        <option value="north-east">North East India</option>
-        <option value="central">Central India</option>
-        <option value="islands">Islands</option>
-      </select>
-      <select id="styleFilter" aria-label="Filter by travel style">
-        <option value="all">All Travel Styles</option>
-        <option value="luxury">Luxury</option>
-        <option value="beach">Beaches</option>
-        <option value="culture">Culture</option>
-        <option value="nature">Nature</option>
-        <option value="adventure">Adventure</option>
-        <option value="heritage">Heritage</option>
-      </select>
-      <select id="seasonFilter" aria-label="Filter by season">
-        <option value="all">All Seasons</option>
-        <option value="winter">Winter Escape</option>
-        <option value="summer">Summer Escape</option>
-        <option value="monsoon">Monsoon Escape</option>
-        <option value="year-round">Year Round</option>
-      </select>
-      <button id="resetBtn" class="reset-btn" type="button">Reset</button>
-    </div>
+<section class="world-hero">
 
-    <div id="destinationGrid" class="destination-grid"></div>
-    <p id="emptyState" class="empty-state" hidden>No destinations match your search.</p>
-  </section>
+  <img
+    class="hero-image"
+    src="https://images.unsplash.com/photo-1600681424632-4e3b1a9d0e3c?auto=format&fit=crop&w=2200&q=85"
+    alt="Kashmir landscape in India"
+    fetchpriority="high"
+  >
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      CURATED BY CLUB ARVELLA
+    </p>
+
+    <h1>
+      EXPLORE INDIA
+    </h1>
+
+    <p>
+      30 incredible destinations. A thousand unforgettable stories.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="explore-wrap">
+
+  <div class="filters">
+
+    <label class="search-box">
+
+      <span aria-hidden="true">
+        ⌕
+      </span>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search destinations (e.g. Kashmir, Goa, Kerala...)"
+        autocomplete="off"
+      >
+
+    </label>
+
+
+    <select id="regionFilter">
+
+      <option value="all">
+        All Regions
+      </option>
+
+      <option value="north">
+        North India
+      </option>
+
+      <option value="west">
+        West India
+      </option>
+
+      <option value="south">
+        South India
+      </option>
+
+      <option value="east">
+        East India
+      </option>
+
+      <option value="north-east">
+        North East India
+      </option>
+
+      <option value="central">
+        Central India
+      </option>
+
+      <option value="islands">
+        Islands
+      </option>
+
+    </select>
+
+
+    <select id="styleFilter">
+
+      <option value="all">
+        All Travel Styles
+      </option>
+
+      <option value="luxury">
+        Luxury
+      </option>
+
+      <option value="beach">
+        Beaches
+      </option>
+
+      <option value="culture">
+        Culture
+      </option>
+
+      <option value="nature">
+        Nature
+      </option>
+
+      <option value="adventure">
+        Adventure
+      </option>
+
+      <option value="heritage">
+        Heritage
+      </option>
+
+    </select>
+
+
+    <select id="seasonFilter">
+
+      <option value="all">
+        All Seasons
+      </option>
+
+      <option value="winter">
+        Winter Escape
+      </option>
+
+      <option value="summer">
+        Summer Escape
+      </option>
+
+      <option value="monsoon">
+        Monsoon Escape
+      </option>
+
+      <option value="year-round">
+        Year Round
+      </option>
+
+    </select>
+
+
+    <button
+      id="resetBtn"
+      class="reset-btn"
+      type="button"
+    >
+      Reset
+    </button>
+
+  </div>
+
+
+  <div
+    id="destinationGrid"
+    class="destination-grid"
+  ></div>
+
+
+  <p
+    id="emptyState"
+    class="empty-state"
+    hidden
+  >
+    No destinations match your search.
+  </p>
+
+</section>
+
 </main>
 
-<script src="explore-india.js" defer></script>
+
+<script
+  src="explore-india.js"
+  defer
+></script>
+
 </body>
 </html>
