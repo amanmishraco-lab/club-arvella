@@ -1,1052 +1,1686 @@
 window.CLUB_ARVELLA_DESTINATIONS = {
-  "kashmir": {
-    "name": "Kashmir",
-    "tagline": "Lakes, meadows and Himalayan grandeur in every direction.",
-    "bestTime": "April – June & September – October",
-    "duration": "5 – 7 Days",
-    "style": "Scenic & Premium",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Srinagar & Dal Lake",
-        "Ride a shikara past houseboats and floating gardens, then explore the Mughal gardens around the city.",
-        "April – October",
-        "2 Days",
-        "srinagar,dal,lake,kashmir",
-        "https://loremflickr.com/900/700/srinagar,dal,lake,kashmir?lock=301"
-      ],
-      [
-        "Gulmarg",
-        "Ride the famous Gondola and experience alpine meadows in summer or snow activities in winter.",
-        "December – March for snow; April – June for meadows",
-        "1 – 2 Days",
-        "gulmarg,kashmir,gondola,snow",
-        "https://loremflickr.com/900/700/gulmarg,kashmir,gondola,snow?lock=302"
-      ],
-      [
-        "Pahalgam",
-        "A peaceful valley of pine forests, rivers and scenic spots such as Betaab and Aru valleys.",
-        "April – October",
-        "1 – 2 Days",
-        "pahalgam,kashmir,betaab,valley",
-        "https://loremflickr.com/900/700/pahalgam,kashmir,betaab,valley?lock=303"
+  "india": [
+    {
+      "slug": "kashmir",
+      "name": "Kashmir",
+      "tagline": "Paradise on Earth",
+      "country": "India",
+      "region": "India",
+      "bestTime": "April – October",
+      "duration": "6 Nights / 7 Days",
+      "description": "Lakes, valleys, gardens and snow peaks come together in one of India’s most cinematic journeys.",
+      "heroQuery": "Kashmir, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Srinagar",
+          "description": "Dal Lake, Mughal gardens and old-city charm make Srinagar the perfect soft landing in Kashmir.",
+          "imageQuery": "Srinagar, Kashmir, India, landmark travel"
+        },
+        {
+          "name": "Gulmarg",
+          "description": "Ride the Gondola, walk through alpine meadows and enjoy dramatic Himalayan views.",
+          "imageQuery": "Gulmarg, Kashmir, India, landmark travel"
+        },
+        {
+          "name": "Pahalgam",
+          "description": "A peaceful valley of pine forests, rivers and scenic trails, ideal for a slower mountain stay.",
+          "imageQuery": "Pahalgam, Kashmir, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/kashmir,india,travel?lock=201"
-  },
-  "goa": {
-    "name": "Goa",
-    "tagline": "Sunlit beaches, Portuguese heritage and an effortless coastal rhythm.",
-    "bestTime": "November – February",
-    "duration": "4 – 5 Days",
-    "style": "Beach & Leisure",
-    "bestFor": "Couples, Friends & Families",
-    "places": [
-      [
-        "North Goa Beaches",
-        "Enjoy lively beaches, water sports, cafés and sunsets around Baga, Calangute and Anjuna.",
-        "November – February",
-        "2 Days",
-        "goa,baga,calangute,beach",
-        "https://loremflickr.com/900/700/goa,baga,calangute,beach?lock=304"
-      ],
-      [
-        "Old Goa",
-        "Explore the Basilica of Bom Jesus and the historic churches and heritage streets of Old Goa.",
-        "November – March",
-        "1 Day",
-        "old,goa,basilica,bom,jesus",
-        "https://loremflickr.com/900/700/old,goa,basilica,bom,jesus?lock=305"
-      ],
-      [
-        "South Goa",
-        "Slow down at quieter beaches such as Palolem and Colva for a more relaxed coastal experience.",
-        "November – March",
-        "1 – 2 Days",
-        "palolem,south,goa,beach",
-        "https://loremflickr.com/900/700/palolem,south,goa,beach?lock=306"
+    },
+    {
+      "slug": "ladakh",
+      "name": "Ladakh",
+      "tagline": "The Land of High Passes",
+      "country": "India",
+      "region": "India",
+      "bestTime": "May – September",
+      "duration": "6 Nights / 7 Days",
+      "description": "A high-altitude journey through stark mountains, monasteries, turquoise lakes and unforgettable roadscapes.",
+      "heroQuery": "Ladakh, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Leh",
+          "description": "The atmospheric base for acclimatisation, monasteries, markets and mountain viewpoints.",
+          "imageQuery": "Leh, Ladakh, India, landmark travel"
+        },
+        {
+          "name": "Pangong Lake",
+          "description": "A spectacular high-altitude lake known for changing shades of blue and vast Himalayan horizons.",
+          "imageQuery": "Pangong Lake, Ladakh, India, landmark travel"
+        },
+        {
+          "name": "Nubra Valley",
+          "description": "Cross Khardung La and descend into a surprising valley of dunes, villages and rugged peaks.",
+          "imageQuery": "Nubra Valley, Ladakh, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/goa,india,travel?lock=202"
-  },
-  "manali": {
-    "name": "Manali",
-    "tagline": "A Himalayan escape blending mountain scenery, culture and adventure.",
-    "bestTime": "March – June & October – February",
-    "duration": "4 – 6 Days",
-    "style": "Mountains & Adventure",
-    "bestFor": "Couples, Families & Adventure",
-    "places": [
-      [
-        "Solang Valley",
-        "A high-altitude playground for snow experiences, cable cars and seasonal adventure sports.",
-        "December – February for snow; May – June for activities",
-        "1 Day",
-        "solang,valley,manali,snow",
-        "https://loremflickr.com/900/700/solang,valley,manali,snow?lock=307"
-      ],
-      [
-        "Old Manali",
-        "Wander through cafés, pine-lined lanes and the relaxed village atmosphere.",
-        "March – June & September – November",
-        "1 Day",
-        "old,manali,himalaya,cafe",
-        "https://loremflickr.com/900/700/old,manali,himalaya,cafe?lock=308"
-      ],
-      [
-        "Hidimba Devi Temple",
-        "Visit the iconic wooden temple surrounded by a tranquil cedar forest.",
-        "March – June & September – November",
-        "Half Day",
-        "hidimba,temple,manali,forest",
-        "https://loremflickr.com/900/700/hidimba,temple,manali,forest?lock=309"
+    },
+    {
+      "slug": "himachal-pradesh",
+      "name": "Himachal Pradesh",
+      "tagline": "Mountain Escapes & Adventure",
+      "country": "India",
+      "region": "India",
+      "bestTime": "March – June • September – November",
+      "duration": "5 Nights / 6 Days",
+      "description": "A versatile mountain escape combining pine forests, colonial hill towns, valleys and outdoor adventure.",
+      "heroQuery": "Himachal Pradesh, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Shimla",
+          "description": "Colonial architecture, ridge walks and pine-covered hills create a classic Himalayan retreat.",
+          "imageQuery": "Shimla, Himachal Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Manali",
+          "description": "A lively mountain base for valley views, cafés, waterfalls and adventure experiences.",
+          "imageQuery": "Manali, Himachal Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Spiti Valley",
+          "description": "A dramatic high-desert landscape of monasteries, remote villages and enormous mountain horizons.",
+          "imageQuery": "Spiti Valley, Himachal Pradesh, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/manali,india,travel?lock=203"
-  },
-  "rajasthan": {
-    "name": "Rajasthan",
-    "tagline": "Royal palaces, desert landscapes and living heritage on a grand scale.",
-    "bestTime": "October – March",
-    "duration": "7 – 10 Days",
-    "style": "Heritage & Luxury",
-    "bestFor": "Culture Lovers & Families",
-    "places": [
-      [
-        "Jaipur",
-        "Discover Amber Fort, Hawa Mahal and the royal character of the Pink City.",
-        "October – March",
-        "2 – 3 Days",
-        "jaipur,hawa,mahal,rajasthan",
-        "https://loremflickr.com/900/700/jaipur,hawa,mahal,rajasthan?lock=310"
-      ],
-      [
-        "Jodhpur",
-        "Explore the mighty Mehrangarh Fort and the indigo lanes of the Blue City.",
-        "October – March",
-        "2 Days",
-        "jodhpur,mehrangarh,fort,blue,city",
-        "https://loremflickr.com/900/700/jodhpur,mehrangarh,fort,blue,city?lock=311"
-      ],
-      [
-        "Jaisalmer",
-        "Experience the Golden Fort, desert dunes and a memorable Thar Desert evening.",
-        "October – February",
-        "2 – 3 Days",
-        "jaisalmer,desert,fort,camel",
-        "https://loremflickr.com/900/700/jaisalmer,desert,fort,camel?lock=312"
+    },
+    {
+      "slug": "uttarakhand",
+      "name": "Uttarakhand",
+      "tagline": "Himalayan Soul & Serenity",
+      "country": "India",
+      "region": "India",
+      "bestTime": "March – June • September – November",
+      "duration": "5 Nights / 6 Days",
+      "description": "From peaceful hill stations to sacred rivers and Himalayan viewpoints, Uttarakhand balances nature and culture.",
+      "heroQuery": "Uttarakhand, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Rishikesh",
+          "description": "A riverside escape for yoga, cafés, rafting and peaceful evenings beside the Ganges.",
+          "imageQuery": "Rishikesh, Uttarakhand, India, landmark travel"
+        },
+        {
+          "name": "Nainital",
+          "description": "A charming lake town surrounded by wooded hills, viewpoints and leisurely walks.",
+          "imageQuery": "Nainital, Uttarakhand, India, landmark travel"
+        },
+        {
+          "name": "Mussoorie",
+          "description": "A refined hill retreat known for mountain views, colonial lanes and scenic drives.",
+          "imageQuery": "Mussoorie, Uttarakhand, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/rajasthan,india,travel?lock=204"
-  },
-  "kerala": {
-    "name": "Kerala",
-    "tagline": "Backwaters, tea-covered hills and tropical coastlines in one journey.",
-    "bestTime": "September – March",
-    "duration": "6 – 8 Days",
-    "style": "Nature & Wellness",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Alleppey Backwaters",
-        "Cruise the palm-fringed backwaters and experience Kerala's famous houseboat stays.",
-        "November – February",
-        "1 – 2 Days",
-        "alleppey,kerala,backwaters,houseboat",
-        "https://loremflickr.com/900/700/alleppey,kerala,backwaters,houseboat?lock=313"
-      ],
-      [
-        "Munnar",
-        "Explore tea estates, misty viewpoints and rolling Western Ghats landscapes.",
-        "September – March",
-        "2 – 3 Days",
-        "munnar,kerala,tea,hills",
-        "https://loremflickr.com/900/700/munnar,kerala,tea,hills?lock=314"
-      ],
-      [
-        "Kochi",
-        "Mix heritage, waterfront culture and colonial-era neighbourhoods around Fort Kochi.",
-        "November – February",
-        "1 – 2 Days",
-        "kochi,fort,kochi,kerala",
-        "https://loremflickr.com/900/700/kochi,fort,kochi,kerala?lock=315"
+    },
+    {
+      "slug": "rajasthan",
+      "name": "Rajasthan",
+      "tagline": "Royal Heritage & Desert Luxury",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "6 Nights / 7 Days",
+      "description": "Palaces, forts, desert landscapes and refined hospitality define Rajasthan’s timeless royal character.",
+      "heroQuery": "Rajasthan, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Jaipur",
+          "description": "The Pink City blends grand forts, palaces, bazaars and richly layered royal history.",
+          "imageQuery": "Jaipur, Rajasthan, India, landmark travel"
+        },
+        {
+          "name": "Udaipur",
+          "description": "Lakes, palaces and sunset views give Udaipur an especially romantic atmosphere.",
+          "imageQuery": "Udaipur, Rajasthan, India, landmark travel"
+        },
+        {
+          "name": "Jaisalmer",
+          "description": "Golden sandstone architecture opens into desert adventures and luxury camp experiences.",
+          "imageQuery": "Jaisalmer, Rajasthan, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/kerala,india,travel?lock=205"
-  },
-  "ladakh": {
-    "name": "Ladakh",
-    "tagline": "High-altitude deserts, monasteries and dramatic Himalayan roads.",
-    "bestTime": "June – September",
-    "duration": "5 – 8 Days",
-    "style": "Adventure & Expedition",
-    "bestFor": "Adventure Lovers",
-    "places": [
-      [
-        "Leh",
-        "Discover monasteries, markets and the cultural heart of Ladakh.",
-        "June – September",
-        "2 Days",
-        "leh,ladakh,monastery,mountains",
-        "https://loremflickr.com/900/700/leh,ladakh,monastery,mountains?lock=316"
-      ],
-      [
-        "Pangong Lake",
-        "See the vast high-altitude lake famous for its changing shades of blue.",
-        "May – September",
-        "1 – 2 Days",
-        "pangong,lake,ladakh,blue",
-        "https://loremflickr.com/900/700/pangong,lake,ladakh,blue?lock=317"
-      ],
-      [
-        "Nubra Valley",
-        "Travel through dramatic mountain passes to dunes, villages and Bactrian camels.",
-        "June – September",
-        "1 – 2 Days",
-        "nubra,valley,ladakh,camel",
-        "https://loremflickr.com/900/700/nubra,valley,ladakh,camel?lock=318"
+    },
+    {
+      "slug": "goa",
+      "name": "Goa",
+      "tagline": "Beaches, Culture & Slow Luxury",
+      "country": "India",
+      "region": "India",
+      "bestTime": "November – February",
+      "duration": "4 Nights / 5 Days",
+      "description": "Goa pairs tropical beaches with Portuguese heritage, vibrant food, relaxed resorts and memorable sunsets.",
+      "heroQuery": "Goa, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "North Goa",
+          "description": "A lively mix of beaches, dining, nightlife and stylish resort experiences.",
+          "imageQuery": "North Goa, Goa, India, landmark travel"
+        },
+        {
+          "name": "South Goa",
+          "description": "Quieter beaches and premium resorts make South Goa ideal for relaxed luxury.",
+          "imageQuery": "South Goa, Goa, India, landmark travel"
+        },
+        {
+          "name": "Old Goa",
+          "description": "Historic churches and heritage architecture reveal Goa’s distinctive cultural story.",
+          "imageQuery": "Old Goa, Goa, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/ladakh,india,travel?lock=206"
-  },
-  "andaman": {
-    "name": "Andaman",
-    "tagline": "Clear waters, coral reefs and some of India's finest island escapes.",
-    "bestTime": "October – May",
-    "duration": "5 – 7 Days",
-    "style": "Island & Water Sports",
-    "bestFor": "Couples, Families & Friends",
-    "places": [
-      [
-        "Radhanagar Beach",
-        "Relax at one of the Andaman's best-known white-sand beaches on Havelock Island.",
-        "October – May",
-        "1 Day",
-        "radhanagar,beach,andaman,havelock",
-        "https://loremflickr.com/900/700/radhanagar,beach,andaman,havelock?lock=319"
-      ],
-      [
-        "Cellular Jail",
-        "Understand the islands' history through this important colonial-era landmark.",
-        "October – May",
-        "Half Day",
-        "cellular,jail,andaman,port,blair",
-        "https://loremflickr.com/900/700/cellular,jail,andaman,port,blair?lock=320"
-      ],
-      [
-        "Neil Island",
-        "Enjoy quieter beaches, natural rock formations and a slower island pace.",
-        "October – May",
-        "1 – 2 Days",
-        "neil,island,andaman,beach",
-        "https://loremflickr.com/900/700/neil,island,andaman,beach?lock=321"
+    },
+    {
+      "slug": "kerala",
+      "name": "Kerala",
+      "tagline": "God’s Own Country",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "5 Nights / 6 Days",
+      "description": "A beautifully paced journey through backwaters, tea country, tropical landscapes and Kerala’s distinctive cuisine.",
+      "heroQuery": "Kerala, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Alappuzha",
+          "description": "Cruise the backwaters on a private houseboat and watch village life drift past.",
+          "imageQuery": "Alappuzha, Kerala, India, landmark travel"
+        },
+        {
+          "name": "Munnar",
+          "description": "Tea plantations, misty hills and cool mountain air create a refreshing highland escape.",
+          "imageQuery": "Munnar, Kerala, India, landmark travel"
+        },
+        {
+          "name": "Thekkady",
+          "description": "Forest landscapes and wildlife experiences add adventure to a classic Kerala circuit.",
+          "imageQuery": "Thekkady, Kerala, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/andaman,india,travel?lock=207"
-  },
-  "mumbai": {
-    "name": "Mumbai",
-    "tagline": "A fast-moving metropolis of sea views, heritage and iconic city life.",
-    "bestTime": "November – February",
-    "duration": "3 – 4 Days",
-    "style": "City & Culture",
-    "bestFor": "Couples, Families & City Explorers",
-    "places": [
-      [
-        "Gateway of India",
-        "Start at Mumbai's iconic waterfront monument and enjoy views across the harbour.",
-        "November – February",
-        "Half Day",
-        "gateway,of,india,mumbai",
-        "https://loremflickr.com/900/700/gateway,of,india,mumbai?lock=322"
-      ],
-      [
-        "Marine Drive",
-        "Walk the Queen's Necklace at sunset for one of Mumbai's classic city experiences.",
-        "November – February",
-        "Half Day",
-        "marine,drive,mumbai,sunset",
-        "https://loremflickr.com/900/700/marine,drive,mumbai,sunset?lock=323"
-      ],
-      [
-        "Elephanta Caves",
-        "Take a harbour ferry to the historic island caves and their remarkable rock-cut sculptures.",
-        "November – March",
-        "Half – 1 Day",
-        "elephanta,caves,mumbai",
-        "https://loremflickr.com/900/700/elephanta,caves,mumbai?lock=324"
+    },
+    {
+      "slug": "andaman",
+      "name": "Andaman Islands",
+      "tagline": "Tropical Island Paradise",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – May",
+      "duration": "5 Nights / 6 Days",
+      "description": "Crystal-clear water, coral reefs and secluded beaches make the Andamans ideal for a tropical escape.",
+      "heroQuery": "Andaman Islands, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Swaraj Dweep",
+          "description": "Famous for beautiful beaches, reef experiences and relaxed island stays.",
+          "imageQuery": "Swaraj Dweep, Andaman Islands, India, landmark travel"
+        },
+        {
+          "name": "Shaheed Dweep",
+          "description": "A quieter island with natural bridges, beaches and unhurried coastal moments.",
+          "imageQuery": "Shaheed Dweep, Andaman Islands, India, landmark travel"
+        },
+        {
+          "name": "Port Blair",
+          "description": "The gateway to the islands, with coastal views, history and convenient arrival connections.",
+          "imageQuery": "Port Blair, Andaman Islands, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/mumbai,india,travel?lock=208"
-  },
-  "agra": {
-    "name": "Agra",
-    "tagline": "Mughal architecture, timeless romance and some of India's greatest monuments.",
-    "bestTime": "October – March",
-    "duration": "2 – 3 Days",
-    "style": "Heritage & Culture",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Taj Mahal",
-        "See India's most iconic monument, ideally early in the day for a calmer experience.",
-        "October – March",
-        "Half Day",
-        "taj,mahal,agra,sunrise",
-        "https://loremflickr.com/900/700/taj,mahal,agra,sunrise?lock=325"
-      ],
-      [
-        "Agra Fort",
-        "Explore the imposing red sandstone fort and its royal Mughal-era spaces.",
-        "October – March",
-        "Half Day",
-        "agra,fort,mughal",
-        "https://loremflickr.com/900/700/agra,fort,mughal?lock=326"
-      ],
-      [
-        "Mehtab Bagh",
-        "Enjoy a peaceful riverside viewpoint with memorable Taj Mahal views.",
-        "October – March",
-        "1 – 2 Hours",
-        "mehtab,bagh,taj,mahal,agra",
-        "https://loremflickr.com/900/700/mehtab,bagh,taj,mahal,agra?lock=327"
+    },
+    {
+      "slug": "sikkim",
+      "name": "Sikkim",
+      "tagline": "Himalayan Paradise",
+      "country": "India",
+      "region": "India",
+      "bestTime": "March – May • October – December",
+      "duration": "5 Nights / 6 Days",
+      "description": "Monasteries, mountain viewpoints, alpine lakes and lush valleys create a peaceful Himalayan journey.",
+      "heroQuery": "Sikkim, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Gangtok",
+          "description": "A polished mountain base with monasteries, viewpoints, cafés and Himalayan culture.",
+          "imageQuery": "Gangtok, Sikkim, India, landmark travel"
+        },
+        {
+          "name": "Tsomgo Lake",
+          "description": "A high-altitude glacial lake surrounded by rugged mountains and seasonal snow.",
+          "imageQuery": "Tsomgo Lake, Sikkim, India, landmark travel"
+        },
+        {
+          "name": "Pelling",
+          "description": "Known for spectacular Kanchenjunga views, monasteries and a quieter mountain atmosphere.",
+          "imageQuery": "Pelling, Sikkim, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/agra,india,travel?lock=209"
-  },
-  "jaipur": {
-    "name": "Jaipur",
-    "tagline": "The Pink City brings together royal architecture, colour and desert heritage.",
-    "bestTime": "October – March",
-    "duration": "2 – 3 Days",
-    "style": "Heritage & Culture",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Amber Fort",
-        "Explore the grand hilltop fort, courtyards and panoramic views outside Jaipur.",
-        "October – March",
-        "Half – 1 Day",
-        "amber,fort,jaipur,rajasthan",
-        "https://loremflickr.com/900/700/amber,fort,jaipur,rajasthan?lock=328"
-      ],
-      [
-        "Hawa Mahal",
-        "See Jaipur's celebrated Palace of Winds and its instantly recognisable façade.",
-        "October – March",
-        "1 – 2 Hours",
-        "hawa,mahal,jaipur,pink",
-        "https://loremflickr.com/900/700/hawa,mahal,jaipur,pink?lock=329"
-      ],
-      [
-        "City Palace",
-        "Discover royal museums, courtyards and the living heritage of Jaipur's rulers.",
-        "October – March",
-        "Half Day",
-        "city,palace,jaipur,rajasthan",
-        "https://loremflickr.com/900/700/city,palace,jaipur,rajasthan?lock=330"
+    },
+    {
+      "slug": "meghalaya",
+      "name": "Meghalaya",
+      "tagline": "Abode of Clouds",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – April",
+      "duration": "5 Nights / 6 Days",
+      "description": "Waterfalls, living-root bridges, misty hills and dramatic caves make Meghalaya one of India’s most atmospheric regions.",
+      "heroQuery": "Meghalaya, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Shillong",
+          "description": "A relaxed hill city with cafés, viewpoints, music and easy access to surrounding landscapes.",
+          "imageQuery": "Shillong, Meghalaya, India, landmark travel"
+        },
+        {
+          "name": "Cherrapunji",
+          "description": "Waterfalls, limestone caves and dramatic valleys showcase Meghalaya’s wild side.",
+          "imageQuery": "Cherrapunji, Meghalaya, India, landmark travel"
+        },
+        {
+          "name": "Mawlynnong",
+          "description": "A serene village experience surrounded by lush greenery, footbridges and village landscapes.",
+          "imageQuery": "Mawlynnong, Meghalaya, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/jaipur,india,travel?lock=210"
-  },
-  "udaipur": {
-    "name": "Udaipur",
-    "tagline": "Lakeside palaces and romantic royal heritage in Rajasthan's city of lakes.",
-    "bestTime": "October – March",
-    "duration": "2 – 3 Days",
-    "style": "Romance & Heritage",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "City Palace",
-        "Explore the vast palace complex overlooking Lake Pichola.",
-        "October – March",
-        "Half Day",
-        "city,palace,udaipur,lake",
-        "https://loremflickr.com/900/700/city,palace,udaipur,lake?lock=331"
-      ],
-      [
-        "Lake Pichola",
-        "Take a scenic boat ride surrounded by palaces, ghats and Aravalli hills.",
-        "October – March",
-        "Half Day",
-        "lake,pichola,udaipur,boat",
-        "https://loremflickr.com/900/700/lake,pichola,udaipur,boat?lock=332"
-      ],
-      [
-        "Jagmandir",
-        "Visit the elegant island palace set on the waters of Lake Pichola.",
-        "October – March",
-        "Half Day",
-        "jagmandir,udaipur,island,palace",
-        "https://loremflickr.com/900/700/jagmandir,udaipur,island,palace?lock=333"
+    },
+    {
+      "slug": "gujarat",
+      "name": "Gujarat",
+      "tagline": "Heritage, Coast & Culture",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "5 Nights / 6 Days",
+      "description": "A diverse route across living heritage, desert landscapes, temples, wildlife and vibrant regional culture.",
+      "heroQuery": "Gujarat, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Ahmedabad",
+          "description": "Historic pols, architecture, museums and food make the city a rich cultural starting point.",
+          "imageQuery": "Ahmedabad, Gujarat, India, landmark travel"
+        },
+        {
+          "name": "Rann of Kutch",
+          "description": "Vast salt plains create an extraordinary landscape, especially around the winter festival season.",
+          "imageQuery": "Rann of Kutch, Gujarat, India, landmark travel"
+        },
+        {
+          "name": "Dwarka",
+          "description": "A major coastal pilgrimage destination with temple heritage and Arabian Sea sunsets.",
+          "imageQuery": "Dwarka, Gujarat, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/udaipur,india,travel?lock=211"
-  },
-  "delhi": {
-    "name": "Delhi",
-    "tagline": "A capital where Mughal monuments, grand boulevards and modern India meet.",
-    "bestTime": "October – March",
-    "duration": "3 – 4 Days",
-    "style": "Heritage & City",
-    "bestFor": "Culture & History Lovers",
-    "places": [
-      [
-        "India Gate",
-        "Visit Delhi's iconic war memorial and the ceremonial avenues around it.",
-        "October – March",
-        "1 – 2 Hours",
-        "india,gate,new,delhi",
-        "https://loremflickr.com/900/700/india,gate,new,delhi?lock=334"
-      ],
-      [
-        "Red Fort",
-        "Explore the historic Mughal fort complex in the heart of Old Delhi.",
-        "October – March",
-        "Half Day",
-        "red,fort,delhi,mughal",
-        "https://loremflickr.com/900/700/red,fort,delhi,mughal?lock=335"
-      ],
-      [
-        "Qutub Minar",
-        "See the soaring minaret and the historic monuments of the Qutub complex.",
-        "October – March",
-        "Half Day",
-        "qutub,minar,delhi",
-        "https://loremflickr.com/900/700/qutub,minar,delhi?lock=336"
+    },
+    {
+      "slug": "maharashtra",
+      "name": "Maharashtra",
+      "tagline": "Cities, Coast & Heritage",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – February",
+      "duration": "5 Nights / 6 Days",
+      "description": "A rewarding mix of cosmopolitan energy, historic caves, hill country and dramatic western coastline.",
+      "heroQuery": "Maharashtra, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Mumbai",
+          "description": "Iconic waterfronts, heritage buildings, culture and dining define India’s most energetic metropolis.",
+          "imageQuery": "Mumbai, Maharashtra, India, landmark travel"
+        },
+        {
+          "name": "Lonavala",
+          "description": "A green hill escape with viewpoints, forts and monsoon-season landscapes.",
+          "imageQuery": "Lonavala, Maharashtra, India, landmark travel"
+        },
+        {
+          "name": "Aurangabad",
+          "description": "A gateway to extraordinary rock-cut heritage including the celebrated Ajanta and Ellora caves.",
+          "imageQuery": "Aurangabad, Maharashtra, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/delhi,india,travel?lock=212"
-  },
-  "varanasi": {
-    "name": "Varanasi",
-    "tagline": "Ancient ghats, sacred rituals and one of the world's most spiritual cities.",
-    "bestTime": "October – March",
-    "duration": "2 – 3 Days",
-    "style": "Spiritual & Cultural",
-    "bestFor": "Culture & Spiritual Travel",
-    "places": [
-      [
-        "Dashashwamedh Ghat",
-        "Witness the evening Ganga Aarti and the energy of Varanasi's riverfront.",
-        "October – March",
-        "Evening",
-        "dashashwamedh,ghat,varanasi,ganga",
-        "https://loremflickr.com/900/700/dashashwamedh,ghat,varanasi,ganga?lock=337"
-      ],
-      [
-        "Kashi Vishwanath Temple",
-        "Visit one of India's most revered Shiva temples.",
-        "October – March",
-        "Half Day",
-        "kashi,vishwanath,temple,varanasi",
-        "https://loremflickr.com/900/700/kashi,vishwanath,temple,varanasi?lock=338"
-      ],
-      [
-        "Sarnath",
-        "Explore the Buddhist heritage site where the Buddha delivered his first sermon.",
-        "October – March",
-        "Half Day",
-        "sarnath,buddhist,stupa,varanasi",
-        "https://loremflickr.com/900/700/sarnath,buddhist,stupa,varanasi?lock=339"
+    },
+    {
+      "slug": "tamil-nadu",
+      "name": "Tamil Nadu",
+      "tagline": "Temples, Hills & Coastal Heritage",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "6 Nights / 7 Days",
+      "description": "Temple architecture, colonial hill towns and the Bay of Bengal create a richly textured southern journey.",
+      "heroQuery": "Tamil Nadu, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Chennai",
+          "description": "A lively gateway combining beaches, cuisine, culture and historic neighbourhoods.",
+          "imageQuery": "Chennai, Tamil Nadu, India, landmark travel"
+        },
+        {
+          "name": "Ooty",
+          "description": "Cool weather, tea gardens and winding mountain roads make this a classic hill retreat.",
+          "imageQuery": "Ooty, Tamil Nadu, India, landmark travel"
+        },
+        {
+          "name": "Madurai",
+          "description": "The magnificent Meenakshi Amman Temple anchors a city filled with living Tamil culture.",
+          "imageQuery": "Madurai, Tamil Nadu, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/varanasi,india,travel?lock=213"
-  },
-  "rishikesh": {
-    "name": "Rishikesh",
-    "tagline": "River adventure, yoga traditions and Himalayan calm on the banks of the Ganga.",
-    "bestTime": "February – April & September – November",
-    "duration": "3 – 4 Days",
-    "style": "Adventure & Wellness",
-    "bestFor": "Adventure & Wellness",
-    "places": [
-      [
-        "Laxman Jhula Area",
-        "Explore the iconic riverfront area, cafés and temples around the suspension bridge zone.",
-        "February – April & September – November",
-        "Half Day",
-        "laxman,jhula,rishikesh,ganga",
-        "https://loremflickr.com/900/700/laxman,jhula,rishikesh,ganga?lock=340"
-      ],
-      [
-        "River Rafting",
-        "Experience the Ganga's famous rafting stretches with licensed operators.",
-        "September – June",
-        "Half Day",
-        "river,rafting,rishikesh,ganga",
-        "https://loremflickr.com/900/700/river,rafting,rishikesh,ganga?lock=341"
-      ],
-      [
-        "Parmarth Niketan",
-        "Attend the evening aarti and experience Rishikesh's spiritual side.",
-        "February – April & September – November",
-        "Half Day",
-        "parmarth,niketan,rishikesh,aarti",
-        "https://loremflickr.com/900/700/parmarth,niketan,rishikesh,aarti?lock=342"
+    },
+    {
+      "slug": "karnataka",
+      "name": "Karnataka",
+      "tagline": "Royal Cities & Ancient Wonders",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – February",
+      "duration": "5 Nights / 6 Days",
+      "description": "Royal palaces, coffee country and extraordinary ruins make Karnataka ideal for culture-led travel.",
+      "heroQuery": "Karnataka, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Bengaluru",
+          "description": "A modern garden city with dining, design, parks and a lively urban culture.",
+          "imageQuery": "Bengaluru, Karnataka, India, landmark travel"
+        },
+        {
+          "name": "Mysuru",
+          "description": "Palaces, markets and heritage architecture give Mysuru a refined royal character.",
+          "imageQuery": "Mysuru, Karnataka, India, landmark travel"
+        },
+        {
+          "name": "Hampi",
+          "description": "Monumental ruins and boulder-strewn landscapes create one of India’s most striking heritage settings.",
+          "imageQuery": "Hampi, Karnataka, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/rishikesh,india,travel?lock=214"
-  },
-  "shimla": {
-    "name": "Shimla",
-    "tagline": "Colonial charm, Himalayan views and an easy mountain escape.",
-    "bestTime": "March – June & December – February",
-    "duration": "3 – 4 Days",
-    "style": "Hill Station",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "The Ridge & Mall Road",
-        "Walk Shimla's social heart with heritage buildings and mountain views.",
-        "March – June & December – February",
-        "1 Day",
-        "shimla,ridge,mall,road",
-        "https://loremflickr.com/900/700/shimla,ridge,mall,road?lock=343"
-      ],
-      [
-        "Kufri",
-        "Head to the nearby hills for panoramic views and seasonal snow activities.",
-        "December – February & April – June",
-        "Half – 1 Day",
-        "kufri,shimla,snow,hills",
-        "https://loremflickr.com/900/700/kufri,shimla,snow,hills?lock=344"
-      ],
-      [
-        "Jakhoo Temple",
-        "Visit the hilltop temple and enjoy a broad view over Shimla.",
-        "March – June & September – November",
-        "Half Day",
-        "jakhoo,temple,shimla,hills",
-        "https://loremflickr.com/900/700/jakhoo,temple,shimla,hills?lock=345"
+    },
+    {
+      "slug": "madhya-pradesh",
+      "name": "Madhya Pradesh",
+      "tagline": "Wildlife & Timeless Heritage",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "5 Nights / 6 Days",
+      "description": "Ancient temples, tiger country and remarkable architecture reveal the depth of central India.",
+      "heroQuery": "Madhya Pradesh, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Khajuraho",
+          "description": "World-famous temples combine intricate sculpture with extraordinary medieval architecture.",
+          "imageQuery": "Khajuraho, Madhya Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Kanha National Park",
+          "description": "Forests and open meadows offer memorable wildlife and safari experiences.",
+          "imageQuery": "Kanha National Park, Madhya Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Orchha",
+          "description": "A quiet riverside heritage town filled with palaces, cenotaphs and historic temples.",
+          "imageQuery": "Orchha, Madhya Pradesh, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/shimla,india,travel?lock=215"
-  },
-  "darjeeling": {
-    "name": "Darjeeling",
-    "tagline": "Tea gardens, Himalayan panoramas and the charm of a legendary hill railway.",
-    "bestTime": "March – May & October – November",
-    "duration": "3 – 4 Days",
-    "style": "Hills & Tea Country",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Tiger Hill",
-        "Wake early for sunrise views across the Himalayas, including Kanchenjunga on clear days.",
-        "March – May & October – November",
-        "Early Morning",
-        "tiger,hill,darjeeling,sunrise",
-        "https://loremflickr.com/900/700/tiger,hill,darjeeling,sunrise?lock=346"
-      ],
-      [
-        "Darjeeling Himalayan Railway",
-        "Ride the famous Toy Train through the hills and heritage stations.",
-        "March – May & October – November",
-        "Half Day",
-        "darjeeling,toy,train,himalayan",
-        "https://loremflickr.com/900/700/darjeeling,toy,train,himalayan?lock=347"
-      ],
-      [
-        "Tea Gardens",
-        "Visit scenic tea estates and learn about the region's celebrated tea culture.",
-        "March – May & October – November",
-        "Half Day",
-        "darjeeling,tea,garden,hills",
-        "https://loremflickr.com/900/700/darjeeling,tea,garden,hills?lock=348"
+    },
+    {
+      "slug": "uttar-pradesh",
+      "name": "Uttar Pradesh",
+      "tagline": "Sacred Cities & Living History",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "5 Nights / 6 Days",
+      "description": "From the Taj Mahal to sacred riverfronts, Uttar Pradesh connects India’s history, spirituality and culture.",
+      "heroQuery": "Uttar Pradesh, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Agra",
+          "description": "Home to the Taj Mahal and a rich Mughal heritage landscape.",
+          "imageQuery": "Agra, Uttar Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Varanasi",
+          "description": "Ancient ghats, evening ceremonies and the Ganges create an unforgettable spiritual atmosphere.",
+          "imageQuery": "Varanasi, Uttar Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Ayodhya",
+          "description": "A major pilgrimage destination with riverfront development, temples and a deep cultural legacy.",
+          "imageQuery": "Ayodhya, Uttar Pradesh, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/darjeeling,india,travel?lock=216"
-  },
-  "ooty": {
-    "name": "Ooty",
-    "tagline": "Cool Nilgiri landscapes, gardens and a classic mountain railway experience.",
-    "bestTime": "October – February & April – June",
-    "duration": "3 – 4 Days",
-    "style": "Hill Station & Nature",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Nilgiri Mountain Railway",
-        "Take the heritage train through dramatic Nilgiri scenery.",
-        "October – February & April – June",
-        "Half – 1 Day",
-        "ooty,nilgiri,mountain,train",
-        "https://loremflickr.com/900/700/ooty,nilgiri,mountain,train?lock=349"
-      ],
-      [
-        "Ooty Lake",
-        "Enjoy a relaxed lakeside outing surrounded by cool hill scenery.",
-        "October – February & April – June",
-        "1 – 2 Hours",
-        "ooty,lake,tamil,nadu",
-        "https://loremflickr.com/900/700/ooty,lake,tamil,nadu?lock=350"
-      ],
-      [
-        "Botanical Gardens",
-        "Walk through landscaped gardens and enjoy Ooty's mild mountain climate.",
-        "April – June & October – February",
-        "Half Day",
-        "ooty,botanical,garden,nilgiri",
-        "https://loremflickr.com/900/700/ooty,botanical,garden,nilgiri?lock=351"
+    },
+    {
+      "slug": "west-bengal",
+      "name": "West Bengal",
+      "tagline": "Culture, Tea & the Himalayas",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "5 Nights / 6 Days",
+      "description": "A journey from Kolkata’s cultural energy to Darjeeling’s tea gardens and Himalayan views.",
+      "heroQuery": "West Bengal, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Kolkata",
+          "description": "Grand colonial architecture, art, literature and exceptional Bengali cuisine define the city.",
+          "imageQuery": "Kolkata, West Bengal, India, landmark travel"
+        },
+        {
+          "name": "Darjeeling",
+          "description": "Tea estates, mountain railways and Kanchenjunga views create a classic hill experience.",
+          "imageQuery": "Darjeeling, West Bengal, India, landmark travel"
+        },
+        {
+          "name": "Sundarbans",
+          "description": "A vast mangrove landscape offering a distinctive wilderness experience by boat.",
+          "imageQuery": "Sundarbans, West Bengal, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/ooty,india,travel?lock=217"
-  },
-  "coorg": {
-    "name": "Coorg",
-    "tagline": "Coffee country, misty hills and lush landscapes in the Western Ghats.",
-    "bestTime": "October – March",
-    "duration": "3 – 4 Days",
-    "style": "Nature & Leisure",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Abbey Falls",
-        "Visit one of Coorg's best-known waterfalls amid lush forest scenery.",
-        "October – March",
-        "Half Day",
-        "abbey,falls,coorg,karnataka",
-        "https://loremflickr.com/900/700/abbey,falls,coorg,karnataka?lock=352"
-      ],
-      [
-        "Dubare Elephant Camp",
-        "Experience the riverside forest setting and elephant-related activities in the area.",
-        "October – March",
-        "Half Day",
-        "dubare,elephant,camp,coorg",
-        "https://loremflickr.com/900/700/dubare,elephant,camp,coorg?lock=353"
-      ],
-      [
-        "Coffee Estates",
-        "Explore Coorg's coffee-growing landscape and plantation culture.",
-        "October – March",
-        "Half Day",
-        "coorg,coffee,plantation,karnataka",
-        "https://loremflickr.com/900/700/coorg,coffee,plantation,karnataka?lock=354"
+    },
+    {
+      "slug": "odisha",
+      "name": "Odisha",
+      "tagline": "Temples, Coast & Craft",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "5 Nights / 6 Days",
+      "description": "Ancient temple architecture, coastal landscapes and living craft traditions shape Odisha’s character.",
+      "heroQuery": "Odisha, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Puri",
+          "description": "A lively coastal pilgrimage city with temple heritage and a broad beach.",
+          "imageQuery": "Puri, Odisha, India, landmark travel"
+        },
+        {
+          "name": "Konark",
+          "description": "The Sun Temple is a spectacular expression of medieval stone architecture and sculpture.",
+          "imageQuery": "Konark, Odisha, India, landmark travel"
+        },
+        {
+          "name": "Bhubaneswar",
+          "description": "Historic temples and modern urban life make the capital a strong cultural base.",
+          "imageQuery": "Bhubaneswar, Odisha, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/coorg,india,travel?lock=218"
-  },
-  "mysore": {
-    "name": "Mysore",
-    "tagline": "Royal architecture, grand boulevards and Karnataka's celebrated cultural heritage.",
-    "bestTime": "October – February",
-    "duration": "2 – 3 Days",
-    "style": "Heritage & Culture",
-    "bestFor": "Families & Culture Lovers",
-    "places": [
-      [
-        "Mysore Palace",
-        "See the city's most famous royal landmark, especially impressive when illuminated.",
-        "October – February",
-        "Half Day",
-        "mysore,palace,karnataka",
-        "https://loremflickr.com/900/700/mysore,palace,karnataka?lock=355"
-      ],
-      [
-        "Chamundi Hill",
-        "Visit the hilltop temple and enjoy wide views over Mysore.",
-        "October – February",
-        "Half Day",
-        "chamundi,hill,mysore,temple",
-        "https://loremflickr.com/900/700/chamundi,hill,mysore,temple?lock=356"
-      ],
-      [
-        "Brindavan Gardens",
-        "Enjoy landscaped gardens and the evening atmosphere near Krishna Raja Sagara Dam.",
-        "October – February",
-        "Evening",
-        "brindavan,gardens,mysore",
-        "https://loremflickr.com/900/700/brindavan,gardens,mysore?lock=357"
+    },
+    {
+      "slug": "assam",
+      "name": "Assam",
+      "tagline": "Tea Country & Wild Landscapes",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – April",
+      "duration": "5 Nights / 6 Days",
+      "description": "Tea estates, river landscapes and national parks offer a slower and deeply scenic Northeast experience.",
+      "heroQuery": "Assam, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Kaziranga",
+          "description": "One of India’s best-known wildlife landscapes, especially celebrated for the one-horned rhinoceros.",
+          "imageQuery": "Kaziranga, Assam, India, landmark travel"
+        },
+        {
+          "name": "Guwahati",
+          "description": "A convenient gateway with river views, temples and access to Assam’s wider attractions.",
+          "imageQuery": "Guwahati, Assam, India, landmark travel"
+        },
+        {
+          "name": "Majuli",
+          "description": "A river island known for distinctive culture, monasteries and tranquil rural landscapes.",
+          "imageQuery": "Majuli, Assam, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/mysore,india,travel?lock=219"
-  },
-  "amritsar": {
-    "name": "Amritsar",
-    "tagline": "Golden spiritual heritage, Punjabi hospitality and powerful modern history.",
-    "bestTime": "October – March",
-    "duration": "2 – 3 Days",
-    "style": "Culture & Spiritual",
-    "bestFor": "Families & Culture Lovers",
-    "places": [
-      [
-        "Golden Temple",
-        "Experience the serene architecture, sacred pool and community spirit of Harmandir Sahib.",
-        "October – March",
-        "Half – 1 Day",
-        "golden,temple,amritsar,punjab",
-        "https://loremflickr.com/900/700/golden,temple,amritsar,punjab?lock=358"
-      ],
-      [
-        "Jallianwala Bagh",
-        "Visit the historic memorial that marks a pivotal moment in India's freedom struggle.",
-        "October – March",
-        "1 – 2 Hours",
-        "jallianwala,bagh,amritsar",
-        "https://loremflickr.com/900/700/jallianwala,bagh,amritsar?lock=359"
-      ],
-      [
-        "Wagah Border",
-        "Watch the energetic Beating Retreat ceremony at the India–Pakistan border.",
-        "October – March",
-        "Evening",
-        "wagah,border,ceremony,punjab",
-        "https://loremflickr.com/900/700/wagah,border,ceremony,punjab?lock=360"
+    },
+    {
+      "slug": "arunachal-pradesh",
+      "name": "Arunachal Pradesh",
+      "tagline": "India’s Eastern Himalayan Frontier",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – April",
+      "duration": "6 Nights / 7 Days",
+      "description": "Remote valleys, monasteries, forests and dramatic mountain roads create an adventurous Himalayan journey.",
+      "heroQuery": "Arunachal Pradesh, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Tawang",
+          "description": "A spectacular high-altitude destination centred around its monumental monastery and mountain scenery.",
+          "imageQuery": "Tawang, Arunachal Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Dirang",
+          "description": "A peaceful valley of hot springs, orchards and mountain villages.",
+          "imageQuery": "Dirang, Arunachal Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Ziro Valley",
+          "description": "Rolling green landscapes and distinctive local culture make Ziro a rewarding slow-travel escape.",
+          "imageQuery": "Ziro Valley, Arunachal Pradesh, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/amritsar,india,travel?lock=220"
-  },
-  "nainital": {
-    "name": "Nainital",
-    "tagline": "A serene Himalayan lake town framed by green hills and viewpoints.",
-    "bestTime": "March – June & September – November",
-    "duration": "3 – 4 Days",
-    "style": "Hill & Lake Escape",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Naini Lake",
-        "Enjoy boating and lakeside walks in the heart of Nainital.",
-        "March – June & September – November",
-        "Half Day",
-        "naini,lake,nainital,uttarakhand",
-        "https://loremflickr.com/900/700/naini,lake,nainital,uttarakhand?lock=361"
-      ],
-      [
-        "Snow View Point",
-        "Take in broad Himalayan views from one of Nainital's classic viewpoints.",
-        "March – June & September – November",
-        "Half Day",
-        "snow,view,nainital,himalaya",
-        "https://loremflickr.com/900/700/snow,view,nainital,himalaya?lock=362"
-      ],
-      [
-        "Naina Devi Temple",
-        "Visit the revered temple beside Naini Lake.",
-        "March – June & September – November",
-        "1 – 2 Hours",
-        "naina,devi,temple,nainital",
-        "https://loremflickr.com/900/700/naina,devi,temple,nainital?lock=363"
+    },
+    {
+      "slug": "delhi",
+      "name": "Delhi",
+      "tagline": "India’s Historic Capital",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "3 Nights / 4 Days",
+      "description": "A layered capital where Mughal monuments, modern India, markets and exceptional food meet.",
+      "heroQuery": "Delhi, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Old Delhi",
+          "description": "Historic lanes, grand gateways and legendary street food reveal the city’s oldest layers.",
+          "imageQuery": "Old Delhi, Delhi, India, landmark travel"
+        },
+        {
+          "name": "India Gate & Central Delhi",
+          "description": "Grand avenues and national landmarks showcase the capital’s ceremonial heart.",
+          "imageQuery": "India Gate & Central Delhi, Delhi, India, landmark travel"
+        },
+        {
+          "name": "Humayun’s Tomb",
+          "description": "A beautifully proportioned Mughal garden tomb and an important architectural precursor to the Taj Mahal.",
+          "imageQuery": "Humayun’s Tomb, Delhi, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/nainital,india,travel?lock=221"
-  },
-  "mussoorie": {
-    "name": "Mussoorie",
-    "tagline": "A graceful hill station of viewpoints, waterfalls and Himalayan air.",
-    "bestTime": "March – June & September – November",
-    "duration": "2 – 3 Days",
-    "style": "Hill Station",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Kempty Falls",
-        "Enjoy the famous waterfall and surrounding hill scenery.",
-        "March – June & September – November",
-        "Half Day",
-        "kempty,falls,mussoorie,uttarakhand",
-        "https://loremflickr.com/900/700/kempty,falls,mussoorie,uttarakhand?lock=364"
-      ],
-      [
-        "Mall Road",
-        "Stroll the lively heart of Mussoorie for cafés, shopping and evening views.",
-        "March – June & September – November",
-        "Evening",
-        "mussoorie,mall,road,hills",
-        "https://loremflickr.com/900/700/mussoorie,mall,road,hills?lock=365"
-      ],
-      [
-        "Lal Tibba",
-        "Head to Mussoorie's famous viewpoint for expansive Himalayan vistas.",
-        "March – June & September – November",
-        "Half Day",
-        "lal,tibba,mussoorie,himalaya",
-        "https://loremflickr.com/900/700/lal,tibba,mussoorie,himalaya?lock=366"
+    },
+    {
+      "slug": "punjab",
+      "name": "Punjab",
+      "tagline": "Heritage, Food & Warm Hospitality",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "3 Nights / 4 Days",
+      "description": "Punjab combines powerful heritage, generous cuisine and lively culture in a warm, welcoming setting.",
+      "heroQuery": "Punjab, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Amritsar",
+          "description": "The Golden Temple, old bazaars and powerful history make Amritsar deeply memorable.",
+          "imageQuery": "Amritsar, Punjab, India, landmark travel"
+        },
+        {
+          "name": "Wagah Border",
+          "description": "The daily ceremonial experience offers a lively glimpse into India-Pakistan border culture.",
+          "imageQuery": "Wagah Border, Punjab, India, landmark travel"
+        },
+        {
+          "name": "Jallianwala Bagh",
+          "description": "A significant historic memorial located close to the Golden Temple precinct.",
+          "imageQuery": "Jallianwala Bagh, Punjab, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/mussoorie,india,travel?lock=222"
-  },
-  "meghalaya": {
-    "name": "Meghalaya",
-    "tagline": "Waterfalls, living root bridges and dramatic landscapes in the Abode of Clouds.",
-    "bestTime": "October – April",
-    "duration": "5 – 7 Days",
-    "style": "Nature & Adventure",
-    "bestFor": "Nature & Adventure Lovers",
-    "places": [
-      [
-        "Living Root Bridges",
-        "Walk through the remarkable bio-engineered bridges around Cherrapunji and nearby villages.",
-        "October – April",
-        "1 Day",
-        "living,root,bridge,meghalaya",
-        "https://loremflickr.com/900/700/living,root,bridge,meghalaya?lock=367"
-      ],
-      [
-        "Nohkalikai Falls",
-        "See one of India's most dramatic waterfalls near Cherrapunji.",
-        "October – April",
-        "Half Day",
-        "nohkalikai,falls,cherrapunji,meghalaya",
-        "https://loremflickr.com/900/700/nohkalikai,falls,cherrapunji,meghalaya?lock=368"
-      ],
-      [
-        "Dawki & Umngot River",
-        "Experience crystal-clear river views and boating near the Bangladesh border.",
-        "October – April",
-        "1 Day",
-        "dawki,umngot,river,meghalaya",
-        "https://loremflickr.com/900/700/dawki,umngot,river,meghalaya?lock=369"
+    },
+    {
+      "slug": "telangana",
+      "name": "Telangana",
+      "tagline": "Heritage & Modern Hyderabad",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – February",
+      "duration": "3 Nights / 4 Days",
+      "description": "Hyderabad pairs royal-era monuments and distinctive cuisine with a fast-moving modern city.",
+      "heroQuery": "Telangana, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Charminar",
+          "description": "The city’s defining monument, surrounded by historic markets and old Hyderabad life.",
+          "imageQuery": "Charminar, Telangana, India, landmark travel"
+        },
+        {
+          "name": "Golconda Fort",
+          "description": "A dramatic hilltop fort known for its architecture, acoustics and expansive city views.",
+          "imageQuery": "Golconda Fort, Telangana, India, landmark travel"
+        },
+        {
+          "name": "Hussain Sagar",
+          "description": "A large urban lake offering open views and a different perspective on Hyderabad.",
+          "imageQuery": "Hussain Sagar, Telangana, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/meghalaya,india,travel?lock=223"
-  },
-  "sikkim": {
-    "name": "Sikkim",
-    "tagline": "Buddhist heritage, Himalayan roads and spectacular mountain landscapes.",
-    "bestTime": "March – May & October – December",
-    "duration": "5 – 7 Days",
-    "style": "Mountains & Culture",
-    "bestFor": "Couples, Families & Adventure",
-    "places": [
-      [
-        "Gangtok",
-        "Explore monasteries, viewpoints and the lively capital of Sikkim.",
-        "March – May & October – December",
-        "2 Days",
-        "gangtok,sikkim,monastery,hills",
-        "https://loremflickr.com/900/700/gangtok,sikkim,monastery,hills?lock=370"
-      ],
-      [
-        "Tsomgo Lake",
-        "Visit the scenic high-altitude lake east of Gangtok.",
-        "April – June & October – November",
-        "Half – 1 Day",
-        "tsomgo,lake,sikkim,mountains",
-        "https://loremflickr.com/900/700/tsomgo,lake,sikkim,mountains?lock=371"
-      ],
-      [
-        "Nathula Pass",
-        "Travel to the historic mountain pass near the India–China border, subject to permits and conditions.",
-        "April – June & October – November",
-        "Half – 1 Day",
-        "nathula,pass,sikkim,mountains",
-        "https://loremflickr.com/900/700/nathula,pass,sikkim,mountains?lock=372"
+    },
+    {
+      "slug": "andhra-pradesh",
+      "name": "Andhra Pradesh",
+      "tagline": "Temples, Coast & Culture",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – February",
+      "duration": "4 Nights / 5 Days",
+      "description": "Sacred hill towns, beaches and coastal heritage make Andhra Pradesh a varied southern journey.",
+      "heroQuery": "Andhra Pradesh, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Visakhapatnam",
+          "description": "A coastal city framed by beaches, viewpoints and a relaxed Bay of Bengal atmosphere.",
+          "imageQuery": "Visakhapatnam, Andhra Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Tirupati",
+          "description": "One of India’s most important pilgrimage destinations, set among the Tirumala hills.",
+          "imageQuery": "Tirupati, Andhra Pradesh, India, landmark travel"
+        },
+        {
+          "name": "Araku Valley",
+          "description": "A scenic hill region of coffee plantations, valleys and winding mountain routes.",
+          "imageQuery": "Araku Valley, Andhra Pradesh, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/sikkim,india,travel?lock=224"
-  },
-  "pondicherry": {
-    "name": "Pondicherry",
-    "tagline": "French colonial streets, coastal calm and a distinctly relaxed character.",
-    "bestTime": "October – March",
-    "duration": "2 – 3 Days",
-    "style": "Coastal & Heritage",
-    "bestFor": "Couples & Leisure",
-    "places": [
-      [
-        "White Town",
-        "Walk pastel colonial streets, cafés and heritage architecture.",
-        "October – March",
-        "Half – 1 Day",
-        "white,town,pondicherry,french",
-        "https://loremflickr.com/900/700/white,town,pondicherry,french?lock=373"
-      ],
-      [
-        "Promenade Beach",
-        "Enjoy the seafront boulevard, especially around sunrise and evening.",
-        "October – March",
-        "1 – 2 Hours",
-        "promenade,beach,pondicherry",
-        "https://loremflickr.com/900/700/promenade,beach,pondicherry?lock=374"
-      ],
-      [
-        "Auroville",
-        "Visit the experimental township and its peaceful, tree-lined surroundings.",
-        "October – March",
-        "Half – 1 Day",
-        "auroville,matrimandir,pondicherry",
-        "https://loremflickr.com/900/700/auroville,matrimandir,pondicherry?lock=375"
+    },
+    {
+      "slug": "lakshadweep",
+      "name": "Lakshadweep",
+      "tagline": "Turquoise Lagoons & Island Calm",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – May",
+      "duration": "4 Nights / 5 Days",
+      "description": "An intimate island escape of turquoise lagoons, coral reefs and quiet beaches.",
+      "heroQuery": "Lakshadweep, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Agatti",
+          "description": "A beautiful arrival island with lagoon views and excellent water-based experiences.",
+          "imageQuery": "Agatti, Lakshadweep, India, landmark travel"
+        },
+        {
+          "name": "Bangaram",
+          "description": "A serene island setting suited to slow days, beaches and clear tropical water.",
+          "imageQuery": "Bangaram, Lakshadweep, India, landmark travel"
+        },
+        {
+          "name": "Kavaratti",
+          "description": "The administrative capital, known for lagoons, marine life and island culture.",
+          "imageQuery": "Kavaratti, Lakshadweep, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/pondicherry,india,travel?lock=225"
-  },
-  "mahabaleshwar": {
-    "name": "Mahabaleshwar",
-    "tagline": "Strawberry country, viewpoints and cool Western Ghats landscapes.",
-    "bestTime": "October – June",
-    "duration": "2 – 3 Days",
-    "style": "Nature & Hill Escape",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Arthur's Seat",
-        "Enjoy one of Mahabaleshwar's most celebrated viewpoints over the valleys.",
-        "October – June",
-        "Half Day",
-        "arthurs,seat,mahabaleshwar,viewpoint",
-        "https://loremflickr.com/900/700/arthurs,seat,mahabaleshwar,viewpoint?lock=376"
-      ],
-      [
-        "Venna Lake",
-        "Spend relaxed time boating by the lake in the heart of the hill station.",
-        "October – June",
-        "1 – 2 Hours",
-        "venna,lake,mahabaleshwar",
-        "https://loremflickr.com/900/700/venna,lake,mahabaleshwar?lock=377"
-      ],
-      [
-        "Mapro Garden",
-        "Enjoy strawberries, local products and a relaxed garden stop.",
-        "October – May",
-        "1 – 2 Hours",
-        "mapro,garden,mahabaleshwar,strawberry",
-        "https://loremflickr.com/900/700/mapro,garden,mahabaleshwar,strawberry?lock=378"
+    },
+    {
+      "slug": "pondicherry",
+      "name": "Pondicherry",
+      "tagline": "French Coastal Charm",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "3 Nights / 4 Days",
+      "description": "Bougainvillea-lined streets, cafés, beaches and Tamil-French heritage create a distinctive coastal break.",
+      "heroQuery": "Pondicherry, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "White Town",
+          "description": "Elegant colonial façades, cafés and quiet lanes define Pondicherry’s most photogenic quarter.",
+          "imageQuery": "White Town, Pondicherry, India, landmark travel"
+        },
+        {
+          "name": "Auroville",
+          "description": "An experimental international community known for its distinctive architecture and philosophy.",
+          "imageQuery": "Auroville, Pondicherry, India, landmark travel"
+        },
+        {
+          "name": "Promenade Beach",
+          "description": "A relaxed seafront for sunrise walks, sea views and evening strolls.",
+          "imageQuery": "Promenade Beach, Pondicherry, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/mahabaleshwar,india,travel?lock=226"
-  },
-  "kodaikanal": {
-    "name": "Kodaikanal",
-    "tagline": "Misty forests, lakes and cool mountain air in the Palani Hills.",
-    "bestTime": "October – March & April – June",
-    "duration": "3 – 4 Days",
-    "style": "Hill & Nature Escape",
-    "bestFor": "Couples & Families",
-    "places": [
-      [
-        "Kodaikanal Lake",
-        "Enjoy boating and walks around the star-shaped lake.",
-        "October – March & April – June",
-        "Half Day",
-        "kodaikanal,lake,tamil,nadu",
-        "https://loremflickr.com/900/700/kodaikanal,lake,tamil,nadu?lock=379"
-      ],
-      [
-        "Coaker's Walk",
-        "Take a scenic cliffside walk with wide valley views on clear days.",
-        "October – March & April – June",
-        "1 – 2 Hours",
-        "coakers,walk,kodaikanal,hills",
-        "https://loremflickr.com/900/700/coakers,walk,kodaikanal,hills?lock=380"
-      ],
-      [
-        "Pillar Rocks",
-        "See the dramatic rock formations and surrounding mountain scenery.",
-        "October – March & April – June",
-        "Half Day",
-        "pillar,rocks,kodaikanal,tamil,nadu",
-        "https://loremflickr.com/900/700/pillar,rocks,kodaikanal,tamil,nadu?lock=381"
+    },
+    {
+      "slug": "bihar",
+      "name": "Bihar",
+      "tagline": "Ancient Wisdom & Sacred Heritage",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "4 Nights / 5 Days",
+      "description": "Bihar connects some of the world’s most important Buddhist sites with ancient Indian history.",
+      "heroQuery": "Bihar, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Bodh Gaya",
+          "description": "A globally important Buddhist pilgrimage destination centred on the Mahabodhi Temple.",
+          "imageQuery": "Bodh Gaya, Bihar, India, landmark travel"
+        },
+        {
+          "name": "Nalanda",
+          "description": "The archaeological remains evoke one of the ancient world’s great centres of learning.",
+          "imageQuery": "Nalanda, Bihar, India, landmark travel"
+        },
+        {
+          "name": "Rajgir",
+          "description": "A historic landscape of hills, Buddhist associations and peaceful viewpoints.",
+          "imageQuery": "Rajgir, Bihar, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/kodaikanal,india,travel?lock=227"
-  },
-  "hampi": {
-    "name": "Hampi",
-    "tagline": "An extraordinary open-air landscape of Vijayanagara ruins and giant boulders.",
-    "bestTime": "October – February",
-    "duration": "2 – 3 Days",
-    "style": "Heritage & Architecture",
-    "bestFor": "History & Culture Lovers",
-    "places": [
-      [
-        "Virupaksha Temple",
-        "Explore one of Hampi's oldest and most important temple complexes.",
-        "October – February",
-        "Half Day",
-        "virupaksha,temple,hampi,karnataka",
-        "https://loremflickr.com/900/700/virupaksha,temple,hampi,karnataka?lock=382"
-      ],
-      [
-        "Vitthala Temple & Stone Chariot",
-        "See Hampi's iconic Stone Chariot and celebrated temple architecture.",
-        "October – February",
-        "Half Day",
-        "vitthala,temple,stone,chariot,hampi",
-        "https://loremflickr.com/900/700/vitthala,temple,stone,chariot,hampi?lock=383"
-      ],
-      [
-        "Lotus Mahal & Elephant Stables",
-        "Discover elegant royal architecture within the Zenana enclosure area.",
-        "October – February",
-        "Half Day",
-        "lotus,mahal,elephant,stables,hampi",
-        "https://loremflickr.com/900/700/lotus,mahal,elephant,stables,hampi?lock=384"
+    },
+    {
+      "slug": "chhattisgarh",
+      "name": "Chhattisgarh",
+      "tagline": "Waterfalls, Forests & Tribal Culture",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – February",
+      "duration": "4 Nights / 5 Days",
+      "description": "Dense forests, powerful waterfalls and living tribal traditions offer an offbeat central Indian journey.",
+      "heroQuery": "Chhattisgarh, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Chitrakote Falls",
+          "description": "A broad horseshoe waterfall on the Indravati River, especially dramatic in the monsoon.",
+          "imageQuery": "Chitrakote Falls, Chhattisgarh, India, landmark travel"
+        },
+        {
+          "name": "Bastar",
+          "description": "A culturally rich region known for crafts, forests and distinctive tribal traditions.",
+          "imageQuery": "Bastar, Chhattisgarh, India, landmark travel"
+        },
+        {
+          "name": "Tirathgarh Falls",
+          "description": "A multi-tiered waterfall surrounded by lush forest and ideal for a nature-focused outing.",
+          "imageQuery": "Tirathgarh Falls, Chhattisgarh, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/hampi,india,travel?lock=228"
-  },
-  "hyderabad": {
-    "name": "Hyderabad",
-    "tagline": "A city of Nizami heritage, grand monuments and vibrant modern culture.",
-    "bestTime": "October – February",
-    "duration": "3 – 4 Days",
-    "style": "Heritage & City",
-    "bestFor": "Families & Culture Lovers",
-    "places": [
-      [
-        "Charminar",
-        "Visit Hyderabad's signature monument and the bustling historic lanes around it.",
-        "October – February",
-        "Half Day",
-        "charminar,hyderabad,telangana",
-        "https://loremflickr.com/900/700/charminar,hyderabad,telangana?lock=385"
-      ],
-      [
-        "Golconda Fort",
-        "Explore the vast hilltop fort complex and its commanding city views.",
-        "October – February",
-        "Half Day",
-        "golconda,fort,hyderabad",
-        "https://loremflickr.com/900/700/golconda,fort,hyderabad?lock=386"
-      ],
-      [
-        "Hussain Sagar",
-        "Spend an evening around the city lake and its well-known waterfront views.",
-        "October – February",
-        "Evening",
-        "hussain,sagar,hyderabad,lake",
-        "https://loremflickr.com/900/700/hussain,sagar,hyderabad,lake?lock=387"
+    },
+    {
+      "slug": "nagaland",
+      "name": "Nagaland",
+      "tagline": "Hills, Culture & Living Traditions",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – May",
+      "duration": "4 Nights / 5 Days",
+      "description": "Mountain villages, strong cultural traditions and dramatic landscapes make Nagaland ideal for curious travellers.",
+      "heroQuery": "Nagaland, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Kohima",
+          "description": "A hill capital with war history, markets and access to surrounding villages.",
+          "imageQuery": "Kohima, Nagaland, India, landmark travel"
+        },
+        {
+          "name": "Khonoma",
+          "description": "A celebrated village experience surrounded by green hills and community-led conservation.",
+          "imageQuery": "Khonoma, Nagaland, India, landmark travel"
+        },
+        {
+          "name": "Dzukou Valley",
+          "description": "A beautiful highland valley known for seasonal flowers and sweeping mountain scenery.",
+          "imageQuery": "Dzukou Valley, Nagaland, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/hyderabad,india,travel?lock=229"
-  },
-  "bengaluru": {
-    "name": "Bengaluru",
-    "tagline": "Garden-city greenery, royal-era landmarks and contemporary urban energy.",
-    "bestTime": "October – February",
-    "duration": "2 – 3 Days",
-    "style": "City & Leisure",
-    "bestFor": "Families & City Explorers",
-    "places": [
-      [
-        "Bengaluru Palace",
-        "Explore the Tudor-inspired royal residence and its ornate interiors.",
-        "October – February",
-        "Half Day",
-        "bengaluru,palace,karnataka",
-        "https://loremflickr.com/900/700/bengaluru,palace,karnataka?lock=388"
-      ],
-      [
-        "Cubbon Park",
-        "Enjoy a relaxed green escape amid Bengaluru's major civic landmarks.",
-        "October – February",
-        "Half Day",
-        "cubbon,park,bengaluru,india",
-        "https://loremflickr.com/900/700/cubbon,park,bengaluru,india?lock=389"
-      ],
-      [
-        "Vidhana Soudha",
-        "See Bengaluru's grand seat of government and one of the city's iconic facades.",
-        "October – February",
-        "1 – 2 Hours",
-        "vidhana,soudha,bengaluru",
-        "https://loremflickr.com/900/700/vidhana,soudha,bengaluru?lock=390"
+    },
+    {
+      "slug": "tripura",
+      "name": "Tripura",
+      "tagline": "Palaces, Temples & Green Landscapes",
+      "country": "India",
+      "region": "India",
+      "bestTime": "October – March",
+      "duration": "3 Nights / 4 Days",
+      "description": "A gentle Northeast escape blending royal heritage, temples, lakes and forested landscapes.",
+      "heroQuery": "Tripura, India, scenic travel landscape",
+      "places": [
+        {
+          "name": "Agartala",
+          "description": "A relaxed capital and gateway to Tripura’s heritage attractions.",
+          "imageQuery": "Agartala, Tripura, India, landmark travel"
+        },
+        {
+          "name": "Ujjayanta Palace",
+          "description": "An elegant royal-era palace set within landscaped grounds in central Agartala.",
+          "imageQuery": "Ujjayanta Palace, Tripura, India, landmark travel"
+        },
+        {
+          "name": "Neermahal",
+          "description": "A striking palace rising from the waters of Rudrasagar Lake.",
+          "imageQuery": "Neermahal, Tripura, India, landmark travel"
+        }
       ]
-    ],
-    "heroImage": "https://loremflickr.com/1800/1000/bengaluru,india,travel?lock=230"
-  }
+    }
+  ],
+  "world": [
+    {
+      "slug": "dubai",
+      "name": "Dubai",
+      "tagline": "Futuristic Luxury & Desert Adventure",
+      "country": "UAE",
+      "region": "World",
+      "bestTime": "November – March",
+      "duration": "4 Nights / 5 Days",
+      "description": "A polished mix of skyline spectacle, premium shopping, desert adventure and resort-style relaxation.",
+      "heroQuery": "Dubai, UAE, scenic travel landscape",
+      "places": [
+        {
+          "name": "Burj Khalifa",
+          "description": "The world’s famous skyline landmark delivers panoramic views across the city and desert.",
+          "imageQuery": "Burj Khalifa, Dubai, UAE, landmark travel"
+        },
+        {
+          "name": "Palm Jumeirah",
+          "description": "An iconic man-made island lined with luxury resorts, beaches and dining.",
+          "imageQuery": "Palm Jumeirah, Dubai, UAE, landmark travel"
+        },
+        {
+          "name": "Dubai Desert",
+          "description": "Golden dunes, sunset drives and elegant desert camps offer a memorable contrast to the city.",
+          "imageQuery": "Dubai Desert, Dubai, UAE, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "maldives",
+      "name": "Maldives",
+      "tagline": "Private Islands & Turquoise Waters",
+      "country": "Maldives",
+      "region": "World",
+      "bestTime": "November – April",
+      "duration": "4 Nights / 5 Days",
+      "description": "An effortless tropical retreat built around turquoise lagoons, private villas and unhurried days.",
+      "heroQuery": "Maldives, Maldives, scenic travel landscape",
+      "places": [
+        {
+          "name": "Malé",
+          "description": "A compact capital offering a quick introduction to Maldivian city life and culture.",
+          "imageQuery": "Malé, Maldives, Maldives, landmark travel"
+        },
+        {
+          "name": "North Malé Atoll",
+          "description": "A popular region for premium resorts, diving and clear-water experiences.",
+          "imageQuery": "North Malé Atoll, Maldives, Maldives, landmark travel"
+        },
+        {
+          "name": "South Malé Atoll",
+          "description": "Known for beautiful lagoons, reefs and an intimate island-resort atmosphere.",
+          "imageQuery": "South Malé Atoll, Maldives, Maldives, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "singapore",
+      "name": "Singapore",
+      "tagline": "Urban Sophistication & Tropical Design",
+      "country": "Singapore",
+      "region": "World",
+      "bestTime": "February – April • June – August",
+      "duration": "4 Nights / 5 Days",
+      "description": "A seamless city break where futuristic architecture, gardens, food and efficient urban design meet.",
+      "heroQuery": "Singapore, Singapore, scenic travel landscape",
+      "places": [
+        {
+          "name": "Marina Bay",
+          "description": "Singapore’s signature skyline and waterfront district, especially striking after dark.",
+          "imageQuery": "Marina Bay, Singapore, Singapore, landmark travel"
+        },
+        {
+          "name": "Gardens by the Bay",
+          "description": "Iconic Supertrees and conservatories create a futuristic garden experience.",
+          "imageQuery": "Gardens by the Bay, Singapore, Singapore, landmark travel"
+        },
+        {
+          "name": "Sentosa",
+          "description": "A resort island for beaches, attractions, dining and relaxed family time.",
+          "imageQuery": "Sentosa, Singapore, Singapore, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "thailand",
+      "name": "Thailand",
+      "tagline": "Beaches, Culture & Vibrant Cities",
+      "country": "Thailand",
+      "region": "World",
+      "bestTime": "November – February",
+      "duration": "5 Nights / 6 Days",
+      "description": "Thailand combines ornate temples, lively cities, tropical islands and some of Asia’s best food.",
+      "heroQuery": "Thailand, Thailand, scenic travel landscape",
+      "places": [
+        {
+          "name": "Bangkok",
+          "description": "Grand temples, river life, markets and modern luxury make Bangkok endlessly energetic.",
+          "imageQuery": "Bangkok, Thailand, Thailand, landmark travel"
+        },
+        {
+          "name": "Phuket",
+          "description": "A convenient base for beaches, island trips and premium resort stays.",
+          "imageQuery": "Phuket, Thailand, Thailand, landmark travel"
+        },
+        {
+          "name": "Krabi",
+          "description": "Limestone cliffs, emerald water and island-hopping create an especially scenic southern escape.",
+          "imageQuery": "Krabi, Thailand, Thailand, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "bali",
+      "name": "Bali",
+      "tagline": "Island Rituals & Tropical Luxury",
+      "country": "Indonesia",
+      "region": "World",
+      "bestTime": "April – October",
+      "duration": "5 Nights / 6 Days",
+      "description": "Rice terraces, temples, beaches and wellness experiences create Bali’s distinctive slow-luxury rhythm.",
+      "heroQuery": "Bali, Indonesia, scenic travel landscape",
+      "places": [
+        {
+          "name": "Ubud",
+          "description": "A cultural heart of rice terraces, art, wellness and jungle-framed experiences.",
+          "imageQuery": "Ubud, Bali, Indonesia, landmark travel"
+        },
+        {
+          "name": "Seminyak",
+          "description": "A stylish coastal base for dining, beach clubs and boutique stays.",
+          "imageQuery": "Seminyak, Bali, Indonesia, landmark travel"
+        },
+        {
+          "name": "Nusa Dua",
+          "description": "A polished resort area suited to premium beaches, spas and relaxed family holidays.",
+          "imageQuery": "Nusa Dua, Bali, Indonesia, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "malaysia",
+      "name": "Malaysia",
+      "tagline": "City Energy, Rainforests & Islands",
+      "country": "Malaysia",
+      "region": "World",
+      "bestTime": "December – March • June – September",
+      "duration": "5 Nights / 6 Days",
+      "description": "Malaysia brings together modern city life, heritage quarters, rainforest scenery and island escapes.",
+      "heroQuery": "Malaysia, Malaysia, scenic travel landscape",
+      "places": [
+        {
+          "name": "Kuala Lumpur",
+          "description": "A modern skyline, food culture and lively neighbourhoods make it a rewarding city break.",
+          "imageQuery": "Kuala Lumpur, Malaysia, Malaysia, landmark travel"
+        },
+        {
+          "name": "Langkawi",
+          "description": "A relaxed island destination with beaches, viewpoints and resort experiences.",
+          "imageQuery": "Langkawi, Malaysia, Malaysia, landmark travel"
+        },
+        {
+          "name": "Penang",
+          "description": "Heritage streets, architecture and exceptional food make George Town a cultural highlight.",
+          "imageQuery": "Penang, Malaysia, Malaysia, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "mauritius",
+      "name": "Mauritius",
+      "tagline": "Island Luxury & Ocean Adventures",
+      "country": "Mauritius",
+      "region": "World",
+      "bestTime": "May – October",
+      "duration": "5 Nights / 6 Days",
+      "description": "Volcanic mountains, lagoons and refined resorts create an easygoing Indian Ocean holiday.",
+      "heroQuery": "Mauritius, Mauritius, scenic travel landscape",
+      "places": [
+        {
+          "name": "Grand Baie",
+          "description": "A lively northern base with beaches, restaurants, shopping and water activities.",
+          "imageQuery": "Grand Baie, Mauritius, Mauritius, landmark travel"
+        },
+        {
+          "name": "Le Morne",
+          "description": "A dramatic mountain-and-lagoon landscape ideal for scenery, beaches and water sports.",
+          "imageQuery": "Le Morne, Mauritius, Mauritius, landmark travel"
+        },
+        {
+          "name": "Black River Gorges",
+          "description": "A lush interior of viewpoints, forests and waterfalls for a change of pace.",
+          "imageQuery": "Black River Gorges, Mauritius, Mauritius, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "switzerland",
+      "name": "Switzerland",
+      "tagline": "Alpine Elegance & Scenic Rail Journeys",
+      "country": "Switzerland",
+      "region": "World",
+      "bestTime": "June – September • December – February",
+      "duration": "6 Nights / 7 Days",
+      "description": "Snowy peaks, immaculate lakes, scenic railways and polished towns create a classic European escape.",
+      "heroQuery": "Switzerland, Switzerland, scenic travel landscape",
+      "places": [
+        {
+          "name": "Lucerne",
+          "description": "A beautiful lakeside city framed by mountains, old-town streets and waterfront views.",
+          "imageQuery": "Lucerne, Switzerland, Switzerland, landmark travel"
+        },
+        {
+          "name": "Interlaken",
+          "description": "A dramatic base between lakes and peaks with easy access to alpine experiences.",
+          "imageQuery": "Interlaken, Switzerland, Switzerland, landmark travel"
+        },
+        {
+          "name": "Zermatt",
+          "description": "A car-free mountain village celebrated for Matterhorn views and premium alpine stays.",
+          "imageQuery": "Zermatt, Switzerland, Switzerland, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "france",
+      "name": "France",
+      "tagline": "Art, Romance & Timeless Cities",
+      "country": "France",
+      "region": "World",
+      "bestTime": "April – June • September – October",
+      "duration": "6 Nights / 7 Days",
+      "description": "France moves effortlessly from iconic Paris to elegant Riviera landscapes and deep cultural heritage.",
+      "heroQuery": "France, France, scenic travel landscape",
+      "places": [
+        {
+          "name": "Paris",
+          "description": "Monuments, museums, cafés and grand boulevards make Paris a timeless first encounter with France.",
+          "imageQuery": "Paris, France, France, landmark travel"
+        },
+        {
+          "name": "Nice",
+          "description": "A Mediterranean base with a beautiful promenade, old town and easy Riviera connections.",
+          "imageQuery": "Nice, France, France, landmark travel"
+        },
+        {
+          "name": "French Riviera",
+          "description": "A glamorous coastal stretch combining seaside towns, yachts, markets and refined dining.",
+          "imageQuery": "French Riviera, France, France, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "italy",
+      "name": "Italy",
+      "tagline": "Art, Cuisine & La Dolce Vita",
+      "country": "Italy",
+      "region": "World",
+      "bestTime": "April – June • September – October",
+      "duration": "7 Nights / 8 Days",
+      "description": "Italy blends ancient history, world-class art, extraordinary food and some of Europe’s most beautiful landscapes.",
+      "heroQuery": "Italy, Italy, scenic travel landscape",
+      "places": [
+        {
+          "name": "Rome",
+          "description": "Ancient monuments, Renaissance masterpieces and vibrant neighbourhoods create an exceptional city journey.",
+          "imageQuery": "Rome, Italy, Italy, landmark travel"
+        },
+        {
+          "name": "Florence",
+          "description": "The compact Renaissance capital is packed with art, architecture and Tuscan character.",
+          "imageQuery": "Florence, Italy, Italy, landmark travel"
+        },
+        {
+          "name": "Venice",
+          "description": "Canals, palaces and intimate lanes create one of Europe’s most distinctive city experiences.",
+          "imageQuery": "Venice, Italy, Italy, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "greece",
+      "name": "Greece",
+      "tagline": "Aegean Islands & Ancient Wonders",
+      "country": "Greece",
+      "region": "World",
+      "bestTime": "May – October",
+      "duration": "5 Nights / 6 Days",
+      "description": "Ancient ruins, whitewashed villages and brilliant Aegean waters make Greece ideal for culture and leisure.",
+      "heroQuery": "Greece, Greece, scenic travel landscape",
+      "places": [
+        {
+          "name": "Athens",
+          "description": "A living capital anchored by the Acropolis and layers of classical and modern culture.",
+          "imageQuery": "Athens, Greece, Greece, landmark travel"
+        },
+        {
+          "name": "Santorini",
+          "description": "Clifftop villages and dramatic caldera views create an iconic romantic island escape.",
+          "imageQuery": "Santorini, Greece, Greece, landmark travel"
+        },
+        {
+          "name": "Mykonos",
+          "description": "Stylish beaches, whitewashed lanes and lively evenings define this glamorous Cycladic island.",
+          "imageQuery": "Mykonos, Greece, Greece, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "spain",
+      "name": "Spain",
+      "tagline": "Culture, Coast & Mediterranean Energy",
+      "country": "Spain",
+      "region": "World",
+      "bestTime": "April – June • September – October",
+      "duration": "6 Nights / 7 Days",
+      "description": "Spain combines grand architecture, art, food and a relaxed Mediterranean rhythm.",
+      "heroQuery": "Spain, Spain, scenic travel landscape",
+      "places": [
+        {
+          "name": "Barcelona",
+          "description": "Gaudí architecture, coastal energy and creative neighbourhoods make Barcelona distinctive.",
+          "imageQuery": "Barcelona, Spain, Spain, landmark travel"
+        },
+        {
+          "name": "Madrid",
+          "description": "Museums, royal heritage, food and elegant boulevards give the capital a confident urban character.",
+          "imageQuery": "Madrid, Spain, Spain, landmark travel"
+        },
+        {
+          "name": "Seville",
+          "description": "Courtyards, flamenco traditions and Andalusian architecture create a warm cultural escape.",
+          "imageQuery": "Seville, Spain, Spain, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "united-kingdom",
+      "name": "United Kingdom",
+      "tagline": "Royal Heritage & Storybook Landscapes",
+      "country": "United Kingdom",
+      "region": "World",
+      "bestTime": "May – September",
+      "duration": "6 Nights / 7 Days",
+      "description": "Historic cities, royal landmarks and green countryside create a classic British journey.",
+      "heroQuery": "United Kingdom, United Kingdom, scenic travel landscape",
+      "places": [
+        {
+          "name": "London",
+          "description": "World-famous landmarks, museums, theatre and neighbourhood culture fill a rich city itinerary.",
+          "imageQuery": "London, United Kingdom, United Kingdom, landmark travel"
+        },
+        {
+          "name": "Edinburgh",
+          "description": "A dramatic old town, castle and surrounding hills give Edinburgh a distinctive atmosphere.",
+          "imageQuery": "Edinburgh, United Kingdom, United Kingdom, landmark travel"
+        },
+        {
+          "name": "Cotswolds",
+          "description": "Stone villages, country lanes and elegant countryside offer a slower English escape.",
+          "imageQuery": "Cotswolds, United Kingdom, United Kingdom, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "turkey",
+      "name": "Turkey",
+      "tagline": "Where Europe Meets Asia",
+      "country": "Türkiye",
+      "region": "World",
+      "bestTime": "April – June • September – October",
+      "duration": "5 Nights / 6 Days",
+      "description": "Turkey combines imperial history, extraordinary landscapes, bazaars and a rich culinary tradition.",
+      "heroQuery": "Turkey, Türkiye, scenic travel landscape",
+      "places": [
+        {
+          "name": "Istanbul",
+          "description": "Mosques, palaces, bazaars and the Bosphorus reveal the city’s unique crossroads character.",
+          "imageQuery": "Istanbul, Turkey, Türkiye, landmark travel"
+        },
+        {
+          "name": "Cappadocia",
+          "description": "Fairy chimneys, cave settlements and sunrise balloons create an unforgettable landscape.",
+          "imageQuery": "Cappadocia, Turkey, Türkiye, landmark travel"
+        },
+        {
+          "name": "Antalya",
+          "description": "Mediterranean beaches, old-town charm and nearby ruins make Antalya a versatile coastal base.",
+          "imageQuery": "Antalya, Turkey, Türkiye, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "austria",
+      "name": "Austria",
+      "tagline": "Imperial Elegance & Alpine Beauty",
+      "country": "Austria",
+      "region": "World",
+      "bestTime": "May – September • December – February",
+      "duration": "5 Nights / 6 Days",
+      "description": "Imperial cities and alpine scenery combine beautifully in Austria’s polished travel experience.",
+      "heroQuery": "Austria, Austria, scenic travel landscape",
+      "places": [
+        {
+          "name": "Vienna",
+          "description": "Palaces, classical music, museums and grand cafés create an elegant capital-city stay.",
+          "imageQuery": "Vienna, Austria, Austria, landmark travel"
+        },
+        {
+          "name": "Salzburg",
+          "description": "Baroque streets and mountain scenery surround the birthplace of Mozart.",
+          "imageQuery": "Salzburg, Austria, Austria, landmark travel"
+        },
+        {
+          "name": "Innsbruck",
+          "description": "An alpine city where dramatic mountains rise directly behind historic streets.",
+          "imageQuery": "Innsbruck, Austria, Austria, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "germany",
+      "name": "Germany",
+      "tagline": "Castles, Culture & Modern Cities",
+      "country": "Germany",
+      "region": "World",
+      "bestTime": "May – September • December",
+      "duration": "6 Nights / 7 Days",
+      "description": "Germany offers historic cities, fairytale castles, forests and a confident modern culture.",
+      "heroQuery": "Germany, Germany, scenic travel landscape",
+      "places": [
+        {
+          "name": "Berlin",
+          "description": "A creative capital where major history, contemporary culture and lively neighbourhoods meet.",
+          "imageQuery": "Berlin, Germany, Germany, landmark travel"
+        },
+        {
+          "name": "Munich",
+          "description": "Elegant squares, museums and Bavarian traditions make Munich a polished city base.",
+          "imageQuery": "Munich, Germany, Germany, landmark travel"
+        },
+        {
+          "name": "Neuschwanstein",
+          "description": "A spectacular hilltop castle surrounded by Alpine scenery and storybook landscapes.",
+          "imageQuery": "Neuschwanstein, Germany, Germany, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "netherlands",
+      "name": "Netherlands",
+      "tagline": "Canals, Art & Dutch Charm",
+      "country": "Netherlands",
+      "region": "World",
+      "bestTime": "April – May • September",
+      "duration": "4 Nights / 5 Days",
+      "description": "Canals, cycling culture, art and compact historic towns make the Netherlands an easy, elegant escape.",
+      "heroQuery": "Netherlands, Netherlands, scenic travel landscape",
+      "places": [
+        {
+          "name": "Amsterdam",
+          "description": "Canals, museums and atmospheric neighbourhoods create the country’s most iconic city experience.",
+          "imageQuery": "Amsterdam, Netherlands, Netherlands, landmark travel"
+        },
+        {
+          "name": "Giethoorn",
+          "description": "A peaceful village of waterways, footbridges and traditional homes offers a slower day trip.",
+          "imageQuery": "Giethoorn, Netherlands, Netherlands, landmark travel"
+        },
+        {
+          "name": "Keukenhof",
+          "description": "Seasonal gardens create a spectacular springtime showcase of Dutch horticulture.",
+          "imageQuery": "Keukenhof, Netherlands, Netherlands, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "australia",
+      "name": "Australia",
+      "tagline": "Coastlines, Cities & Wild Landscapes",
+      "country": "Australia",
+      "region": "World",
+      "bestTime": "September – November • March – May",
+      "duration": "7 Nights / 8 Days",
+      "description": "Australia pairs sophisticated cities with dramatic coastlines, wildlife and vast natural spaces.",
+      "heroQuery": "Australia, Australia, scenic travel landscape",
+      "places": [
+        {
+          "name": "Sydney",
+          "description": "Harbour views, beaches and architectural icons create a spectacular city setting.",
+          "imageQuery": "Sydney, Australia, Australia, landmark travel"
+        },
+        {
+          "name": "Melbourne",
+          "description": "Art, cafés, sport and laneways make Melbourne one of Australia’s most distinctive cities.",
+          "imageQuery": "Melbourne, Australia, Australia, landmark travel"
+        },
+        {
+          "name": "Great Barrier Reef",
+          "description": "A world-famous marine landscape offering extraordinary reef and island experiences.",
+          "imageQuery": "Great Barrier Reef, Australia, Australia, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "new-zealand",
+      "name": "New Zealand",
+      "tagline": "Epic Landscapes & Adventure",
+      "country": "New Zealand",
+      "region": "World",
+      "bestTime": "December – February • March – April",
+      "duration": "7 Nights / 8 Days",
+      "description": "Glacial lakes, mountains, fjords and adventure experiences make New Zealand a dream road-trip destination.",
+      "heroQuery": "New Zealand, New Zealand, scenic travel landscape",
+      "places": [
+        {
+          "name": "Queenstown",
+          "description": "A beautiful lakeside base for mountain scenery, premium stays and adventure.",
+          "imageQuery": "Queenstown, New Zealand, New Zealand, landmark travel"
+        },
+        {
+          "name": "Milford Sound",
+          "description": "Dramatic fjords, waterfalls and towering cliffs create an unforgettable wilderness cruise.",
+          "imageQuery": "Milford Sound, New Zealand, New Zealand, landmark travel"
+        },
+        {
+          "name": "Rotorua",
+          "description": "Geothermal landscapes and Māori cultural experiences add depth to a North Island journey.",
+          "imageQuery": "Rotorua, New Zealand, New Zealand, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "japan",
+      "name": "Japan",
+      "tagline": "Tradition, Design & Future Cities",
+      "country": "Japan",
+      "region": "World",
+      "bestTime": "March – May • October – November",
+      "duration": "6 Nights / 7 Days",
+      "description": "Japan balances ancient traditions, precise design, exceptional food and fast-moving cities.",
+      "heroQuery": "Japan, Japan, scenic travel landscape",
+      "places": [
+        {
+          "name": "Tokyo",
+          "description": "A huge yet highly organised city of neighbourhoods, food, design and futuristic energy.",
+          "imageQuery": "Tokyo, Japan, Japan, landmark travel"
+        },
+        {
+          "name": "Kyoto",
+          "description": "Temples, gardens and traditional streets preserve the atmosphere of old Japan.",
+          "imageQuery": "Kyoto, Japan, Japan, landmark travel"
+        },
+        {
+          "name": "Osaka",
+          "description": "Known for food, friendly energy and easy access to major Kansai attractions.",
+          "imageQuery": "Osaka, Japan, Japan, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "south-korea",
+      "name": "South Korea",
+      "tagline": "K-Culture, Palaces & Modern Seoul",
+      "country": "South Korea",
+      "region": "World",
+      "bestTime": "April – June • September – November",
+      "duration": "5 Nights / 6 Days",
+      "description": "South Korea combines royal heritage, design-led cities, mountain landscapes and an influential food culture.",
+      "heroQuery": "South Korea, South Korea, scenic travel landscape",
+      "places": [
+        {
+          "name": "Seoul",
+          "description": "Palaces, neighbourhood markets, cafés and contemporary culture create a dynamic capital.",
+          "imageQuery": "Seoul, South Korea, South Korea, landmark travel"
+        },
+        {
+          "name": "Busan",
+          "description": "A coastal city of beaches, markets, temples and scenic viewpoints.",
+          "imageQuery": "Busan, South Korea, South Korea, landmark travel"
+        },
+        {
+          "name": "Jeju Island",
+          "description": "Volcanic landscapes, waterfalls and coastal roads offer a slower island contrast.",
+          "imageQuery": "Jeju Island, South Korea, South Korea, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "vietnam",
+      "name": "Vietnam",
+      "tagline": "Heritage, Street Food & Scenic Coasts",
+      "country": "Vietnam",
+      "region": "World",
+      "bestTime": "February – April • October – December",
+      "duration": "6 Nights / 7 Days",
+      "description": "Vietnam offers remarkable food, historic cities, karst landscapes and a fast-growing premium travel scene.",
+      "heroQuery": "Vietnam, Vietnam, scenic travel landscape",
+      "places": [
+        {
+          "name": "Hanoi",
+          "description": "Old-quarter streets, lakes and rich food traditions create an atmospheric capital experience.",
+          "imageQuery": "Hanoi, Vietnam, Vietnam, landmark travel"
+        },
+        {
+          "name": "Ha Long Bay",
+          "description": "Limestone islands rising from emerald water form one of Southeast Asia’s signature landscapes.",
+          "imageQuery": "Ha Long Bay, Vietnam, Vietnam, landmark travel"
+        },
+        {
+          "name": "Hoi An",
+          "description": "Lantern-lit streets, heritage architecture and riverside evenings make Hoi An especially charming.",
+          "imageQuery": "Hoi An, Vietnam, Vietnam, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "indonesia",
+      "name": "Indonesia",
+      "tagline": "Volcanoes, Islands & Culture",
+      "country": "Indonesia",
+      "region": "World",
+      "bestTime": "April – October",
+      "duration": "6 Nights / 7 Days",
+      "description": "Beyond Bali, Indonesia opens into volcanic landscapes, cultural treasures and extraordinary islands.",
+      "heroQuery": "Indonesia, Indonesia, scenic travel landscape",
+      "places": [
+        {
+          "name": "Jakarta",
+          "description": "A fast-moving capital offering museums, dining and a gateway to the wider archipelago.",
+          "imageQuery": "Jakarta, Indonesia, Indonesia, landmark travel"
+        },
+        {
+          "name": "Yogyakarta",
+          "description": "Temples, traditional arts and Javanese culture make it one of Indonesia’s strongest cultural bases.",
+          "imageQuery": "Yogyakarta, Indonesia, Indonesia, landmark travel"
+        },
+        {
+          "name": "Komodo",
+          "description": "Rugged islands, clear waters and extraordinary marine life define this adventurous destination.",
+          "imageQuery": "Komodo, Indonesia, Indonesia, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "sri-lanka",
+      "name": "Sri Lanka",
+      "tagline": "Tea Country, Wildlife & Tropical Coast",
+      "country": "Sri Lanka",
+      "region": "World",
+      "bestTime": "December – March • June – September",
+      "duration": "6 Nights / 7 Days",
+      "description": "A compact island with beaches, tea country, wildlife and ancient heritage packed into one journey.",
+      "heroQuery": "Sri Lanka, Sri Lanka, scenic travel landscape",
+      "places": [
+        {
+          "name": "Colombo",
+          "description": "A lively coastal capital blending colonial traces, contemporary dining and urban energy.",
+          "imageQuery": "Colombo, Sri Lanka, Sri Lanka, landmark travel"
+        },
+        {
+          "name": "Kandy",
+          "description": "A cultural highland city surrounded by hills, temples and lake views.",
+          "imageQuery": "Kandy, Sri Lanka, Sri Lanka, landmark travel"
+        },
+        {
+          "name": "Ella",
+          "description": "Tea-covered mountains, scenic rail journeys and waterfalls make Ella a favourite highland escape.",
+          "imageQuery": "Ella, Sri Lanka, Sri Lanka, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "seychelles",
+      "name": "Seychelles",
+      "tagline": "Granite Islands & Ocean Serenity",
+      "country": "Seychelles",
+      "region": "World",
+      "bestTime": "April – May • October – November",
+      "duration": "5 Nights / 6 Days",
+      "description": "Granite islands, brilliant beaches and lush interiors create an intimate Indian Ocean escape.",
+      "heroQuery": "Seychelles, Seychelles, scenic travel landscape",
+      "places": [
+        {
+          "name": "Mahé",
+          "description": "The main island combines mountain roads, beaches, local culture and convenient resort access.",
+          "imageQuery": "Mahé, Seychelles, Seychelles, landmark travel"
+        },
+        {
+          "name": "Praslin",
+          "description": "Known for beautiful beaches and lush landscapes, including the Vallée de Mai area.",
+          "imageQuery": "Praslin, Seychelles, Seychelles, landmark travel"
+        },
+        {
+          "name": "La Digue",
+          "description": "A slower island experience of bicycles, granite formations and postcard-like beaches.",
+          "imageQuery": "La Digue, Seychelles, Seychelles, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "south-africa",
+      "name": "South Africa",
+      "tagline": "Safari, Coast & City Style",
+      "country": "South Africa",
+      "region": "World",
+      "bestTime": "May – September",
+      "duration": "7 Nights / 8 Days",
+      "description": "South Africa combines sophisticated cities, dramatic coastlines, vineyards and unforgettable safari.",
+      "heroQuery": "South Africa, South Africa, scenic travel landscape",
+      "places": [
+        {
+          "name": "Cape Town",
+          "description": "Mountain, ocean and city life meet in one of the world’s most scenic urban settings.",
+          "imageQuery": "Cape Town, South Africa, South Africa, landmark travel"
+        },
+        {
+          "name": "Kruger National Park",
+          "description": "A classic safari destination with excellent opportunities for wildlife viewing.",
+          "imageQuery": "Kruger National Park, South Africa, South Africa, landmark travel"
+        },
+        {
+          "name": "Garden Route",
+          "description": "A spectacular coastal drive through forests, lagoons, beaches and small towns.",
+          "imageQuery": "Garden Route, South Africa, South Africa, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "egypt",
+      "name": "Egypt",
+      "tagline": "Ancient Wonders & Nile Journeys",
+      "country": "Egypt",
+      "region": "World",
+      "bestTime": "October – April",
+      "duration": "5 Nights / 6 Days",
+      "description": "Ancient monuments, the Nile and bustling modern cities make Egypt one of the world’s great heritage journeys.",
+      "heroQuery": "Egypt, Egypt, scenic travel landscape",
+      "places": [
+        {
+          "name": "Cairo",
+          "description": "A huge capital where the Giza pyramids sit alongside museums, markets and modern life.",
+          "imageQuery": "Cairo, Egypt, Egypt, landmark travel"
+        },
+        {
+          "name": "Luxor",
+          "description": "Temples and tombs make Luxor an extraordinary open-air showcase of ancient Egypt.",
+          "imageQuery": "Luxor, Egypt, Egypt, landmark travel"
+        },
+        {
+          "name": "Nile Cruise",
+          "description": "A slower way to connect major heritage sites while travelling through the river landscape.",
+          "imageQuery": "Nile Cruise, Egypt, Egypt, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "usa",
+      "name": "USA",
+      "tagline": "Iconic Cities & Grand Landscapes",
+      "country": "USA",
+      "region": "World",
+      "bestTime": "April – June • September – October",
+      "duration": "7 Nights / 8 Days",
+      "description": "The United States offers enormous variety, from global cities to national parks and dramatic coastlines.",
+      "heroQuery": "USA, USA, scenic travel landscape",
+      "places": [
+        {
+          "name": "New York City",
+          "description": "Skyscrapers, museums, neighbourhoods and food create one of the world’s most energetic city breaks.",
+          "imageQuery": "New York City, USA, USA, landmark travel"
+        },
+        {
+          "name": "Las Vegas",
+          "description": "A theatrical desert city known for entertainment, dining and spectacular resorts.",
+          "imageQuery": "Las Vegas, USA, USA, landmark travel"
+        },
+        {
+          "name": "Grand Canyon",
+          "description": "An immense natural landscape best experienced through viewpoints, trails and scenic drives.",
+          "imageQuery": "Grand Canyon, USA, USA, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "canada",
+      "name": "Canada",
+      "tagline": "Lakes, Mountains & Cosmopolitan Cities",
+      "country": "Canada",
+      "region": "World",
+      "bestTime": "June – September",
+      "duration": "7 Nights / 8 Days",
+      "description": "Canada pairs polished cities with enormous mountain, lake and wilderness landscapes.",
+      "heroQuery": "Canada, Canada, scenic travel landscape",
+      "places": [
+        {
+          "name": "Vancouver",
+          "description": "A waterfront city framed by mountains, forests and a beautiful outdoor lifestyle.",
+          "imageQuery": "Vancouver, Canada, Canada, landmark travel"
+        },
+        {
+          "name": "Banff",
+          "description": "Turquoise lakes and Rocky Mountain peaks create one of Canada’s most iconic landscapes.",
+          "imageQuery": "Banff, Canada, Canada, landmark travel"
+        },
+        {
+          "name": "Toronto",
+          "description": "A multicultural metropolis with waterfront views, museums and an exceptional food scene.",
+          "imageQuery": "Toronto, Canada, Canada, landmark travel"
+        }
+      ]
+    },
+    {
+      "slug": "norway",
+      "name": "Norway",
+      "tagline": "Fjords, Arctic Light & Nordic Calm",
+      "country": "Norway",
+      "region": "World",
+      "bestTime": "June – August • November – March",
+      "duration": "6 Nights / 7 Days",
+      "description": "Fjords, mountain railways, Arctic landscapes and clean Scandinavian design define Norway.",
+      "heroQuery": "Norway, Norway, scenic travel landscape",
+      "places": [
+        {
+          "name": "Oslo",
+          "description": "A modern Nordic capital combining museums, waterfront architecture and green spaces.",
+          "imageQuery": "Oslo, Norway, Norway, landmark travel"
+        },
+        {
+          "name": "Bergen",
+          "description": "A colourful historic harbour and gateway to Norway’s dramatic fjord country.",
+          "imageQuery": "Bergen, Norway, Norway, landmark travel"
+        },
+        {
+          "name": "Tromsø",
+          "description": "An Arctic base for northern lights, winter experiences and striking surrounding landscapes.",
+          "imageQuery": "Tromsø, Norway, Norway, landmark travel"
+        }
+      ]
+    }
+  ]
 };
