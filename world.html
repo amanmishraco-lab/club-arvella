@@ -1,81 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Explore World | Club Arvella</title>
-  <meta name="description" content="Explore 30 extraordinary Club Arvella world destinations.">
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="explore.css">
+
+  <meta
+    name="description"
+    content="Explore 30 extraordinary international destinations with Club Arvella."
+  >
+
+  <link
+    rel="stylesheet"
+    href="explore.css"
+  >
+
 </head>
+
+
 <body>
+
+
+<!-- ==============================
+     NAVIGATION
+================================ -->
+
 <header class="nav">
-  <a class="brand" href="index.html" aria-label="Club Arvella Home">
-    <span class="brand-mark">A</span>
-    <span class="brand-name">CLUB ARVELLA<small>TRAVEL BEYOND</small></span>
+
+
+  <a
+    class="brand"
+    href="index.html"
+    aria-label="Club Arvella Home"
+  >
+
+    <span class="brand-mark">
+      A
+    </span>
+
+
+    <span class="brand-name">
+
+      CLUB ARVELLA
+
+      <small>
+        TRAVEL BEYOND
+      </small>
+
+    </span>
+
   </a>
-  <button class="menu-btn" aria-label="Open menu">MENU</button>
+
+
+
+  <button
+    class="menu-btn"
+    aria-label="Open menu"
+    type="button"
+  >
+    MENU
+  </button>
+
+
+
   <nav class="nav-links">
-    <a href="index.html">HOME</a>
-    <a href="india.html">EXPLORE INDIA</a>
-    <a class="active" href="world.html">EXPLORE WORLD</a>
-    <a href="packages.html">PACKAGES</a>
-    <a href="about.html">ABOUT</a>
-    <a href="contact.html">CONTACT</a>
-    <a class="nav-cta" href="contact.html">PLAN YOUR TRIP</a>
+
+
+    <a href="index.html">
+      HOME
+    </a>
+
+
+    <a href="india.html">
+      EXPLORE INDIA
+    </a>
+
+
+    <a
+      class="active"
+      href="world.html"
+    >
+      EXPLORE WORLD
+    </a>
+
+
+    <a href="packages.html">
+      PACKAGES
+    </a>
+
+
+    <a href="about.html">
+      ABOUT
+    </a>
+
+
+    <a href="contact.html">
+      CONTACT
+    </a>
+
+
+    <a
+      class="nav-cta"
+      href="contact.html"
+    >
+      PLAN YOUR TRIP
+    </a>
+
+
   </nav>
+
 </header>
 
+
+
+<!-- ==============================
+     MAIN
+================================ -->
+
 <main>
+
+
+  <!-- HERO -->
+
   <section class="world-hero">
-    <img class="hero-image" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85"
-         alt="Luxury tropical world destination" fetchpriority="high">
+
+
+    <img
+      class="hero-image"
+      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=85"
+      alt="Beautiful international tropical destination"
+      fetchpriority="high"
+    >
+
+
     <div class="hero-overlay"></div>
+
+
     <div class="hero-content">
-      <p class="eyebrow">CURATED BY CLUB ARVELLA</p>
-      <h1>EXPLORE THE WORLD</h1>
-      <p>30 extraordinary destinations. One unforgettable life.</p>
+
+
+      <p class="eyebrow">
+        CURATED BY CLUB ARVELLA
+      </p>
+
+
+      <h1>
+        EXPLORE THE WORLD
+      </h1>
+
+
+      <p>
+        30 extraordinary destinations.
+        One unforgettable life.
+      </p>
+
+
     </div>
+
+
   </section>
+
+
+
+  <!-- DESTINATION AREA -->
 
   <section class="explore-wrap">
+
+
+    <!-- FILTERS -->
+
     <div class="filters">
+
+
+      <!-- SEARCH -->
+
       <label class="search-box">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" placeholder="Search countries or cities..." autocomplete="off">
+
+
+        <span aria-hidden="true">
+          ⌕
+        </span>
+
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search countries or cities..."
+          autocomplete="off"
+        >
+
+
       </label>
-      <select id="regionFilter" aria-label="Filter by region">
-        <option value="all">All Regions</option>
-        <option value="asia">Asia</option>
-        <option value="europe">Europe</option>
-        <option value="middle-east">Middle East</option>
-        <option value="africa">Africa</option>
-        <option value="americas">Americas</option>
-        <option value="oceania">Oceania</option>
+
+
+
+      <!-- REGION -->
+
+      <select
+        id="regionFilter"
+        aria-label="Filter by region"
+      >
+
+        <option value="all">
+          All Regions
+        </option>
+
+        <option value="asia">
+          Asia
+        </option>
+
+        <option value="europe">
+          Europe
+        </option>
+
+        <option value="middle-east">
+          Middle East
+        </option>
+
+        <option value="africa">
+          Africa
+        </option>
+
+        <option value="americas">
+          Americas
+        </option>
+
+        <option value="oceania">
+          Oceania
+        </option>
+
       </select>
-      <select id="styleFilter" aria-label="Filter by travel style">
-        <option value="all">All Travel Styles</option>
-        <option value="luxury">Luxury</option>
-        <option value="beach">Beaches</option>
-        <option value="culture">Culture</option>
-        <option value="nature">Nature</option>
-        <option value="adventure">Adventure</option>
-        <option value="city">City Life</option>
+
+
+
+      <!-- TRAVEL STYLE -->
+
+      <select
+        id="styleFilter"
+        aria-label="Filter by travel style"
+      >
+
+        <option value="all">
+          All Travel Styles
+        </option>
+
+        <option value="luxury">
+          Luxury
+        </option>
+
+        <option value="beach">
+          Beaches
+        </option>
+
+        <option value="culture">
+          Culture
+        </option>
+
+        <option value="nature">
+          Nature
+        </option>
+
+        <option value="adventure">
+          Adventure
+        </option>
+
+        <option value="city">
+          City Life
+        </option>
+
       </select>
-      <select id="seasonFilter" aria-label="Filter by season">
-        <option value="all">All Seasons</option>
-        <option value="winter">Winter Escape</option>
-        <option value="summer">Summer Escape</option>
-        <option value="year-round">Year Round</option>
+
+
+
+      <!-- SEASON -->
+
+      <select
+        id="seasonFilter"
+        aria-label="Filter by season"
+      >
+
+        <option value="all">
+          All Seasons
+        </option>
+
+        <option value="winter">
+          Winter Escape
+        </option>
+
+        <option value="summer">
+          Summer Escape
+        </option>
+
+        <option value="year-round">
+          Year Round
+        </option>
+
       </select>
-      <button id="resetBtn" class="reset-btn" type="button">Reset</button>
+
+
+
+      <!-- RESET -->
+
+      <button
+        id="resetBtn"
+        class="reset-btn"
+        type="button"
+      >
+        Reset
+      </button>
+
+
     </div>
 
-    <div id="destinationGrid" class="destination-grid"></div>
-    <p id="emptyState" class="empty-state" hidden>No destinations match your search.</p>
+
+
+    <!-- DESTINATION CARDS -->
+
+    <div
+      id="destinationGrid"
+      class="destination-grid"
+    ></div>
+
+
+
+    <!-- NO RESULT -->
+
+    <p
+      id="emptyState"
+      class="empty-state"
+      hidden
+    >
+      No destinations match your search.
+    </p>
+
+
   </section>
+
+
 </main>
 
-<script src="explore-world.js" defer></script>
+
+
+<!-- WORLD JAVASCRIPT -->
+
+<script
+  src="explore-world.js"
+  defer
+></script>
+
+
 </body>
+
 </html>
