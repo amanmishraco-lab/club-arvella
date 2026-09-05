@@ -1,460 +1,543 @@
-const destinations = [
+/* =========================================================
+   CLUB ARVELLA — EXPLORE WORLD
+   30 INTERNATIONAL DESTINATIONS
+========================================================= */
+
+const WORLD_DESTINATIONS = [
+
   {
-    "name": "Dubai",
-    "tags": "Luxury • Shopping • Modern",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=82",
-    "region": "middle-east",
-    "styles": [
-      "luxury",
-      "city"
-    ],
-    "season": "winter",
-    "slug": "dubai"
+    slug: "dubai",
+    name: "Dubai",
+    region: "middle-east",
+    styles: ["luxury", "city"],
+    seasons: ["winter", "year-round"],
+    tagline: "Iconic luxury, desert adventures & skyline",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Maldives",
-    "tags": "Islands • Beaches • Luxury",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "luxury",
-      "beach"
-    ],
-    "season": "winter",
-    "slug": "maldives"
+    slug: "maldives",
+    name: "Maldives",
+    region: "asia",
+    styles: ["beach", "luxury"],
+    seasons: ["winter", "year-round"],
+    tagline: "Private islands & turquoise waters",
+    image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Singapore",
-    "tags": "Modern • Family • Culture",
-    "image": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "city",
-      "culture"
-    ],
-    "season": "year-round",
-    "slug": "singapore"
+    slug: "singapore",
+    name: "Singapore",
+    region: "asia",
+    styles: ["city", "luxury", "culture"],
+    seasons: ["year-round"],
+    tagline: "Futuristic city life & culinary experiences",
+    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Thailand",
-    "tags": "Beaches • Islands • Adventure",
-    "image": "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "beach",
-      "adventure"
-    ],
-    "season": "winter",
-    "slug": "thailand"
+    slug: "thailand",
+    name: "Thailand",
+    region: "asia",
+    styles: ["beach", "culture", "adventure"],
+    seasons: ["winter", "year-round"],
+    tagline: "Islands, temples & tropical escapes",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Bali",
-    "tags": "Culture • Beaches • Wellness",
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "beach",
-      "wellness"
-    ],
-    "season": "summer",
-    "slug": "bali"
+    slug: "bali",
+    name: "Bali",
+    region: "asia",
+    styles: ["beach", "nature", "luxury"],
+    seasons: ["summer", "year-round"],
+    tagline: "Rice terraces, temples & island luxury",
+    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Malaysia",
-    "tags": "City Life • Nature • Food",
-    "image": "https://images.unsplash.com/photo-1596422846543-75c293f2f4a5?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "city",
-      "nature"
-    ],
-    "season": "year-round",
-    "slug": "malaysia"
+    slug: "malaysia",
+    name: "Malaysia",
+    region: "asia",
+    styles: ["city", "culture", "nature"],
+    seasons: ["year-round"],
+    tagline: "Modern cities, islands & rainforests",
+    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Mauritius",
-    "tags": "Beaches • Luxury • Nature",
-    "image": "https://images.unsplash.com/photo-1589979481223-deb893043163?auto=format&fit=crop&w=1000&q=82",
-    "region": "africa",
-    "styles": [
-      "luxury",
-      "beach"
-    ],
-    "season": "winter",
-    "slug": "mauritius"
+    slug: "mauritius",
+    name: "Mauritius",
+    region: "africa",
+    styles: ["beach", "luxury", "nature"],
+    seasons: ["summer", "winter"],
+    tagline: "Indian Ocean beaches & island luxury",
+    image: "https://images.unsplash.com/photo-1589979481223-deb893043163?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Switzerland",
-    "tags": "Mountains • Scenery • Romance",
-    "image": "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "nature",
-      "romance"
-    ],
-    "season": "summer",
-    "slug": "switzerland"
+    slug: "switzerland",
+    name: "Switzerland",
+    region: "europe",
+    styles: ["nature", "luxury", "adventure"],
+    seasons: ["summer", "winter"],
+    tagline: "Alpine villages, lakes & scenic railways",
+    image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "France",
-    "tags": "Art • Culture • Romance",
-    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "culture",
-      "city"
-    ],
-    "season": "summer",
-    "slug": "france"
+    slug: "france",
+    name: "France",
+    region: "europe",
+    styles: ["luxury", "culture", "city"],
+    seasons: ["summer", "winter"],
+    tagline: "Paris, Riviera & timeless elegance",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Italy",
-    "tags": "History • Food • Coastline",
-    "image": "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "culture",
-      "beach"
-    ],
-    "season": "summer",
-    "slug": "italy"
+    slug: "italy",
+    name: "Italy",
+    region: "europe",
+    styles: ["culture", "heritage", "luxury"],
+    seasons: ["summer", "winter"],
+    tagline: "Art, cuisine, coastlines & ancient cities",
+    image: "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Greece",
-    "tags": "Islands • Culture • Scenic",
-    "image": "https://images.unsplash.com/photo-1530841377377-3ff06c0ca713?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "beach",
-      "culture"
-    ],
-    "season": "summer",
-    "slug": "greece"
+    slug: "greece",
+    name: "Greece",
+    region: "europe",
+    styles: ["beach", "culture", "luxury"],
+    seasons: ["summer"],
+    tagline: "Whitewashed islands & Mediterranean beauty",
+    image: "https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Spain",
-    "tags": "Architecture • Food • Culture",
-    "image": "https://images.unsplash.com/photo-1509840841025-9088ba78a4cc?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "culture",
-      "city"
-    ],
-    "season": "summer",
-    "slug": "spain"
+    slug: "spain",
+    name: "Spain",
+    region: "europe",
+    styles: ["beach", "culture", "city"],
+    seasons: ["summer", "year-round"],
+    tagline: "Architecture, beaches & vibrant culture",
+    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "United Kingdom",
-    "tags": "Heritage • Culture • City Life",
-    "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "culture",
-      "city"
-    ],
-    "season": "summer",
-    "slug": "united-kingdom"
+    slug: "united-kingdom",
+    name: "United Kingdom",
+    region: "europe",
+    styles: ["culture", "heritage", "city"],
+    seasons: ["summer", "year-round"],
+    tagline: "Royal heritage, countryside & iconic cities",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Turkey",
-    "tags": "History • Culture • Landscapes",
-    "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "culture",
-      "adventure"
-    ],
-    "season": "summer",
-    "slug": "turkey"
+    slug: "turkey",
+    name: "Turkey",
+    region: "europe",
+    styles: ["culture", "heritage", "adventure"],
+    seasons: ["summer", "winter"],
+    tagline: "Ancient wonders & spectacular landscapes",
+    image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Austria",
-    "tags": "Mountains • Lakes • Culture",
-    "image": "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "nature",
-      "culture"
-    ],
-    "season": "summer",
-    "slug": "austria"
+    slug: "austria",
+    name: "Austria",
+    region: "europe",
+    styles: ["culture", "nature", "luxury"],
+    seasons: ["summer", "winter"],
+    tagline: "Alpine scenery, music & imperial heritage",
+    image: "https://images.unsplash.com/photo-1524396309943-e03f5249f002?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Germany",
-    "tags": "History • Culture • Scenery",
-    "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "culture",
-      "nature"
-    ],
-    "season": "summer",
-    "slug": "germany"
+    slug: "germany",
+    name: "Germany",
+    region: "europe",
+    styles: ["heritage", "culture", "city"],
+    seasons: ["summer", "winter"],
+    tagline: "Castles, cities & rich European heritage",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Netherlands",
-    "tags": "Tulips • Countryside • Culture",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "culture",
-      "nature"
-    ],
-    "season": "summer",
-    "slug": "netherlands"
+    slug: "netherlands",
+    name: "Netherlands",
+    region: "europe",
+    styles: ["culture", "city", "nature"],
+    seasons: ["summer"],
+    tagline: "Canals, cycling & Dutch countryside",
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Australia",
-    "tags": "Beaches • Wildlife • Adventure",
-    "image": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9dc?auto=format&fit=crop&w=1000&q=82",
-    "region": "oceania",
-    "styles": [
-      "beach",
-      "adventure"
-    ],
-    "season": "summer",
-    "slug": "australia"
+    slug: "australia",
+    name: "Australia",
+    region: "oceania",
+    styles: ["nature", "beach", "city"],
+    seasons: ["summer", "winter"],
+    tagline: "Iconic cities, reefs & wild landscapes",
+    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d8?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "New Zealand",
-    "tags": "Epic Landscapes • Adventure",
-    "image": "https://images.unsplash.com/photo-1507699622108-4be3e2b4f9c0?auto=format&fit=crop&w=1000&q=82",
-    "region": "oceania",
-    "styles": [
-      "nature",
-      "adventure"
-    ],
-    "season": "summer",
-    "slug": "new-zealand"
+    slug: "new-zealand",
+    name: "New Zealand",
+    region: "oceania",
+    styles: ["nature", "adventure", "luxury"],
+    seasons: ["summer", "winter"],
+    tagline: "Dramatic mountains, lakes & adventure",
+    image: "https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Japan",
-    "tags": "Tradition • Design • Future Cities",
-    "image": "https://images.unsplash.com/photo-1493976040374-85c0c3c5c3e1?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "culture",
-      "city"
-    ],
-    "season": "spring",
-    "slug": "japan"
+    slug: "japan",
+    name: "Japan",
+    region: "asia",
+    styles: ["culture", "city", "nature"],
+    seasons: ["spring", "winter"],
+    tagline: "Ancient traditions & futuristic cities",
+    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "South Korea",
-    "tags": "K-Culture • Palaces • Modern Seoul",
-    "image": "https://images.unsplash.com/photo-1538485399081-7c897f2f5b8e?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "culture",
-      "city"
-    ],
-    "season": "spring",
-    "slug": "south-korea"
+    slug: "south-korea",
+    name: "South Korea",
+    region: "asia",
+    styles: ["city", "culture", "nature"],
+    seasons: ["spring", "winter"],
+    tagline: "Seoul energy, palaces & mountain escapes",
+    image: "https://images.unsplash.com/photo-1538485399081-7c897f1f7e0c?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Vietnam",
-    "tags": "Heritage • Street Food • Scenic Coasts",
-    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "culture",
-      "beach"
-    ],
-    "season": "winter",
-    "slug": "vietnam"
+    slug: "vietnam",
+    name: "Vietnam",
+    region: "asia",
+    styles: ["culture", "nature", "adventure"],
+    seasons: ["winter", "year-round"],
+    tagline: "Ha Long Bay, heritage & local flavours",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Indonesia",
-    "tags": "Volcanoes • Islands • Culture",
-    "image": "https://images.unsplash.com/photo-1539367628448-4bc5d9e1f3b8?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "adventure",
-      "nature"
-    ],
-    "season": "summer",
-    "slug": "indonesia"
+    slug: "indonesia",
+    name: "Indonesia",
+    region: "asia",
+    styles: ["beach", "nature", "adventure"],
+    seasons: ["summer", "year-round"],
+    tagline: "Volcanoes, islands & tropical adventures",
+    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Sri Lanka",
-    "tags": "Tea Country • Wildlife • Tropical Coast",
-    "image": "https://images.unsplash.com/photo-1588596085918-1a4b5f9b7c6d?auto=format&fit=crop&w=1000&q=82",
-    "region": "asia",
-    "styles": [
-      "beach",
-      "nature"
-    ],
-    "season": "winter",
-    "slug": "sri-lanka"
+    slug: "sri-lanka",
+    name: "Sri Lanka",
+    region: "asia",
+    styles: ["beach", "culture", "nature"],
+    seasons: ["winter", "year-round"],
+    tagline: "Tea country, temples & tropical coast",
+    image: "https://images.unsplash.com/photo-1588598198321-9735fd524d0b?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Seychelles",
-    "tags": "Granite Islands • Ocean Serenity",
-    "image": "https://images.unsplash.com/photo-1539650116574-75c0c6d6f4a1?auto=format&fit=crop&w=1000&q=82",
-    "region": "africa",
-    "styles": [
-      "luxury",
-      "beach"
-    ],
-    "season": "winter",
-    "slug": "seychelles"
+    slug: "seychelles",
+    name: "Seychelles",
+    region: "africa",
+    styles: ["beach", "luxury", "nature"],
+    seasons: ["year-round"],
+    tagline: "Granite islands & pristine beaches",
+    image: "https://images.unsplash.com/photo-1589979481223-deb893043163?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "South Africa",
-    "tags": "Safari • Coast • City Style",
-    "image": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=82",
-    "region": "africa",
-    "styles": [
-      "adventure",
-      "nature"
-    ],
-    "season": "winter",
-    "slug": "south-africa"
+    slug: "south-africa",
+    name: "South Africa",
+    region: "africa",
+    styles: ["nature", "adventure", "luxury"],
+    seasons: ["summer", "winter"],
+    tagline: "Safari, wine country & dramatic coastlines",
+    image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Egypt",
-    "tags": "Ancient Wonders • Nile Journeys",
-    "image": "https://images.unsplash.com/photo-1568322445389-fd3b1a9f4c8e?auto=format&fit=crop&w=1000&q=82",
-    "region": "africa",
-    "styles": [
-      "culture",
-      "adventure"
-    ],
-    "season": "winter",
-    "slug": "egypt"
+    slug: "egypt",
+    name: "Egypt",
+    region: "africa",
+    styles: ["heritage", "culture", "adventure"],
+    seasons: ["winter"],
+    tagline: "Pyramids, Nile cruises & ancient wonders",
+    image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "USA",
-    "tags": "Iconic Cities • National Parks • Road Trips",
-    "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1000&q=82",
-    "region": "americas",
-    "styles": [
-      "city",
-      "adventure"
-    ],
-    "season": "summer",
-    "slug": "usa"
+    slug: "usa",
+    name: "USA",
+    region: "americas",
+    styles: ["city", "nature", "adventure"],
+    seasons: ["summer", "winter"],
+    tagline: "Iconic cities, national parks & endless variety",
+    image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Canada",
-    "tags": "Alpine Landscapes • Lakes • Wildlife",
-    "image": "https://images.unsplash.com/photo-1503614472-8c93d56c1e6f?auto=format&fit=crop&w=1000&q=82",
-    "region": "americas",
-    "styles": [
-      "nature",
-      "adventure"
-    ],
-    "season": "summer",
-    "slug": "canada"
+    slug: "canada",
+    name: "Canada",
+    region: "americas",
+    styles: ["nature", "adventure", "luxury"],
+    seasons: ["summer", "winter"],
+    tagline: "Rockies, lakes & spectacular wilderness",
+    image: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=1000&q=82"
   },
+
   {
-    "name": "Norway",
-    "tags": "Fjords • Northern Lights • Adventure",
-    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=82",
-    "region": "europe",
-    "styles": [
-      "nature",
-      "adventure"
-    ],
-    "season": "summer",
-    "slug": "norway"
+    slug: "norway",
+    name: "Norway",
+    region: "europe",
+    styles: ["nature", "adventure", "luxury"],
+    seasons: ["summer", "winter"],
+    tagline: "Fjords, northern lights & Arctic beauty",
+    image: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=82"
   }
+
 ];
 
-const grid = document.getElementById('destinationGrid');
-const searchInput = document.getElementById('searchInput');
-const regionFilter = document.getElementById('regionFilter');
-const styleFilter = document.getElementById('styleFilter');
-const seasonFilter = document.getElementById('seasonFilter');
-const resetBtn = document.getElementById('resetBtn');
-const emptyState = document.getElementById('emptyState');
 
-const usedImageUrls = new Set();
-const loadedImageUrls = new Set();
+/* =========================================================
+   ELEMENTS
+========================================================= */
 
-function normalise(value) {
-  return value.toLowerCase().trim();
-}
+const grid =
+  document.getElementById("destinationGrid");
 
-function matches(item) {
-  const query = normalise(searchInput.value);
-  const region = regionFilter.value;
-  const style = styleFilter.value;
-  const season = seasonFilter.value;
+const searchInput =
+  document.getElementById("searchInput");
 
-  const textMatch = !query ||
-    normalise(item.name).includes(query) ||
-    normalise(item.tags).includes(query);
+const regionFilter =
+  document.getElementById("regionFilter");
 
-  const regionMatch = region === 'all' || item.region === region;
-  const styleMatch = style === 'all' || item.styles.includes(style);
-  const seasonMatch = season === 'all' || item.season === season;
+const styleFilter =
+  document.getElementById("styleFilter");
 
-  return textMatch && regionMatch && styleMatch && seasonMatch;
-}
+const seasonFilter =
+  document.getElementById("seasonFilter");
 
-function render() {
-  grid.innerHTML = '';
-  usedImageUrls.clear();
+const resetBtn =
+  document.getElementById("resetBtn");
 
-  const visible = destinations.filter(matches);
-  emptyState.hidden = visible.length !== 0;
+const emptyState =
+  document.getElementById("emptyState");
 
-  visible.forEach((item, index) => {
-    // Every card has an explicit image URL from the data object.
-    // No image API, random search, or generic fallback is used.
-    if (usedImageUrls.has(item.image)) {
-      console.error('Duplicate image blocked:', item.name);
-      return;
-    }
-    usedImageUrls.add(item.image);
 
-    const card = document.createElement('article');
-    card.className = 'destination-card';
+/* =========================================================
+   RENDER DESTINATIONS
+========================================================= */
+
+function renderDestinations() {
+
+  const search =
+    searchInput.value
+      .trim()
+      .toLowerCase();
+
+  const region =
+    regionFilter.value;
+
+  const style =
+    styleFilter.value;
+
+  const season =
+    seasonFilter.value;
+
+
+  const filtered =
+    WORLD_DESTINATIONS.filter(item => {
+
+      const matchesSearch =
+        !search ||
+        item.name.toLowerCase().includes(search) ||
+        item.tagline.toLowerCase().includes(search);
+
+
+      const matchesRegion =
+        region === "all" ||
+        item.region === region;
+
+
+      const matchesStyle =
+        style === "all" ||
+        item.styles.includes(style);
+
+
+      const matchesSeason =
+        season === "all" ||
+        item.seasons.includes(season);
+
+
+      return (
+        matchesSearch &&
+        matchesRegion &&
+        matchesStyle &&
+        matchesSeason
+      );
+
+    });
+
+
+  grid.innerHTML = "";
+
+
+  emptyState.hidden =
+    filtered.length !== 0;
+
+
+  filtered.forEach((item, index) => {
+
+    const card =
+      document.createElement("article");
+
+    card.className =
+      "destination-card";
+
+
     card.innerHTML = `
-      <div class="card-image-wrap">
-        <img class="card-image"
-             src="${item.image}"
-             alt="${item.name} travel destination"
-             loading="${index < 6 ? 'eager' : 'lazy'}"
-             decoding="async">
-        <span class="number">${String(destinations.indexOf(item)+1).padStart(2,'0')}</span>
+
+      <div class="destination-image-wrap">
+
+        <img
+          src="${item.image}"
+          alt="${item.name}"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <span class="destination-number">
+          ${String(index + 1).padStart(2, "0")}
+        </span>
+
       </div>
-      <div class="card-body">
-        <h2>${item.name}</h2>
-        <div class="tags">${item.tags.replaceAll(' • ',' &nbsp;•&nbsp; ')}</div>
-        <a class="explore-link"
-           href="destination.html?region=world&place=${item.slug}">
-          EXPLORE <span>→</span>
+
+
+      <div class="destination-info">
+
+        <h2>
+          ${item.name}
+        </h2>
+
+        <p>
+          ${item.tagline}
+        </p>
+
+
+        <a
+          class="explore-link"
+          href="destination.html?region=world&place=${item.slug}"
+        >
+          EXPLORE
+          <span>→</span>
         </a>
-      </div>`;
+
+      </div>
+
+    `;
+
+
     grid.appendChild(card);
 
-    const image = card.querySelector('img');
-    image.addEventListener('load', () => loadedImageUrls.add(item.image), {once:true});
-    image.addEventListener('error', () => {
-      // Never substitute another destination's photo.
-      image.remove();
-      card.classList.add('image-unavailable');
-    }, {once:true});
   });
+
 }
 
-[searchInput, regionFilter, styleFilter, seasonFilter].forEach(control => {
-  control.addEventListener('input', render);
-  control.addEventListener('change', render);
-});
 
-resetBtn.addEventListener('click', () => {
-  searchInput.value = '';
-  regionFilter.value = 'all';
-  styleFilter.value = 'all';
-  seasonFilter.value = 'all';
-  render();
-});
+/* =========================================================
+   FILTER EVENTS
+========================================================= */
 
-document.querySelector('.menu-btn').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('mobile-open');
-});
+searchInput.addEventListener(
+  "input",
+  renderDestinations
+);
 
-render();
+regionFilter.addEventListener(
+  "change",
+  renderDestinations
+);
+
+styleFilter.addEventListener(
+  "change",
+  renderDestinations
+);
+
+seasonFilter.addEventListener(
+  "change",
+  renderDestinations
+);
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+resetBtn.addEventListener(
+  "click",
+  () => {
+
+    searchInput.value = "";
+
+    regionFilter.value = "all";
+
+    styleFilter.value = "all";
+
+    seasonFilter.value = "all";
+
+    renderDestinations();
+
+  }
+);
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+  document.querySelector(".menu-btn");
+
+const navLinks =
+  document.querySelector(".nav-links");
+
+
+if (menuBtn && navLinks) {
+
+  menuBtn.addEventListener(
+    "click",
+    () => {
+
+      navLinks.classList.toggle(
+        "mobile-open"
+      );
+
+
+      menuBtn.textContent =
+        navLinks.classList.contains(
+          "mobile-open"
+        )
+          ? "CLOSE"
+          : "MENU";
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+renderDestinations();
