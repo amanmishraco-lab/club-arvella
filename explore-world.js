@@ -436,7 +436,7 @@ function renderDestinations() {
 
         <a
           class="explore-link"
-          href="destination.html?region=world&place=${item.slug}"
+          href="./destination.html?region=world&place=${item.slug}"
         >
           EXPLORE
           <span>→</span>
