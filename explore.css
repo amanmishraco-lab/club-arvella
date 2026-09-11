@@ -60,6 +60,20 @@ body {
 }
 
 
+/* ACTUAL CLUB ARVELLA LOGO */
+
+.brand-logo {
+  width: 43px;
+  height: 43px;
+
+  object-fit: contain;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
 .brand-mark {
   width: 43px;
   height: 43px;
@@ -226,7 +240,6 @@ body {
   max-width: 760px;
 
   padding:
-
     175px 7vw 60px;
 }
 
@@ -644,6 +657,12 @@ body {
   }
 
 
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+
   .nav-links {
     position: absolute;
 
@@ -701,7 +720,6 @@ body {
 
   .hero-content {
     padding:
-
       145px 25px 40px;
   }
 
