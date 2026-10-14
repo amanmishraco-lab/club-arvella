@@ -173,46 +173,20 @@ document.addEventListener(
 
 
     /* =====================================
-       MOBILE MENU
-    ===================================== */
+   MOBILE MENU
+===================================== */
 
-    const menuBtn =
-      document.querySelector(
-        ".menu-btn"
-      );
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-    const navLinks =
-      document.querySelector(
-        ".nav-links"
-      );
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
 
-
-    if (
-      menuBtn &&
-      navLinks
-    ) {
-
-      menuBtn.addEventListener(
-        "click",
-        () => {
-
-          navLinks.classList.toggle(
-            "mobile-open"
-          );
-
-
-          menuBtn.textContent =
-            navLinks.classList.contains(
-              "mobile-open"
-            )
-              ? "CLOSE"
-              : "MENU";
-
-        }
-      );
-
-    }
-
+    menuBtn.textContent = isOpen ? "CLOSE" : "MENU";
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+  });
+}
 
     /* =====================================
        ENQUIRY FORM
