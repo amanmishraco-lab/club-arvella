@@ -33,7 +33,7 @@ const INDIA_DESTINATIONS = [
     styles: ["nature", "adventure", "luxury"],
     seasons: ["summer", "winter"],
     tagline: "Mountains, forests & charming hill towns",
-    image: "https://images.unsplash.com/photo-1623059508824-0e4e3a2f3a7d?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1657894736581-ccc35d62d9e2?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -73,7 +73,7 @@ const INDIA_DESTINATIONS = [
     styles: ["culture", "heritage", "nature"],
     seasons: ["winter"],
     tagline: "Heritage, wildlife & vibrant culture",
-    image: "https://plus.unsplash.com/premium_photo-1661963629241-52c812d5c7f8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+    image: "https://images.unsplash.com/photo-1642841819300-20ed449c02a1?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -123,7 +123,7 @@ const INDIA_DESTINATIONS = [
     styles: ["heritage", "culture", "nature"],
     seasons: ["winter"],
     tagline: "Temples, coastline & cultural heritage",
-    image: "https://images.unsplash.com/photo-1621429408206-1d4c9f0d8b1e?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1671345642501-c278083ad77f?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
