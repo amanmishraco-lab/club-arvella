@@ -54,7 +54,7 @@
 
   async function resolve(key, query, width=1200) {
     const fixedImages = {
-  "world:south-korea:hero": "/assets/SK-JEJU.jpg",
+  "world:south-korea:hero": "/assets/south-korea-jeju island.jpg",
   "world:south-korea:place:1": "/assets/SK HERO.jpg",
   "world:south-korea:place:2": "/assets/SK-Busan1.jpg",
   "world:south-korea:place:3": "/assets/SK-Seoul.jpg"
