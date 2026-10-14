@@ -73,7 +73,7 @@ const INDIA_DESTINATIONS = [
     styles: ["culture", "heritage", "nature"],
     seasons: ["winter"],
     tagline: "Heritage, wildlife & vibrant culture",
-    image: "https://images.unsplash.com/photo-1600100397608-f010f4b7d4c7?auto=format&fit=crop&w=1000&q=82"
+    image: "https://plus.unsplash.com/premium_photo-1661963629241-52c812d5c7f8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
   },
 
   {
