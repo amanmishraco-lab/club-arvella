@@ -53,6 +53,21 @@
   }
 
   async function resolve(key, query, width=1200) {
+    const fixedImages = {
+  "world:south-korea:hero": "/assets/south-korea-hero.jpg",
+  "world:south-korea:place:1": "/assets/south-korea-seoul.jpg",
+  "world:south-korea:place:2": "/assets/south-korea-busan.jpg",
+  "world:south-korea:place:3": "/assets/south-korea-jeju.jpg"
+};
+
+if (fixedImages[key]) {
+  return {
+    pageid: "fixed-" + key,
+    src: fixedImages[key],
+    original: fixedImages[key],
+    title: key
+  };
+}
     if (state.map[key]) return state.map[key];
     if (pending.has(key)) return pending.get(key);
     const job = (async () => {
