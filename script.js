@@ -13,13 +13,15 @@ const SUPABASE_ANON_KEY =
   "sb_publishable_ZE4do_lwZXvbsvtsD9bpfA_U1_LvuSL";
 
 
-/* Create Supabase Client */
 
-const supabaseClient =
-  supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY
-  );
+/* Create Supabase Client Safely */
+
+const supabaseClient = window.supabase
+  ? window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    )
+  : null;
 
 
 /* =====================================
