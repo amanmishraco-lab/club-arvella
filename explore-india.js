@@ -123,7 +123,7 @@ const INDIA_DESTINATIONS = [
     styles: ["heritage", "culture", "nature"],
     seasons: ["winter"],
     tagline: "Temples, coastline & cultural heritage",
-    image: "https://images.unsplash.com/photo-1671345642501-c278083ad77f?auto=format&fit=crop&w=1000&q=82"
+    image: "https://assets.thehansindia.com/h-upload/feeds/2019/05/18/176298-13.jpg?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
