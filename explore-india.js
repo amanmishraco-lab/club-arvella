@@ -23,7 +23,7 @@ const INDIA_DESTINATIONS = [
     styles: ["adventure", "nature"],
     seasons: ["summer"],
     tagline: "High passes & unforgettable landscapes",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1558187424-f786111643b0?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -183,7 +183,7 @@ const INDIA_DESTINATIONS = [
     styles: ["nature", "culture"],
     seasons: ["winter"],
     tagline: "Tea gardens & extraordinary wildlife",
-    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1000&q=82"
+    image: "https://plus.unsplash.com/premium_photo-1692049123825-8d43174c9c5c?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -213,7 +213,7 @@ const INDIA_DESTINATIONS = [
     styles: ["heritage", "culture", "nature"],
     seasons: ["winter"],
     tagline: "Palaces, forests & ancient heritage",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1695150854909-a00039a284b8?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -223,7 +223,7 @@ const INDIA_DESTINATIONS = [
     styles: ["heritage", "nature", "adventure"],
     seasons: ["winter"],
     tagline: "Wildlife, temples & timeless heritage",
-    image: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1000&q=82"
+    image: "https://plus.unsplash.com/premium_photo-1697729447666-c39f50d595ea?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -273,7 +273,7 @@ const INDIA_DESTINATIONS = [
     styles: ["heritage", "culture"],
     seasons: ["winter"],
     tagline: "Buddhist heritage & ancient India",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1622194993926-1801586d460f?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
