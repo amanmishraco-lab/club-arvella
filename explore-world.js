@@ -182,7 +182,7 @@ const WORLD_DESTINATIONS = [
     styles: ["nature", "beach", "city"],
     seasons: ["summer", "winter"],
     tagline: "Iconic cities, reefs & wild landscapes",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d8?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -212,7 +212,7 @@ const WORLD_DESTINATIONS = [
     styles: ["city", "culture", "nature"],
     seasons: ["spring", "winter"],
     tagline: "Seoul energy, palaces & mountain escapes",
-    image: "https://images.unsplash.com/photo-1538485399081-7c897f1f7e0c?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1540483761890-a1f7be05d99f?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
@@ -242,7 +242,7 @@ const WORLD_DESTINATIONS = [
     styles: ["beach", "culture", "nature"],
     seasons: ["winter", "year-round"],
     tagline: "Tea country, temples & tropical coast",
-    image: "https://images.unsplash.com/photo-1588598198321-9735fd524d0b?auto=format&fit=crop&w=1000&q=82"
+    image: "https://images.unsplash.com/photo-1612862862126-865765df2ded?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
