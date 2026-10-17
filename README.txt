@@ -1,4 +1,4 @@
-CLUB ARVELLA - EXPLORE INDIA
+ARVELLA CLUB - EXPLORE INDIA
 
 This package mirrors the Explore World design exactly:
 - Same navigation height
