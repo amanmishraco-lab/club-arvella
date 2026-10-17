@@ -1,5 +1,5 @@
 /* =========================================================
-   Arvella Club — EXPLORE WORLD
+   ARVELLA CLUB — EXPLORE WORLD
    30 INTERNATIONAL DESTINATIONS
 ========================================================= */
 
