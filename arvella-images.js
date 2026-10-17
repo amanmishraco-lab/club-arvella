@@ -1,6 +1,6 @@
 
 /*
-  Club Arvella image engine
+  ARVELLA CLUB image engine
   - Uses Wikimedia Commons search instead of generic image/random endpoints.
   - Each image slot gets a permanent browser-side mapping.
   - Used Wikimedia page IDs are persisted, so a photo is not assigned twice.
