@@ -13,7 +13,7 @@
     return;
   }
 
-  document.title = `${d.name} | Club Arvella`;
+  document.title = `${d.name} | ARVELLA CLUB`;
   const esc = s => String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
   const home = region === "world" ? "world.html" : "india.html";
   const nextQuery = d.places.map(p => `${p.name}, ${d.name}, ${d.country}`).join(" | ");
@@ -31,7 +31,7 @@
     <section class="detail-hero">
       <img data-arvella-image data-image-eager data-image-key="${region}:${d.slug}:hero" data-image-query="${esc(d.heroQuery)}" data-image-width="1600" alt="${esc(d.name)}" width="1600" height="1000">
       <div class="detail-hero-content">
-        <div class="ca-eyebrow">${esc(region.toUpperCase())} • CLUB ARVELLA JOURNEY</div>
+        <div class="ca-eyebrow">${esc(region.toUpperCase())} • ARVELLA CLUB JOURNEY</div>
         <h1>${esc(d.name)}</h1>
         <p class="detail-tagline">${esc(d.tagline)}. ${esc(d.description)}</p>
         <div class="detail-meta">
@@ -48,7 +48,7 @@
         <div>
           <div class="detail-eyebrow">WHY GO</div>
           <h2>A journey designed around the character of ${esc(d.name)}.</h2>
-          <p>${esc(d.description)} ${esc(d.tagline)} Whether you want a relaxed break, a family holiday, a romantic escape or a culture-led itinerary, this route gives Club Arvella a strong starting point for a personalised plan.</p>
+          <p>${esc(d.description)} ${esc(d.tagline)} Whether you want a relaxed break, a family holiday, a romantic escape or a culture-led itinerary, this route gives ARVELLA CLUB a strong starting point for a personalised plan.</p>
         </div>
         <aside class="detail-facts">
           <div class="fact"><b>BEST TIME</b><span>${esc(d.bestTime)}</span></div>
@@ -62,7 +62,7 @@
         <div class="detail-section-head">
           <div class="detail-eyebrow">CURATED HIGHLIGHTS</div>
           <h2>Top 3 places to experience.</h2>
-          <p>Three signature stops to anchor your first Club Arvella journey through ${esc(d.name)}.</p>
+          <p>Three signature stops to anchor your first ARVELLA CLUB journey through ${esc(d.name)}.</p>
         </div>
         <div class="place-grid">
           ${d.places.map((p,i)=>`
@@ -81,7 +81,7 @@
         <div class="detail-section-head">
           <div class="detail-eyebrow">SUGGESTED ITINERARY</div>
           <h2>A relaxed 6-day flow.</h2>
-          <p>This is a planning framework. Club Arvella can adjust nights, hotels, experiences and pace around your membership or holiday requirement.</p>
+          <p>This is a planning framework. ARVELLA CLUB can adjust nights, hotels, experiences and pace around your membership or holiday requirement.</p>
         </div>
         <div class="itinerary">
           ${days.map((x,i)=>`<div class="day"><b>DAY ${i+1}</b><span>${esc(x)}</span></div>`).join("")}
