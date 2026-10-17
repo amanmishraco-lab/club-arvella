@@ -1,5 +1,5 @@
 /* =========================================================
-   CLUB ARVELLA — EXPLORE INDIA
+   Arvella Club — EXPLORE INDIA
    30 INDIAN DESTINATIONS
    Fixed destination → fixed image mapping
 ========================================================= */
