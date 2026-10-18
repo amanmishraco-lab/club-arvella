@@ -1,6 +1,6 @@
 
 const REVIEWS_SUPABASE_URL = "https://otsdkbnneyjxeawoujtf.supabase.co";
-const REVIEWS_REVIEWS_SUPABASE_KEY = "sb_publishable_ZEgbViwjQFEfgXiDL8M0tg_Fy0Rsua1";
+const REVIEWS_SUPABASE_KEY = "sb_publishable_ZEgbViwjQFEfgXiDL8M0tg_Fy0Rsua1";
 
 async function loadApprovedReviews() {
   const list = document.getElementById("reviews-list");
