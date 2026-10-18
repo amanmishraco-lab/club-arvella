@@ -1,6 +1,6 @@
 
 const REVIEWS_SUPABASE_URL = "https://otsdkbnneyjxeawoujtf.supabase.co";
-const REVIEWS_SUPABASE_KEY = "sb_publishable_ZEgbViwjQFEfgXiDL8M0tg_Fy0Rsua1";
+const REVIEWS_REVIEWS_SUPABASE_KEY = "sb_publishable_ZEgbViwjQFEfgXiDL8M0tg_Fy0Rsua1";
 
 async function loadApprovedReviews() {
   const list = document.getElementById("reviews-list");
@@ -11,8 +11,8 @@ async function loadApprovedReviews() {
       `${SUPABASE_URL}/rest/v1/reviews?select=customer_name,rating,review_text,created_at&status=eq.approved&order=created_at.desc`,
       {
         headers: {
-          apikey: SUPABASE_KEY,
-          Authorization: `Bearer ${SUPABASE_KEY}`
+          apikey: REVIEWS_SUPABASE_KEY,
+          Authorization: `Bearer ${REVIEWS_SUPABASE_KEY}`
         }
       }
     );
@@ -65,8 +65,8 @@ async function submitReview(event) {
     const response = await fetch(`${SUPABASE_URL}/rest/v1/reviews`, {
       method: "POST",
       headers: {
-        apikey: SUPABASE_KEY,
-        Authorization: `Bearer ${SUPABASE_KEY}`,
+        apikey: REVIEWS_SUPABASE_KEY,
+        Authorization: `Bearer ${REVIEWS_SUPABASE_KEY}`,
         "Content-Type": "application/json",
         Prefer: "return=minimal"
       },
