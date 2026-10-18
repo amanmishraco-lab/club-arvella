@@ -78,14 +78,15 @@ async function submitReview(event) {
       })
     });
 
-    if (!response.ok) throw new Error("Review submission failed");
+    if (!response.ok) {
+  throw new Error(`Supabase error ${response.status}: ${await response.text()}`);
+}
 
     form.reset();
     message.textContent =
       "Thank you! Your review has been submitted for approval.";
   } catch (error) {
-    message.textContent =
-      "We couldn't submit your review. Please try again later.";
+    message.textContent = error.message;
     console.error(error);
   } finally {
     button.disabled = false;
