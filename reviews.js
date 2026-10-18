@@ -8,7 +8,7 @@ async function loadApprovedReviews() {
 
   try {
     const response = await fetch(
-      `${SUPABASE_URL}/rest/v1/reviews?select=customer_name,rating,review_text,created_at&status=eq.approved&order=created_at.desc`,
+      `${REVIEWS_SUPABASE_URL}/rest/v1/reviews?select=customer_name,rating,review_text,created_at&status=eq.approved&order=created_at.desc`,
       {
         headers: {
           apikey: REVIEWS_SUPABASE_KEY,
@@ -62,7 +62,7 @@ async function submitReview(event) {
   message.textContent = "Submitting your review...";
 
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/reviews`, {
+    const response = await fetch(`${REVIEWS_SUPABASE_URL}/rest/v1/reviews`, {
       method: "POST",
       headers: {
         apikey: REVIEWS_SUPABASE_KEY,
