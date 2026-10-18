@@ -2307,3 +2307,143 @@ h2 {
     padding: 18px;
   }
 }
+
+/* ===== ARVELLA FLOATING REVIEW CAROUSEL ===== */
+
+#customer-reviews #reviews-list {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+#customer-reviews .reviews-carousel {
+  width: 100%;
+  margin: 24px auto;
+}
+
+#customer-reviews .reviews-carousel-viewport {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+#customer-reviews .reviews-carousel-track {
+  display: flex;
+  align-items: stretch;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+#customer-reviews .review-card {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 32px 28px;
+  text-align: center;
+  background: #0b1d2b;
+  color: #ffffff;
+  border: 1px solid #b99a52;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(11, 29, 43, 0.12);
+}
+
+#customer-reviews .review-stars {
+  color: #dfbd60;
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin: 0 0 18px;
+}
+
+#customer-reviews .review-quote {
+  color: #f4f0e8;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  margin: 0 auto 20px;
+}
+
+#customer-reviews .review-author {
+  color: #dfbd60;
+  font-size: 16px;
+  margin: 0;
+}
+
+#customer-reviews .reviews-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+#customer-reviews .reviews-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid #b99a52;
+  border-radius: 50%;
+  background: #0b1d2b;
+  color: #dfbd60;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#customer-reviews .reviews-arrow:hover {
+  background: #dfbd60;
+  color: #0b1d2b;
+}
+
+#customer-reviews .reviews-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#customer-reviews .reviews-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c8c1b3;
+  cursor: pointer;
+}
+
+#customer-reviews .reviews-dot.active {
+  background: #b58b35;
+  transform: scale(1.25);
+}
+
+#customer-reviews .reviews-arrow:focus-visible,
+#customer-reviews .reviews-dot:focus-visible {
+  outline: 2px solid #b58b35;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  #customer-reviews .review-card {
+    padding: 24px 18px;
+  }
+
+  #customer-reviews .review-quote {
+    font-size: 17px;
+  }
+
+  #customer-reviews .reviews-carousel-controls {
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #customer-reviews .reviews-carousel-track {
+    transition: none;
+  }
+}
