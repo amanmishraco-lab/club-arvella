@@ -554,6 +554,51 @@
 </div>
 </div>
 </section>
+        
+<!-- ================= CUSTOMER REVIEWS ================= -->
+<section class="section section-light" id="customer-reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" style="color:#8a6810">GUEST EXPERIENCES</div>
+      <h2>Stories From Our Travellers.</h2>
+      <p>Share your experience with Club Arvella.</p>
+    </div>
+
+    <div id="reviews-list" class="grid">
+      Loading reviews...
+    </div>
+
+    <div class="review-form-wrap">
+      <h3>Share Your Experience</h3>
+      <form id="review-form">
+        <label for="review-name">Your Name</label>
+        <input id="review-name" name="customer_name"
+          type="text" minlength="2" maxlength="80"
+          placeholder="Enter your name" required />
+
+        <label for="review-rating">Your Rating</label>
+        <select id="review-rating" name="rating" required>
+          <option value="">Select your rating</option>
+          <option value="5">★★★★★ — Excellent</option>
+          <option value="4">★★★★ — Very Good</option>
+          <option value="3">★★★ — Good</option>
+          <option value="2">★★ — Fair</option>
+          <option value="1">★ — Poor</option>
+        </select>
+
+        <label for="review-text">Your Review</label>
+        <textarea id="review-text" name="review_text"
+          minlength="10" maxlength="1000" rows="5"
+          placeholder="Tell us about your experience..." required></textarea>
+
+        <button class="btn btn-gold" type="submit">SUBMIT REVIEW</button>
+        <p id="review-form-message" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ================= END CUSTOMER REVIEWS ================= -->
+
 <!-- ================= FINAL CTA ================= -->
 <section class="section section-light">
 <div class="container">
