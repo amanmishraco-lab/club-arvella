@@ -2206,3 +2206,104 @@ h2 {
   }
 
 }
+
+/* ===== CLUB ARVELLA REVIEW SECTION ===== */
+#customer-reviews {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+#customer-reviews .section-head {
+  margin-bottom: 24px;
+}
+
+#customer-reviews .section-head h2 {
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.25;
+  margin: 8px 0 10px;
+}
+
+#customer-reviews .section-head p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+#customer-reviews h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0 0 16px;
+}
+
+#customer-reviews p {
+  line-height: 1.6;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#customer-reviews .review-form-wrap {
+  max-width: 650px;
+  margin: 28px auto 0;
+  padding: 24px;
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  border-radius: 12px;
+}
+
+#customer-reviews #review-form {
+  display: grid;
+  gap: 10px;
+}
+
+#customer-reviews #review-form label {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+#customer-reviews #review-form input,
+#customer-reviews #review-form select,
+#customer-reviews #review-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#customer-reviews #review-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+#customer-reviews .review-card {
+  padding: 18px;
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  border-radius: 10px;
+}
+
+#customer-reviews .review-card h3 {
+  margin-bottom: 6px;
+}
+
+#customer-reviews .review-stars {
+  color: #b58b35;
+  letter-spacing: 2px;
+  margin: 4px 0 10px;
+}
+
+#customer-reviews #review-form-message {
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+@media (max-width: 600px) {
+  #customer-reviews {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  #customer-reviews .review-form-wrap {
+    padding: 18px;
+  }
+}
