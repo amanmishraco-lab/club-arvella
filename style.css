@@ -2706,3 +2706,43 @@ h2 {
     font-size: 12px !important;
   }
 }
+
+/* RESTORE BOTH DESTINATION IMAGE ROWS */
+
+.premium-hero .floating-row {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  gap: 12px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 0 8px !important;
+}
+
+.premium-hero .floating-row-left {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+.premium-hero .floating-row-right {
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+/* Keep images in a neat horizontal strip */
+.premium-hero .floating-row img {
+  flex: 0 0 190px;
+  width: 190px !important;
+  height: 110px !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+}
+
+@media (max-width: 768px) {
+  .premium-hero .floating-row img {
+    flex-basis: 145px;
+    width: 145px !important;
+    height: 88px !important;
+  }
+}
