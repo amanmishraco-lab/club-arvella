@@ -13,7 +13,7 @@ const INDIA_DESTINATIONS = [
     styles: ["nature", "luxury", "adventure"],
     seasons: ["summer", "winter"],
     tagline: "Valleys, lakes & Himalayan beauty",
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1000&q=82"
+    image: "https://plus.unsplash.com/premium_photo-1697729690458-2d64ca777c04?auto=format&fit=crop&w=1000&q=82"
   },
 
   {
